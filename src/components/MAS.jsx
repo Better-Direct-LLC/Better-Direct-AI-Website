@@ -6,21 +6,21 @@ const MAS = () => {
         {
             name: 'Rachel Mock',
             title: 'GSA & 2GIT Program Manager',
-            photo: '/src/assets/Contracts/2Git/rachel.png',
+            photo: './assets/Contracts/2Git/rachel.png',
             description: 'Rachel Mock, Better Direct\'s GSA and 2GIT Program Manager, oversees the GSA Advantage storefront, vendor relations, and marketing. With over 10 years of experience, she delivers exceptional customer service and crafts efficient IT solutions for complex challenges.',
             buttonText: 'Contact Rachel'
         },
         {
             name: 'Thien Duc Phung',
             title: 'GSA & 2GIT Contract Manager',
-            photo: '/src/assets/Contracts/2Git/Thien.jpg',
+            photo: './assets/Contracts/2Git/Thien.jpg',
             description: 'Thien Duc Phung manages GSA and 2GIT contracts at Better Direct, ensuring current product listings, government compliance, and strong client relationships. Starting as a GSA Admin in 2022, he now leads catalog growth, bid responses, and revenue initiatives, working closely with the fulfillment team to address customer inquiries.',
             buttonText: 'Contact Thien'
         },
         {
             name: 'Devika N',
             title: 'Assistant GSA & 2GIT Program Manager',
-            photo: '/src/assets/Contracts/2Git/devika.jpg',
+            photo: './assets/Contracts/2Git/devika.jpg',
             description: 'Works as Assistant Program Manager at Better Direct, supporting GSA and 2GIT operations, including GSA Advantage storefronts, vendor coordination, and federal contract management. With 5+ years of product management experience, Devika specializes in workflow optimization, data-driven strategy, and cross-functional collaboration, leveraging tools like Airtable, Drift, and MySQL to streamline procurement and enhance engagement.',
             buttonText: 'Contact Devika'
         }
@@ -46,7 +46,7 @@ const MAS = () => {
                             {/* Right side - Logo */}
                             <div className="flex justify-center">
                                 <img
-                                    src="/src/assets/Contracts/2Git/GSA.jpg"
+                                    src="./assets/Contracts/2Git/GSA.jpg"
                                     alt="GSA Logo"
                                     className="w-64 h-auto"
                                     onError={(e) => {
@@ -191,7 +191,7 @@ const MAS = () => {
                             <div className="flex-shrink-0">
                                 <div className="w-20 h-20  overflow-hidden shadow-lg">
                                     <img
-                                        src="/src/assets/Contracts/2Git/madison.jpg"
+                                        src="./assets/Contracts/2Git/madison.jpg"
                                         alt="Madison Alberts"
                                         className="w-full h-full object-cover"
                                         onError={(e) => {

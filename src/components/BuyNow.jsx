@@ -1,15 +1,15 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef , useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
 
 // ImageCarousel component for 4-image auto-fading carousel with manual navigation
 function ImageCarousel() {
   const carouselImages = [
-    '/src/assets/BuyNow/team-1.jpeg',
-    '/src/assets/BuyNow/team-2.jpg',
-    '/src/assets/BuyNow/team-3.jpg',
-    '/src/assets/BuyNow/team-4.jpg',
+    './assets/BuyNow/team-1.jpeg',
+    './assets/BuyNow/team-2.jpg',
+    './assets/BuyNow/team-3.jpg',
+    './assets/BuyNow/team-4.jpg',
   ];
   const [current, setCurrent] = useState(0);
   const timeoutRef = useRef(null);
@@ -92,7 +92,7 @@ const BuyNow = () => {
       description: 'As an ADMC-3 contract holder, Better Direct supplies IT hardware, services, and lifecycle support to the U.S. Army and DoD.',
       buttonText: 'Request a Quote',
       buttonLink: '/contact-us',
-      logo: '/src/assets/BuyNow/admc.png',
+      logo: './assets/BuyNow/admc.png',
       bgColor: 'bg-blue-600'
     },
     {
@@ -100,7 +100,7 @@ const BuyNow = () => {
       description: 'With our GSA Schedule contract, Better Direct makes it easy for Federal agencies to purchase the IT products and services they need at pre-negotiated, compliant rates.',
       buttonText: 'Request a Quote',
       buttonLink: '/contact-us',
-      logo: '/src/assets/BuyNow/gsa.jpg',
+      logo: './assets/BuyNow/gsa.jpg',
       bgColor: 'bg-blue-600'
     },
     {
@@ -108,7 +108,7 @@ const BuyNow = () => {
       description: 'Through the NASA SEWP V contract, Better Direct provides cutting-edge IT solutions to Federal agencies across all departments.',
       buttonText: 'Learn More',
       buttonLink: '/contracts',
-      logo: '/src/assets/BuyNow/sewp.png',
+      logo: './assets/BuyNow/sewp.png',
       bgColor: 'bg-blue-600'
     }
   ];

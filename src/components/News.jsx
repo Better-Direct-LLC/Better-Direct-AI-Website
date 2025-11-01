@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 const News = () => {
   // Photo gallery images
   const galleryPhotos = [
-    { src: '/src/assets/News/bd.jpg', alt: 'Better Direct Presentation' },
-    { src: '/src/assets/News/bd-2.jpg', alt: 'Team Collaboration' },
-    { src: '/src/assets/News/bd-3.jpg', alt: 'Team Meeting' },
-    { src: '/src/assets/News/bd-4.jpg', alt: 'Team Event' }
+    { src: './assets/News/bd.jpg', alt: 'Better Direct Presentation' },
+    { src: './assets/News/bd-2.jpg', alt: 'Team Collaboration' },
+    { src: './assets/News/bd-3.jpg', alt: 'Team Meeting' },
+    { src: './assets/News/bd-4.jpg', alt: 'Team Event' }
   ];
 
   // Modal state for gallery
@@ -42,7 +42,7 @@ const News = () => {
             {/* Right side - Image */}
             <div>
               <img 
-                src="/src/assets/News/services-1.jpg"
+                src="./assets/News/services-1-1.jpg"
                 alt="CISCO CCNA Engineer"
                 className="w-full h-auto rounded-lg shadow-xl"
                 onError={(e) => {
@@ -72,7 +72,7 @@ const News = () => {
             {/* Right side - Image */}
             <div>
               <img 
-                src="/src/assets/News/services-2.jpg"
+                src="./assets/News/services-2.jpg"
                 alt="AI Solutions Team"
                 className="w-full h-auto rounded-lg shadow-xl"
                 onError={(e) => {

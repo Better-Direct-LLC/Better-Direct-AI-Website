@@ -30,10 +30,10 @@ const Services = () => {
 
     // Video carousel data
     const videos = [
-        { id: 1, thumbnail: '/src/assets/Services/joe.png', title: 'Joe', youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_1' },
-        { id: 2, thumbnail: '/src/assets/Services/rashawn.png', title: 'Rashawn Hugg', youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_2' },
-        { id: 3, thumbnail: '/src/assets/Services/anthony.png', title: 'Anthony Hernandez', youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_3' },
-        { id: 4, thumbnail: '/src/assets/Services/mckenna.jpg', title: 'McKenna Mulligan', youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_4' },
+        { id: 1, thumbnail: './assets/Services/joe.png', title: 'Joe', youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_1' },
+        { id: 2, thumbnail: './assets/Services/rashawn.png', title: 'Rashawn Hugg', youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_2' },
+        { id: 3, thumbnail: './assets/Services/anthony.png', title: 'Anthony Hernandez', youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_3' },
+        { id: 4, thumbnail: './assets/Services/mckenna.jpg', title: 'McKenna Mulligan', youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_4' },
     ];
 
     const [playerOpen, setPlayerOpen] = useState(false);
@@ -42,19 +42,19 @@ const Services = () => {
     const teamMembers = [
         {
             name: 'Rashawn Hugg',
-            photo: '/src/assets/Services/display/rashawn.jpg',
+            photo: './assets/Services/display/rashawn.jpg',
             description: 'Rashawn Hugg is Better Direct\'s Senior Program Manager. He leads federal contract programs and project management teams, supporting agencies like NGA, DIA, and NSA. Rashawn develops partner relationships for the company as well as professional services initiatives. Rashawn\'s goal is to ensure successful project completion for Better Direct\'s customers.',
             buttonText: 'Contact Rashawn'
         },
         {
             name: 'Anthony Hernandez',
-            photo: '/src/assets/Services/display/anthony.jpg',
+            photo: './assets/Services/display/anthony.jpg',
             description: 'Anthony Hernandez is the Project Manager at Better Direct. In this role, he leads the company\'s services team and handles installations, repairs, and custom manufacturing projects. Years ago he started in data entry at Better Direct, and has grown with the company to manage house accounts and high-value contracts. He meets Better Direct\'s high standards as he delivers excellent customer service.',
             buttonText: 'Contact Anthony'
         },
         {
             name: 'McKenna Mulligan',
-            photo: '/src/assets/Services/display/mckenna.jpg',
+            photo: './assets/Services/display/mckenna.jpg',
             description: 'McKenna Mulligan is a Project Manager at Better Direct, where she specializes in technology solutions and software implementations for government clients. Starting her career at the company as a Federal Sales Executive, she developed expertise in federal procurement and agency partnerships that now guide her project leadership. McKenna combines this government sector knowledge with her custom software development background to deliver impactful IT solutions across federal, state, and local agencies. She\'s focused on expanding the services department\'s impact while strengthening Better Direct\'s Tempe community roots as a HUBZone-certified, Service-Disabled Veteran-Owned IT VAR.',
             buttonText: 'Contact McKenna'
         }
@@ -152,7 +152,7 @@ const Services = () => {
                             {/* Right side - Image */}
                             <div>
                                 <img
-                                    src="/src/assets/Services/services-1.jpg"
+                                    src="./assets/Services/services-1-2.jpg"
                                     alt="Services"
                                     className="w-full h-auto rounded-lg shadow-xl"
                                     onError={(e) => {
@@ -324,7 +324,7 @@ const Services = () => {
                         {/* Right side - Image */}
                         <div>
                             <img
-                                src="/src/assets/Services/services-2.jpg"
+                                src="./assets/Services/services-2.jpg"
                                 alt="AI Services"
                                 className="w-full h-auto rounded-lg shadow-xl"
                                 onError={(e) => {
@@ -343,7 +343,7 @@ const Services = () => {
                         {/* Left side - Image */}
                         <div>
                             <img
-                                src="/src/assets/Services/services-3.jpg"
+                                src="./assets/Services/services-3.jpg"
                                 alt="Customized Project Management"
                                 className="w-full h-auto rounded-lg shadow-xl"
                                 onError={(e) => {

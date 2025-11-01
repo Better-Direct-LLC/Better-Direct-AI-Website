@@ -6,14 +6,14 @@ const MAS = () => {
         {
             name: 'Kim Lambert',
             title: 'Sales Manager, Deputy SEWP Program Manager',
-            photo: '/src/assets/Contracts/2Git/kim.jpg',
+            photo: './assets/Contracts/2Git/kim.jpg',
             description: 'Kim Lambert is a Sales Manager at Better Direct who leads a dynamic sales team. She works on developing strong partnerships with distributors and manufacturers, and she assists her team in helping customers grow. Her goal is for clients to receive fast service and tailored IT solutions, all at a better value. Kim challenges her team to innovate, so the team can deliver beyond expectations.',
             buttonText: 'Contact Kim'
         },
         {
             name: 'Matthew Walz',
             title: 'SEWP Program Manager',
-            photo: '/src/assets/Contracts/2Git/matt.jpg',
+            photo: './assets/Contracts/2Git/matt.jpg',
             description: 'Matthew Walz is the NASA SEWP Program Manager at Better Direct, which is its largest revenue-generating contract. Matt works closely with federal procurement teams to deliver IT solutions to government agencies. He focuses on expanding partnerships with OEMs to ensure he has the best possible solutions for Better Direct’s clients.',
             buttonText: 'Contact Matthew'
         }
@@ -39,7 +39,7 @@ const MAS = () => {
                             {/* Right side - Logo */}
                             <div className="flex justify-center">
                                 <img
-                                    src="/src/assets/Contracts/2Git/SEWP.png"
+                                    src="./assets/Contracts/2Git/SEWP.png"
                                     alt="SEWP Logo"
                                     className="w-64 h-auto"
                                     onError={(e) => {
@@ -192,7 +192,7 @@ const MAS = () => {
                             <div className="flex-shrink-0">
                                 <div className="w-20 h-20  overflow-hidden shadow-lg">
                                     <img
-                                        src="/src/assets/Contracts/2Git/kim.jpg"
+                                        src="./assets/Contracts/2Git/kim.jpg"
                                         alt="Kim Lambert"
                                         className="w-full h-full object-cover"
                                         onError={(e) => {

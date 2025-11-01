@@ -11,7 +11,7 @@ const CapabilityStatement = () => (
         {/* Right half: PDF viewer only, no download or label */}
         <div className="flex items-center justify-center w-full h-full">
           <iframe
-            src="/src/assets/Capability/Capabilities.pdf"
+            src="./assets/Capability/Capabilities.pdf"
             title="Capability Statement PDF"
             className="w-full h-[600px] md:h-[700px] rounded-xl border-none shadow-lg"
             style={{ background: 'transparent' }}
@@ -33,7 +33,7 @@ const CapabilityStatement = () => (
         </div>
         <div className="flex justify-center mt-10">
           <a
-            href="/src/assets/Capability/Capabilities.pdf"
+            href="./assets/Capability/Capabilities.pdf"
             download="Capability_Statement.pdf"
             className="px-10 py-5 text-2xl font-bold rounded-full bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 text-white shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-blue-400"
           >

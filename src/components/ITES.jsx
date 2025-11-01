@@ -6,21 +6,21 @@ const ITES = () => {
         {
             name: 'Mark Evans',
             title: 'Founder & President',
-            photo: '/src/assets/Contracts/2Git/mark.jpg',
+            photo: './assets/Contracts/2Git/mark.jpg',
             description: 'Mark Evans, a two-tour combat veteran and IT expert, founded Better Direct, growing it into a HUBZone-certified, Service-Disabled Veteran-Owned IT VAR with 45+ employees. With deep expertise in enterprise IT solutions, hardware procurement, and technology strategy, he leads with innovation, customer success, and community impact, guiding his team to deliver cutting-edge IT solutions.',
             buttonText: 'Contact Mark'
         },
         {
             name: 'KaTo Wong',
             title: 'Sales Manager, ITES-4H Contract Manager',
-            photo: '/src/assets/Contracts/2Git/kato.jpg',
+            photo: './assets/Contracts/2Git/kato.jpg',
             description: 'Kato Wong is a Better Direct Sales Manager. Since 2018, he has overseen the ITES-4H contract for the company. He focuses on building long-term relationships with his customers so he can better understand their operational requirements and align IT solutions to their needs.',
             buttonText: 'Contact KaTo'
         },
         {
             name: 'Diana Zhong',
             title: 'Director of Operations and Finance, ITES-4H Contract Manager',
-            photo: '/src/assets/Contracts/2Git/diana.jpg',
+            photo: './assets/Contracts/2Git/diana.jpg',
             description: 'Diana Zhong is the Manager of Operations and Finance at Better Direct. In her Operations role, she aligns the departments with strategic goals and watches over the government projects so they run seamlessly. On the financial side, Diana optimizes the profitability of the company by making sure it runs efficiently, and by mitigating its financial risk. She also has the role of co-manager of the ITES-4H contract.',
             buttonText: 'Contact Diana'
         }
@@ -46,7 +46,7 @@ const ITES = () => {
                             {/* Right side - Logo */}
                             <div className="flex justify-center">
                                 <img
-                                    src="/src/assets/Contracts/2Git/ITES.png"
+                                    src="./assets/Contracts/2Git/ITES.png"
                                     alt="ITES Logo"
                                     className="w-64 h-auto"
                                     onError={(e) => {

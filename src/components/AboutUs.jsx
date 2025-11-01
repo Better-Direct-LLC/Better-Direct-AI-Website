@@ -17,7 +17,7 @@ const AboutUs = () => {
     {
       name: 'Mark Evans',
       title: 'Founder & President',
-      image: '/src/assets/AboutUs/video/mark.png',
+      image: './assets/AboutUs/video/mark.png',
       videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
       bio: 'Mark Evans is the founder and president of Better Direct. He started in this industry as a sales agent for IBM and Lenovo, and has now grown Better Direct into a HUBZone-certified, Service-Disabled Veteran-Owned IT VAR with 45+ employees. Mark continually looks for ways to innovate and has teams dedicated to new projects. He has built a business that values customer success and has a positive community impact. As a harbour combat veteran and IT expert, he leads the company while encouraging leadership and discipline. His entrepreneurial vision guides the Better Direct team to deliver cutting-edge IT solutions.',
       imagePosition: 'right'
@@ -25,7 +25,7 @@ const AboutUs = () => {
     {
       name: 'Diana Zhong',
       title: 'Financial Quantitative Analyst',
-      image: '/src/assets/AboutUs/video/diana.png',
+      image: './assets/AboutUs/video/diana.png',
       videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
       bio: 'Diana Zhong is the Manager of Operations and Finance at Better Direct. In her Operations role, she aligns the departments with strategic goals and watches over the government projects so they run seamlessly. On the financial side, Diana optimizes the profitability of the company by making sure it runs efficiently, and by mitigating its financial risk. She also has the role of co-manager of the Army CHESS ADMC-3 contract.',
       imagePosition: 'left'
@@ -33,7 +33,7 @@ const AboutUs = () => {
     {
       name: 'Chase Cai',
       title: 'Purchasing Manager',
-      image: '/src/assets/AboutUs/video/chase.png',
+      image: './assets/AboutUs/video/chase.png',
       videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
       bio: 'Chase Cai is the Purchasing Manager at Better Direct. Seven years at Better Direct, she now manages the team that handles every aspect of Purchasing, including order processing, invoices, returns and even issue resolution. Chase develops and implements cost-saving strategies to strengthen the company\'s bottom line. She also has a role in working with the company\'s vendors to strengthen partnerships with them. Her goals are to ensure customer orders run smoothly and make the customer\'s jobs easier.',
       imagePosition: 'right'
@@ -41,7 +41,7 @@ const AboutUs = () => {
     {
       name: 'Kim Lambert',
       title: 'Sales Manager, Deputy SEWP Program Manager',
-      image: '/src/assets/AboutUs/video/kim.jpg',
+      image: './assets/AboutUs/video/kim.jpg',
       videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
       bio: 'Kim Lambert is a Sales Manager at Better Direct who leads a dynamic sales team. She works on developing strong partnerships with distributors and manufacturers, she assists her team in helping customers grow. Her goal is for clients to receive fast service and tailored IT solutions, all at a better value. Kim challenges her team to innovate, so the team can deliver beyond expectations.',
       imagePosition: 'left'
@@ -49,7 +49,7 @@ const AboutUs = () => {
     {
       name: 'Kato Wong',
       title: 'Sales Manager, ADMC-3 Program Manager',
-      image: '/src/assets/AboutUs/video/kato.png',
+      image: './assets/AboutUs/video/kato.png',
       videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
       bio: 'Kato Wong is a Better Direct Sales Manager. Since 2018, he has overseen the ADMC-3 and Army CHESS contracts for the company. He focuses on building longterm relationships with his customers so he can better understand their operational requirements and align IT solutions to their needs.',
       imagePosition: 'right'
@@ -57,7 +57,7 @@ const AboutUs = () => {
     {
       name: 'Joe Holt',
       title: 'Senior Engineer',
-      image: '/src/assets/AboutUs/video/joe.png',
+      image: './assets/AboutUs/video/joe.png',
       videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
       bio: 'Joe Holt is the Senior Engineer at Better Direct. Joe has over 43 years in IT technical roles and sales experience. He even has System x engineering experience at IBM. Joe holds certifications from Cisco, IBM, HPE, and VMware. He is Better Direct\'s specialist in evaluating, repairing, and deploying both legacy and modern IT solutions.',
       imagePosition: 'left'
@@ -65,7 +65,7 @@ const AboutUs = () => {
     {
       name: 'Rashawn Hugg',
       title: 'Senior Program Manager',
-      image: '/src/assets/AboutUs/video/rashawn.png',
+      image: './assets/AboutUs/video/rashawn.png',
       videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
       bio: 'Rashawn Hugg is Better Direct\'s Senior Program Manager. He leads federal contract programs and project management teams, supporting agencies like NASA, DOA, and NSA. Rashawn develops partner relationships for the company as well as professional services initiatives. Rashawn\'s goal is to ensure successful project completion for Better Direct\'s customers.',
       imagePosition: 'right'
@@ -73,7 +73,7 @@ const AboutUs = () => {
     {
       name: 'Rachel Mock',
       title: 'GSA & 2GIT Program Manager',
-      image: '/src/assets/AboutUs/video/rachel.png',
+      image: './assets/AboutUs/video/rachel.png',
       videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
       bio: 'Rachel Mock is the Program Manager for GSA and 2GIT at Better Direct. She manages the GSA Advantage storefront, while also focusing on strategic vendor relations and marketing. Her goal is to assist Better Direct in delivering exceptional customer service. With over a decade of experience, Rachel crafts IT solutions that solve complex problems efficiently.',
       imagePosition: 'left'
@@ -81,7 +81,7 @@ const AboutUs = () => {
     {
       name: 'Thien Duc Phung',
       title: 'GSA & 2GIT Contract Manager',
-      image: '/src/assets/AboutUs/video/thien.png',
+      image: './assets/AboutUs/video/thien.png',
       videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
       bio: 'Thien Duc Phung, oversees GSA and 2GIT contracts at Better Direct. Thien\'s focus with managing these contracts is to keep product listings current, ensure government compliance, and maintain strong client relationships. He began at Better Direct as a GSA Admin in 2022, and has been promoted to now lead catalog growth, bid responses, and revenue-driving initiatives, collaborating closely with our fulfillment team to resolve customer inquiries.',
       imagePosition: 'right'
@@ -89,7 +89,7 @@ const AboutUs = () => {
     {
       name: 'Matthew Walz',
       title: 'SEWP Program Manager',
-      image: '/src/assets/AboutUs/video/matt.png',
+      image: './assets/AboutUs/video/matt.png',
       videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
       bio: 'Matthew Walz is the NASA SEWP Program Manager at Better Direct, which is its largest revenue-generating contract. Matt works closely with federal procurement teams to deliver IT solutions to government agencies. He focuses on expanding partnerships with OEMs so he has the best possible solutions for Better Direct\'s clients.',
       imagePosition: 'left'
@@ -97,7 +97,7 @@ const AboutUs = () => {
     {
       name: 'Anthony Hernandez',
       title: 'Project Manager',
-      image: '/src/assets/AboutUs/video/anthony.png',
+      image: './assets/AboutUs/video/anthony.png',
       videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
       bio: 'Anthony Hernandez is the Project Manager at Better Direct. In this role, he leads the company\'s services team, and Theirn handles installations, repairs, and custom manufacturing projects. Years ago he started in data entry at Better Direct, and has grown with the company to manage house accounts and high-value contracts. He meets Better Direct\'s high standards as he delivers excellent customer services.',
       imagePosition: 'right'
@@ -105,7 +105,7 @@ const AboutUs = () => {
     {
       name: 'McKenna Mulligan',
       title: 'Project Manager',
-      image: '/src/assets/AboutUs/mckenna.jpg',
+      image: './assets/AboutUs/mckenna.jpg',
       videoUrl: 'https://www.youtube.com/embed/gOQocJ0WMzQ?feature=oembed',
       bio: 'McKenna Mulligan is a Project Manager at Better Direct, specializing in technology solutions and software implementations for government clients. She began her career as a Federal Sales Executive, gaining expertise in federal procurement and agency partnerships that now guide her project work. Combining her government sector insight with a background in custom software development, McKenna delivers impactful IT solutions across federal, state, and local agencies while helping grow Better Direct\'s services department and uphold its Tempe-based HUBZone, Service-Disabled Veteran-Owned mission.',
       imagePosition: 'left'
@@ -114,17 +114,17 @@ const AboutUs = () => {
 
   // Team grid data for "People Who Make a Difference" section
   const teamGrid = [
-    { name: 'Mark Evans', title: 'President', image: '/src/assets/AboutUs/mark.jpg' },
-    { name: 'Diana Zhong', title: 'Financial Quantitative Analyst', image: '/src/assets/AboutUs/diana.jpg' },
-    { name: 'Rashawn Hugg', title: 'Senior Program Manager', image: '/src/assets/AboutUs/rashawn.jpg' },
-    { name: 'Chase Cai', title: 'Purchasing Manager', image: '/src/assets/AboutUs/chase.jpg' },
-    { name: 'Kim Lambert', title: 'Sales Manager/Deputy SEWP Program Manager', image: '/src/assets/AboutUs/kim.jpg' },
-    { name: 'Kato Wong', title: 'Sales Manager, ADMC-3 Program Manager', image: '/src/assets/AboutUs/kato.jpg' },
-    { name: 'Matt Walz', title: 'SEWP Program Manager', image: '/src/assets/AboutUs/matt.jpg' },
-    { name: 'Thien Duc Phung', title: 'GSA & 2GIT Contract Manager', image: '/src/assets/AboutUs/thein.jpg' },
-    { name: 'Rachel Mock', title: 'GSA & 2GIT Program Manager', image: '/src/assets/AboutUs/rachel.jpg' },
-    { name: 'Anthony Hernandez', title: 'Project Manager', image: '/src/assets/AboutUs/anthony.jpg' },
-    { name: 'McKenna Mulligan', title: 'Project Manager', image: '/src/assets/AboutUs/mckenna.jpg' }
+    { name: 'Mark Evans', title: 'President', image: './assets/AboutUs/mark.jpg' },
+    { name: 'Diana Zhong', title: 'Financial Quantitative Analyst', image: './assets/AboutUs/diana.jpg' },
+    { name: 'Rashawn Hugg', title: 'Senior Program Manager', image: './assets/AboutUs/rashawn.jpg' },
+    { name: 'Chase Cai', title: 'Purchasing Manager', image: './assets/AboutUs/chase.jpg' },
+    { name: 'Kim Lambert', title: 'Sales Manager/Deputy SEWP Program Manager', image: './assets/AboutUs/kim.jpg' },
+    { name: 'Kato Wong', title: 'Sales Manager, ADMC-3 Program Manager', image: './assets/AboutUs/kato.jpg' },
+    { name: 'Matt Walz', title: 'SEWP Program Manager', image: './assets/AboutUs/matt.jpg' },
+    { name: 'Thien Duc Phung', title: 'GSA & 2GIT Contract Manager', image: './assets/AboutUs/thein.jpg' },
+    { name: 'Rachel Mock', title: 'GSA & 2GIT Program Manager', image: './assets/AboutUs/rachel.jpg' },
+    { name: 'Anthony Hernandez', title: 'Project Manager', image: './assets/AboutUs/anthony.jpg' },
+    { name: 'McKenna Mulligan', title: 'Project Manager', image: './assets/AboutUs/mckenna.jpg' }
   ];
 
   return (
@@ -135,7 +135,7 @@ const AboutUs = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/src/assets/AboutUs/Group-scaled.jpg)'
+            backgroundImage: 'url(./assets/AboutUs/Group-scaled.jpg)'
           }}
         >
           <div className="absolute inset-0 bg-blue-500 opacity-40 mix-blend-overlay"></div>

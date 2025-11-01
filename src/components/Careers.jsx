@@ -584,10 +584,10 @@ const Careers = () => {
 
     // Team photos
     const teamPhotos = [
-        { src: '/src/assets/Careers/team-1.jpg', alt: 'Team Photo 1' },
-        { src: '/src/assets/Careers/team-2.jpg', alt: 'Team Photo 2' },
-        { src: '/src/assets/Careers/team-3.jpg', alt: 'Team Photo 3' },
-        { src: '/src/assets/Careers/team-4.jpg', alt: 'Team Photo 4' }
+        { src: './assets/Careers/team-1.jpg', alt: 'Team Photo 1' },
+        { src: './assets/Careers/team-2.jpg', alt: 'Team Photo 2' },
+        { src: './assets/Careers/team-3.jpg', alt: 'Team Photo 3' },
+        { src: './assets/Careers/team-4.jpg', alt: 'Team Photo 4' }
     ];
 
     const toggleJob = (index) => {

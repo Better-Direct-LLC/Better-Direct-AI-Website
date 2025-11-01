@@ -54,7 +54,7 @@ const EmployeeReview = () => {
         <div className="min-h-screen relative">
             {/* Background Image */}
             <img 
-                src="/src/assets/Success/1.jpg"
+                src="./assets/Success/1.jpg"
                 alt="Office Background"
                 className="absolute inset-0 w-full h-full object-cover z-0"
                 onError={(e) => {

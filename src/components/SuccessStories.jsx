@@ -50,7 +50,7 @@ const SuccessStories = () => {
               {/* Right side - Image */}
               <div>
                 <img 
-                  src="/src/assets/Success/1.jpg"
+                  src="./assets/Success/1.jpg"
                   alt="Better Direct Office"
                   className="w-full h-auto rounded-lg shadow-xl"
                   onError={(e) => {

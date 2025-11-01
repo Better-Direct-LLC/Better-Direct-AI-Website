@@ -21,7 +21,7 @@ const Certifications = () => {
               {/* Right side - Image */}
               <div className="flex-1 flex justify-center items-center min-h-[300px]">
                 <img 
-                  src="/src/assets/Certifications/certi-1.png"
+                  src="./assets/Certifications/certi-1.png"
                   alt="ISO 9001 DEKRA Certified"
                   className="w-full h-full max-w-full max-h-[400px] object-contain rounded-lg "
                   onError={(e) => {
@@ -52,7 +52,7 @@ const Certifications = () => {
               {/* Right side - Image */}
               <div className="flex justify-center items-start">
                 <img 
-                  src="/src/assets/Certifications/certi-2.png"
+                  src="./assets/Certifications/certi-2.png"
                   alt="ISO 20243 Open Group Certified"
                   className="w-full max-w-md h-auto"
                   onError={(e) => {

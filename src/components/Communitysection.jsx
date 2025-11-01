@@ -1,7 +1,7 @@
 import React from 'react';
-import image1 from '../assets/community-1.jpeg';
-import image2 from '../assets/community-2.jpeg';
-import image3 from '../assets/community-3.jpg';
+import image1 from '.././assets/community-1.jpeg';
+import image2 from '.././assets/community-2.jpeg';
+import image3 from '.././assets/community-3.jpg';
 
 const CommunitySection = () => {
   const images = [

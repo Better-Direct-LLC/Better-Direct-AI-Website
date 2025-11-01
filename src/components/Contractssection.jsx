@@ -1,10 +1,10 @@
 import React from 'react';
-import SEWP from '../assets/SEWP.png';
-import Seaport from '../assets/Seaport.jpg';
-import TwoGIT from '../assets/2GIT.png';
-import CHESS from '../assets/ADMC.png';
-import GSA from '../assets/GSA.jpg';
-import ITES from '../assets/ITES.png';
+import SEWP from '.././assets/SEWP.png';
+import Seaport from '.././assets/Seaport.jpg';
+import TwoGIT from '.././assets/2GIT.png';
+import CHESS from '.././assets/ADMC.png';
+import GSA from '.././assets/GSA.jpg';
+import ITES from '.././assets/ITES.png';
 
 const ContractsSection = () => {
   // You'll add your actual contract logo images here

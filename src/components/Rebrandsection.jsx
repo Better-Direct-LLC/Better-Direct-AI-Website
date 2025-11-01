@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assets/Logo1.png';
+import Logo from '.././assets/Logo1.png';
 
 const RebrandSection = () => {
   return (

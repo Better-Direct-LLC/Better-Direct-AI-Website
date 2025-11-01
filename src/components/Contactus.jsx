@@ -33,14 +33,14 @@ const ContactUs = () => {
   const slides = [
     {
       type: 'location',
-      image: '/src/assets/Contactus/carousel-1.jpg',
+      image: './assets/Contactus/carousel-1.jpg',
       title: 'Location',
       address: '2425 East University Drive, Tempe, AZ 85288',
       mailing: 'P.O. Box 7430, Tempe, AZ 85281'
     },
     {
       type: 'contact',
-      image: '/src/assets/Contactus/carousel-2.jpg',
+      image: './assets/Contactus/carousel-2.jpg',
       title: 'Contact Details',
       phone: '(480) 921-3858 / (866) 921-3858',
       fax: '(366) 458-2636',
@@ -48,7 +48,7 @@ const ContactUs = () => {
     },
     {
       type: 'hours',
-      image: '/src/assets/Contactus/carousel-3.jpg',
+      image: './assets/Contactus/carousel-3.jpg',
       title: 'Office Hours',
       schedule: [
         { day: 'Monday', hours: '5AM – 7PM' },
@@ -250,7 +250,7 @@ const ContactUs = () => {
             {/* Left side - Image */}
             <div className="order-2 md:order-1">
               <img 
-                src="/src/assets/Contactus/bd.jpg"
+                src="./assets/Contactus/bd.jpg"
                 alt="Better Direct Presentation"
                 className="w-full h-auto rounded-lg shadow-xl"
                 onError={(e) => {

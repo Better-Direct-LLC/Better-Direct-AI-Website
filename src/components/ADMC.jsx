@@ -6,14 +6,14 @@ const ADMC = () => {
         {
             name: 'KaTo Wong',
             title: 'Sales Manager, ADMC-3 Contract Manager',
-            photo: '/src/assets/Contracts/2Git/kato.jpg',
+            photo: './assets/Contracts/2Git/kato.jpg',
             description: 'Kato Wong is a Better Direct Sales Manager. Since 2018, he has overseen the ADMC-3 and Army CHESS contracts for the company. He focuses on building long-term relationships with his customers so he can better understand their operational requirements and align IT solutions to their needs.',
             buttonText: 'Contact KaTo'
         },
         {
             name: 'Diana Zhong',
             title: 'Director of Operations and Finance, ADMC-3 Contract Manager',
-            photo: '/src/assets/Contracts/2Git/diana.jpg',
+            photo: './assets/Contracts/2Git/diana.jpg',
             description: 'Diana Zhong is the Manager of Operations and Finance at Better Direct. In her Operations role, she aligns the departments with strategic goals and watches over the government projects so they run seamlessly. On the financial side, Diana optimizes the profitability of the company by making sure it runs efficiently, and by mitigating its financial risk. She also has the role of co-manager of the Army CHESS ADMC-3 contract.',
             buttonText: 'Contact Diana'
         }
@@ -39,7 +39,7 @@ const ADMC = () => {
                             {/* Right side - Logo */}
                             <div className="flex justify-center">
                                 <img
-                                    src="/src/assets/Contracts/2Git/ADMC.png"
+                                    src="./assets/Contracts/2Git/ADMC.png"
                                     alt="ADMC Logo"
                                     className="w-64 h-auto"
                                     onError={(e) => {
@@ -179,7 +179,7 @@ const ADMC = () => {
                             <div className="flex-shrink-0">
                                 <div className="w-20 h-20  overflow-hidden shadow-lg">
                                     <img
-                                        src="/src/assets/Contracts/2Git/agyness.jpg"
+                                        src="./assets/Contracts/2Git/agyness.jpg"
                                         alt="Agness Tsang"
                                         className="w-full h-full object-cover"
                                         onError={(e) => {

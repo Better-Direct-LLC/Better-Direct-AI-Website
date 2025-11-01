@@ -6,7 +6,7 @@ const SeaPort = () => {
         {
             name: 'Rashawn Hugg',
             title: 'Seaport Contract Manager',
-            photo: '/src/assets/Contracts/2Git/rashawn.jpg',
+            photo: './assets/Contracts/2Git/rashawn.jpg',
             description: 'Rashawn Hugg is Better Direct’s Senior Program Manager. He leads federal contract programs and project management teams, supporting agencies like NGA, DIA, and NSA. Rashawn develops partner relationships for the company as well as professional services initiatives. Rashawn’s goal is to ensure successful project completion for Better Direct’s customers.',
             buttonText: 'Contact Rashawn'
         }
@@ -32,7 +32,7 @@ const SeaPort = () => {
                             {/* Right side - Logo */}
                             <div className="flex justify-center">
                                 <img
-                                    src="/src/assets/Contracts/2Git/Seaport.jpg"
+                                    src="./assets/Contracts/2Git/Seaport.jpg"
                                     alt="SeaPort Logo"
                                     className="w-64 h-auto"
                                     onError={(e) => {
@@ -186,7 +186,7 @@ const SeaPort = () => {
                             <div className="flex-shrink-0">
                                 <div className="w-20 h-20  overflow-hidden shadow-lg">
                                     <img
-                                        src="/src/assets/Contracts/2Git/anthony.jpg"
+                                        src="./assets/Contracts/2Git/anthony.jpg"
                                         alt="Anthony Hernandez"
                                         className="w-full h-full object-cover"
                                         onError={(e) => {
