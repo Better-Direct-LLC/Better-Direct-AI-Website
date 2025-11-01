@@ -1,12 +1,12 @@
 import React from 'react';
-import HeroSection from '../components/HeroSection.jsx';
-import ContractsSection from '../components/Contractssection.jsx';
+import HeroSection from '../components/HeroSection';
+import ContractsSection from '../components/Contractssection';
 import RebrandSection from '../components/Rebrandsection';
-import WhatWeDoSection from '../components/WhatWeDosection';
-import HubZoneSection from '../components/HubZonesection';
-import CommunitySection from '../components/Communitysection';
-import ServicesSection from '../components/Servicessection';
-import PartnersSection from '../components/PartnersSection.jsx';
+import WhatWeDoSection from '../components/Whatwedosection';
+import HubZoneSection from '../components/Hubzonesection.jsx';
+import CommunitySection from '../components/Communitysection.jsx';
+import ServicesSection from '../components/Servicessection.jsx';
+import PartnersSection from '../components/Partnerssection.jsx';
 
 const Home = () => {
   return (
