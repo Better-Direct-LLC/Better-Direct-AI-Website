@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Better-Direct-AI-Website/',
+  base: '/', // Use root path for custom domains
   plugins: [react()],
 })
