@@ -7,7 +7,7 @@ import AboutUs from './components/AboutUs';
 import BuyNow from './components/BuyNow';
 import CapabilityStatement from './components/CapabilityStatement';
 import Careers from './components/Careers';
-import ContactUs from './components/ContactUs';
+import Contactus from './components/Contactus';
 import Contracts from './components/Contracts';
 import News from './components/News';
 import Services from './components/Services';
@@ -36,7 +36,7 @@ function App() {
           <Route path="/buy-now" element={<BuyNow />} />
           <Route path="/capability-statement" element={<CapabilityStatement />} />
           <Route path="/careers" element={<Careers />} />
-          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/contact-us" element={<Contactus />} />
           <Route path="/contracts" element={<Contracts />} />
           <Route path="/news" element={<News />} />
           <Route path="/services" element={<Services />} />
