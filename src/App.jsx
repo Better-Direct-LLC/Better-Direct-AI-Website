@@ -14,7 +14,7 @@ import Services from './components/Services';
 import SuccessStories from './components/SuccessStories';
 import Certifications from './components/Certifications';
 import EmployeeReview from './components/EmployeeReview';
-import TwoGIT from './components/TwoGit';
+import TwoGIT from './components/TwoGIT';
 import MAS from './components/MAS';
 import SEWP from './components/SEWP';
 import ADMC from './components/ADMC';
