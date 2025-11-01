@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
@@ -23,7 +23,7 @@ import SeaPort from './components/SeaPort';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         {/* Navbar appears on all pages */}
         <Navbar />
@@ -66,7 +66,7 @@ function App() {
         {/* Footer will go here when you create it */}
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

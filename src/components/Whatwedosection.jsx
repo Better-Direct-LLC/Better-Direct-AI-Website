@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import image1 from '../assets/whatwedo-1.jpeg';
 import image2 from '../assets/whatwedo-2.jpg';
 import image3 from '../assets/whatwedo-3.jpeg';
@@ -51,12 +52,12 @@ const WhatWeDoSection = () => {
                   {service.description}
                 </p>
                 {service.hasButton && (
-                  <a 
-                    href="/gsa-partnership"
+                  <Link 
+                    to="/gsa"
                     className="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium rounded hover:bg-blue-600 hover:text-white transition-all duration-300"
                   >
                     Partner with us on GSA
-                  </a>
+                  </Link>
                 )}
               </div>
             </div>

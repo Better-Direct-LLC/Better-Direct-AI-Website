@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero_section from '../assets/Hero_section.jpeg';
 
 const HeroSection = () => {
@@ -16,12 +17,12 @@ const HeroSection = () => {
                 If you're an OEM interested in joining our GSA schedule
               </p>
               <div>
-                <a 
-                  href="/contracts"
+                <Link 
+                  to="/contracts"
                   className="inline-block px-8 py-3 border-2 border-blue-600 text-blue-600 font-medium rounded hover:bg-blue-600 hover:text-white transition-all duration-300"
                 >
                   Explore our Contracts
-                </a>
+                </Link>
               </div>
             </div>
 

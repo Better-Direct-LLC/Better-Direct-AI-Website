@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/Logo1.png';
 
 const Navbar = () => {
@@ -50,37 +51,37 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex items-center flex-shrink-0">
-              <a href="/" className="flex items-center">
+              <Link to="/" className="flex items-center">
                 <img
                   src={Logo}
                   alt="BetterDirect AI Logo"
                   className="h-14 w-auto max-w-xs object-contain"
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Navigation Links */}
             <div className="hidden xl:flex items-center gap-6">
               {/* About Us - with dropdown */}
               <div className="group relative">
-                <a
-                  href="/about-us"
+                <Link
+                  to="/about-us"
                   className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200 py-2"
                 >
                   About Us
-                </a>
+                </Link>
                 {/* Dropdown */}
                 <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[200px] border-t-4 border-t-blue-600">
-                    <a href="/certifications" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <Link to="/certifications" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
                       Certifications
-                    </a>
+                    </Link>
                     <a href="https://drive.google.com/file/d/1Ktch401esB3V1p8dNACra15UUbHVUc_p/view" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
                       Credit Application
                     </a>
-                    <a href="/employee-review" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <Link to="/employee-review" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
                       Employee Review
-                    </a>
+                    </Link>
                     <a href="https://drive.google.com/file/d/1ErvMYOaUJKVTVquuXcaWNO-Nrni2bTLC/view" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
                       W-9
                     </a>
@@ -90,12 +91,12 @@ const Navbar = () => {
 
               {/* Buy Now - with dropdown */}
               <div className="group relative">
-                <a
-                  href="/buy-now"
+                <Link
+                  to="/buy-now"
                   className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200 py-2"
                 >
                   Buy Now
-                </a>
+                </Link>
                 {/* Dropdown - Add your Buy Now dropdown items here */}
                 <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[200px] border-t-4 border-t-blue-600">
@@ -121,87 +122,87 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <a
-                href="/capability-statement"
+              <Link
+                to="/capability-statement"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
               >
                 Capability statement
-              </a>
+              </Link>
 
-              <a
-                href="/careers"
+              <Link
+                to="/careers"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
               >
                 Careers
-              </a>
+              </Link>
 
-              <a
-                href="/contact-us"
+              <Link
+                to="/contact-us"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
               >
                 Contact Us
-              </a>
+              </Link>
 
               {/* Contracts - with dropdown */}
               <div className="group relative">
-                <a
-                  href="/contracts"
+                <Link
+                  to="/contracts"
                   className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200 py-2"
                 >
                   Contracts
-                </a>
+                </Link>
                 {/* Dropdown - Add your Contracts dropdown items here */}
                 <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[200px] border-t-4 border-t-blue-600">
-                    <a href="/2git" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <Link to="/2git" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
                       GSA 2GIT
-                    </a>
-                    <a href="/mas" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    </Link>
+                    <Link to="/mas" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
                       GSA MAS
-                    </a>
-                    <a href="/sewp" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    </Link>
+                    <Link to="/sewp" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
                       SEWP V
-                    </a>
-                    <a href="/admc" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    </Link>
+                    <Link to="/admc" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
                       ADMC 3
-                    </a>
-                    <a href="/ites" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    </Link>
+                    <Link to="/ites" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
                       ITES-4H
-                    </a>
-                    <a href="/seaport" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    </Link>
+                    <Link to="/seaport" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
                       SEAPORT
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
 
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
               >
                 Home
-              </a>
+              </Link>
 
-              <a
-                href="/news"
+              <Link
+                to="/news"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
               >
                 News
-              </a>
+              </Link>
 
-              <a
-                href="/services"
+              <Link
+                to="/services"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
               >
                 Services
-              </a>
+              </Link>
 
-              <a
-                href="/success-stories"
+              <Link
+                to="/success-stories"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
               >
                 Success Stories
-              </a>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
@@ -231,36 +232,36 @@ const Navbar = () => {
           {isMobileMenuOpen && (
             <div className="xl:hidden pb-4 border-t border-gray-200">
               <div className="flex flex-col space-y-3 pt-4">
-                <a href="/about-us" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                <Link to="/about-us" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
                   About Us
-                </a>
-                <a href="/buy-now" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                </Link>
+                <Link to="/buy-now" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
                   Buy Now
-                </a>
-                <a href="/capability-statement" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                </Link>
+                <Link to="/capability-statement" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
                   Capability statement
-                </a>
-                <a href="/careers" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                </Link>
+                <Link to="/careers" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
                   Careers
-                </a>
-                <a href="/contact-us" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                </Link>
+                <Link to="/contact-us" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
                   Contact Us
-                </a>
-                <a href="/contracts" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                </Link>
+                <Link to="/contracts" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
                   Contracts
-                </a>
-                <a href="/" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                </Link>
+                <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
                   Home
-                </a>
-                <a href="/news" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                </Link>
+                <Link to="/news" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
                   News
-                </a>
-                <a href="/services" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                </Link>
+                <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
                   Services
-                </a>
-                <a href="/success-stories" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                </Link>
+                <Link to="/success-stories" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
                   Success Stories
-                </a>
+                </Link>
               </div>
             </div>
           )}

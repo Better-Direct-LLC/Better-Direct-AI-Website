@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Contracts = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -56,42 +57,42 @@ const Contracts = () => {
       title: 'General Services Administration (GSA) Multiple Award Schedule (MAS)',
       description: 'Better Direct elevates your IT procurement as a strategic partner under GSA MAS (Contract #GS-35F-0503X), providing access to over 400,000 products from 140+ OEMs like Dell, HP, and Dell. Ideal for federal, state, and local agencies, we offer competitive pricing, personalized expertise across SINs such as IT Hardware (33411), Furniture (33721), Professional Services (54151), Security (334010), Office Equipment (339940), Software (511210), and Maintenance (811212), effortless acquisition via GSA Advantage, full FAR/TAA/cybersecurity compliance, and swift, scalable solutions backed by proven results like $40M+ in Navy repairs.',
       buttonText: 'Learn More About GSA MAS',
-      buttonLink: '#'
+      buttonLink: '/mas'
     },
     {
       logo: '/src/assets/Contracts/LOGOS/2git.png',
       title: '2nd Generation Information Technology (2GIT) Blanket Purchase Agreement (BPA)',
       description: 'Better Direct is your premier partner under the GSA-managed 2GIT BPA (Contract #47QTCA21A000P), offering cutting-edge IT hardware, software, and services through March 30, 2026. Tailored for federal, state, local, tribal, and regional governments, including the U.S. Air Force and DoD, we deliver maximized savings with pre-negotiated discounts, expert guidance on SINs like IT Hardware (33411), Services (54151), Software (511210), and Maintenance (811212), seamless ordering via GSA Advantage or eBuy, trusted FAR/DoD compliance, and rapid delivery from 70+ vendors, including 50+ small businesses, for scalable IT modernization.',
       buttonText: 'Learn More About GSA 2GIT',
-      buttonLink: '#'
+      buttonLink: '/2git'
     },
     {
       logo: '/src/assets/Contracts/sewp.png',
       title: 'NASA SEWP V',
       description: 'Better Direct powers federal IT needs as a key partner under NASA\'s SEWP V GWAC, holding contracts in Group A (NNG15SD45B), Group B (NNG15SD10B), and Group C (NNG15SD65B). As an SDVOSB and HUBZone-certified company, we provide cost-effective IT products and services, including hardware, networking, software, cloud, mobility, and supporting tech, with expert support, seamless ordering via the SEWP Quote Request Tool, FAR-compliant solutions, and rapid scalability for any agency mission, proven by achievements like $40M+ in Navy repairs.',
       buttonText: 'Learn More About SEWP V',
-      buttonLink: '#'
+      buttonLink: '/sewp'
     },
     {
       logo: '/src/assets/Contracts/admc.png',
       title: 'Chess ADMC-3',
       description: 'Better Direct is your go-to partner under the ADMC-3 BPA (W52P1J-20-D-0018) within the Army\'s CHESS program, delivering fee-free COTS IT hardware like desktops, notebooks, tablets, printers, displays, and accessories to the U.S. Army, DoD, and all federal agencies. As the sole SDVOSB and HUBZone vendor among 10 awardees, we offer cost mastery, tailored expert guidance, effortless ordering via CHESS IT e-mart, full FAR/DoD compliance, and fast, scalable solutions, highlighted by a 130.25% sales increase in 2023 and 64.3% in 2024.',
       buttonText: 'Learn More About ADMC-3',
-      buttonLink: '#'
+      buttonLink: '/admc'
     },
     {
       logo: '/src/assets/Contracts/LOGOS/Seaport.jpg',
       title: 'Navy Seaport NXG',
       description: 'Better Direct supports Navy missions under the SeaPort-NxG IDIQ (N0017825D7129), a $4B vehicle running through January 1, 2029, for engineering, program management, and IT services across commands like NAVSEA, NAVWAR, and USMC. We deliver best-value pricing, expert-led solutions in design, testing, risk management, AI/ML, secure infrastructure, and incidental materials, streamlined Task Orders, FAR/DFARS/DoD compliance, and scalable, rapid deployment for innovative projects, ensuring mission success with our proven federal expertise.',
       buttonText: 'Learn More About Seaport',
-      buttonLink: '#'
+      buttonLink: '/seaport'
     },
     {
       logo: '/src/assets/Contracts/LOGOS/ITES.png',
       title: 'Chess ITES-4H',
       description: 'Better Direct is your trusted partner under the ITES-4H contract (W52P1J-23-D-0005), delivering cost-effective, compliant, and mission-ready IT hardware for the Army, DoD, and federal agencies. Through CHESS IT e-mart, we offer zero-fee pricing and a comprehensive portfolio of desktops, laptops, servers, tablets, printers, monitors, and accessories, delivered quickly and reliably. As a Service-Disabled Veteran-Owned Small Business (SDVOSB) and Certified HUBZone vendor, we combine speed, scalability, and expertise to ensure your agency\'s IT needs are met with precision and value.',
       buttonText: 'Learn More About ITES-4H',
-      buttonLink: '#'
+      buttonLink: '/ites'
     }
   ];
 
@@ -260,12 +261,12 @@ const Contracts = () => {
                 </p>
 
                 {/* Button */}
-                <a 
-                  href={contract.buttonLink}
+                <Link 
+                  to={contract.buttonLink}
                   className="inline-block px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-medium rounded hover:bg-cyan-400 hover:text-white transition-all duration-300"
                 >
                   {contract.buttonText}
-                </a>
+                </Link>
               </div>
             ))}
           </div>

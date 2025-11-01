@@ -1,5 +1,6 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 // ImageCarousel component for 4-image auto-fading carousel with manual navigation
@@ -170,12 +171,12 @@ const BuyNow = () => {
                     <p className="mb-6 leading-relaxed">
                       {carouselItems[currentSlide].description}
                     </p>
-                    <a 
-                      href={carouselItems[currentSlide].buttonLink}
+                    <Link 
+                      to={carouselItems[currentSlide].buttonLink}
                       className="inline-block px-6 py-3 border-2 border-white text-white font-medium rounded hover:bg-white hover:text-blue-600 transition-all duration-300"
                     >
                       {carouselItems[currentSlide].buttonText}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
