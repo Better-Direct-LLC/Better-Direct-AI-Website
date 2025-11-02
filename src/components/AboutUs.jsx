@@ -130,7 +130,7 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Background Image and Animated Text */}
-      <section className="relative h-160 overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image with strong blue tint and moved down */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -142,20 +142,20 @@ const AboutUs = () => {
         </div>
 
         {/* Animated Text Overlay - nearly transparent */}
-        <div className="relative h-full flex items-center justify-center px-4">
+        <div className="relative w-full flex items-center justify-center px-4 py-20">
           <div
-            className={`rounded-xl shadow-2xl p-8 md:p-10 max-w-5xl w-full mt-20 transition-all duration-1000 transform ${
+            className={`rounded-xl shadow-2xl p-6 md:p-10 max-w-5xl w-full transition-all duration-1000 transform ${
               showHeroText
-                ? 'translate-y-0 opacity-100 h-[20rem]'
-                : 'translate-y-10 opacity-0 h-[20rem]'
+                ? 'translate-y-0 opacity-100'
+                : 'translate-y-10 opacity-0'
             }`}
             style={{ background: showHeroText ? 'rgba(248, 248, 248, 0.33)' : 'rgba(255, 255, 255, 0)' }}
           >
-            <h1 className="text-3xl md:text-4xl font-bold text-blue-600 mb-4 text-start leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 mb-4 text-start leading-tight">
               Rooted in Our Community, Driven by Innovation
             </h1>
-            <div className="w-16 h-1 bg-blue-400 mb-12"></div>
-            <p className="text-blue-900 text-start leading-relaxed">
+            <div className="w-16 h-1 bg-blue-400 mb-6 md:mb-8"></div>
+            <p className="text-sm md:text-base text-blue-900 text-start leading-relaxed">
               Since 2006, we've grown alongside Tempe, Arizona, creating opportunities for local talent and building IT solutions that make a difference. As a HUBZone-certified business, we take pride in employing community members who bring skill, dedication, and fresh ideas to every project, strengthening both our company and the neighborhoods we serve.
             </p>
           </div>
