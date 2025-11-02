@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const AboutUs = () => {
   const [showHeroText, setShowHeroText] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState(null);
 
   // Animate hero text after component mounts
   useEffect(() => {
@@ -98,7 +99,7 @@ const AboutUs = () => {
       name: 'Anthony Hernandez',
       title: 'Project Manager',
       image: './assets/AboutUs/video/anthony.png',
-      videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
+      videoUrl: 'https://www.youtube.com/embed/0d421a52-0fd5-40a3-a247-8bff156ca3ea',
       bio: 'Anthony Hernandez is the Project Manager at Better Direct. In this role, he leads the company\'s services team, and Theirn handles installations, repairs, and custom manufacturing projects. Years ago he started in data entry at Better Direct, and has grown with the company to manage house accounts and high-value contracts. He meets Better Direct\'s high standards as he delivers excellent customer services.',
       imagePosition: 'right'
     },
@@ -184,29 +185,53 @@ const AboutUs = () => {
               {/* Image and Video - Order changes based on imagePosition */}
               <div className={`${member.imagePosition === 'right' ? 'md:order-2' : ''}`}>
                 <div className="relative rounded-lg overflow-hidden shadow-lg">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                    style={{ height: '300px'}}
-                    onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/420x300?text=' + encodeURIComponent(member.name);
-                    }}
-                  />
-                  {/* Video Play Button Overlay */}
-                  <a 
-                    href={member.videoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute inset-0 flex items-center justify-center group"
-                  >
-                      <div className="w-16 h-16 flex items-center justify-center">
-                        <svg className="w-14 h-14" viewBox="0 0 56 56" fill="none">
-                          <circle cx="28" cy="28" r="26" stroke="#60a5fa" strokeWidth="4" fill="transparent" />
-                          <polygon points="22,18 22,38 40,28" fill="#60a5fa" />
+                  {currentVideo === member.videoUrl ? (
+                    // Video Player
+                    <div className="relative w-full" style={{ height: '300px' }}>
+                      <iframe
+                        className="absolute top-0 left-0 w-full h-full"
+                        src={member.videoUrl}
+                        title={`${member.name} Video Interview`}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                      {/* Close button */}
+                      <button 
+                        onClick={() => setCurrentVideo(null)}
+                        className="absolute top-2 right-2 bg-black bg-opacity-50 text-white rounded-full p-1 hover:bg-opacity-70 transition-all"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                         </svg>
-                      </div>
-                  </a>
+                      </button>
+                    </div>
+                  ) : (
+                    // Image with Play Button
+                    <>
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                        style={{ height: '300px'}}
+                        onError={(e) => {
+                          e.target.src = 'https://via.placeholder.com/420x300?text=' + encodeURIComponent(member.name);
+                        }}
+                      />
+                      {/* Video Play Button Overlay */}
+                      <button 
+                        onClick={() => setCurrentVideo(member.videoUrl)}
+                        className="absolute inset-0 flex items-center justify-center group hover:bg-black hover:bg-opacity-20 transition-all duration-300"
+                      >
+                          <div className="w-16 h-16 flex items-center justify-center">
+                            <svg className="w-14 h-14" viewBox="0 0 56 56" fill="none">
+                              <circle cx="28" cy="28" r="26" stroke="#60a5fa" strokeWidth="4" fill="transparent" />
+                              <polygon points="22,18 22,38 40,28" fill="#60a5fa" />
+                            </svg>
+                          </div>
+                      </button>
+                    </>
+                  )}
                 </div>
               </div>
 
