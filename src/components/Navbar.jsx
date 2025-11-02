@@ -1,12 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '.././assets/Logo1.png';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navRef = useRef(null);
+
+  // Function to close mobile menu when link is clicked
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
 
   return (
-    <nav className="w-full bg-white">
+    <nav className="w-full bg-white" ref={navRef}>
       {/* Top Bar with CTA Buttons */}
       <div className="border-b border-gray-200 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -232,34 +255,34 @@ const Navbar = () => {
           {isMobileMenuOpen && (
             <div className="xl:hidden pb-4 border-t border-gray-200">
               <div className="flex flex-col space-y-3 pt-4">
-                <Link to="/about-us" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                <Link to="/about-us" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
                   About Us
                 </Link>
-                <Link to="/buy-now" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                <Link to="/buy-now" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
                   Buy Now
                 </Link>
-                <Link to="/capability-statement" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                <Link to="/capability-statement" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
                   Capability statement
                 </Link>
-                <Link to="/careers" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                <Link to="/careers" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
                   Careers
                 </Link>
-                <Link to="/contact-us" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                <Link to="/contact-us" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
                   Contact Us
                 </Link>
-                <Link to="/contracts" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                <Link to="/contracts" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
                   Contracts
                 </Link>
-                <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
                   Home
                 </Link>
-                <Link to="/news" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                <Link to="/news" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
                   News
                 </Link>
-                <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
                   Services
                 </Link>
-                <Link to="/success-stories" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2">
+                <Link to="/success-stories" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
                   Success Stories
                 </Link>
               </div>
