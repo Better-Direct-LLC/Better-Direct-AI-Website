@@ -31,11 +31,11 @@ const CapabilityStatement = () => (
            We specialize in comprehensive hardware, software, and service offerings, providing access to over <b className="font-bold text-blue-700">2,000 trusted brands</b> and more than <b className="font-bold text-blue-700">400,000 products</b>. Our deep industry expertise, combined with our commitment to excellence and agility, makes Better Direct a strategic partner for federal, state, and commercial clients seeking scalable, cost-effective IT solutions.
           </p>
         </div>
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-start mt-10">
           <a
             href="./assets/Capability/Capabilities.pdf"
             download="Capability_Statement.pdf"
-            className="px-10 py-5 text-2xl font-bold rounded-full bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 text-white shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-blue-400"
+            className="px-6 py-2 text-lg font-bold rounded border-2 border-blue-600 bg-white text-blue-700 shadow transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-300 hover:bg-blue-50 hover:border-blue-700 hover:text-blue-800"
           >
             Download our Capability Statement
           </a>

@@ -36,7 +36,7 @@ const Navbar = () => {
           <div className="flex justify-end items-center gap-3">
             {/* Email us button */}
             <button
-              className="group relative px-6 py-2.5 border-2 border-blue-600 text-blue-600 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent"
+              className="group relative px-6 py-2.5 border-2 border-blue-600 text-blue-600 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent cursor-pointer"
               onClick={() => window.location.href = 'mailto:info@betterdirectai.com'}
             >
               <span className="relative inline-flex items-center gap-1">
@@ -56,14 +56,14 @@ const Navbar = () => {
             </p>
 
             {/* Buy Now button */}
-            <button className="group relative px-6 py-2.5 border-2 border-blue-600 text-blue-600 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent">
+            <Link to="/buy-now" className="group relative px-6 py-2.5 border-2 border-blue-600 text-blue-600 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent cursor-pointer">
               <span className="relative inline-flex items-center gap-1">
                 Buy Now
                 <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
                   »
                 </span>
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

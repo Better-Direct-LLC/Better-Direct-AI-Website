@@ -30,10 +30,10 @@ const Services = () => {
 
     // Video carousel data
     const videos = [
-        { id: 1, thumbnail: './assets/Services/joe.png', title: 'Joe', youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_1' },
-        { id: 2, thumbnail: './assets/Services/rashawn.png', title: 'Rashawn Hugg', youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_2' },
-        { id: 3, thumbnail: './assets/Services/anthony.png', title: 'Anthony Hernandez', youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_3' },
-        { id: 4, thumbnail: './assets/Services/mckenna.jpg', title: 'McKenna Mulligan', youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_4' },
+        { id: 1, thumbnail: './assets/Services/joe.png', title: 'Joe', youtubeUrl: 'https://www.youtube.com/embed/nWddftjCXD0' },
+        { id: 2, thumbnail: './assets/Services/rashawn.png', title: 'Rashawn Hugg', youtubeUrl: 'https://www.youtube.com/embed/W8buP_sxQl8' },
+        { id: 3, thumbnail: './assets/Services/anthony.png', title: 'Anthony Hernandez', youtubeUrl: 'https://www.youtube.com/embed/ekB2n8ZM4u4' },
+        { id: 4, thumbnail: './assets/Services/mckenna.jpg', title: 'McKenna Mulligan', youtubeUrl: 'https://www.youtube.com/embed/gOQocJ0WMzQ' },
     ];
 
     const [playerOpen, setPlayerOpen] = useState(false);
