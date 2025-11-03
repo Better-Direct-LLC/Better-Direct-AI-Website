@@ -8,14 +8,16 @@ const MAS = () => {
             title: 'Sales Manager, Deputy SEWP Program Manager',
             photo: './assets/Contracts/2Git/kim.jpg',
             description: 'Kim Lambert is a Sales Manager at Better Direct who leads a dynamic sales team. She works on developing strong partnerships with distributors and manufacturers, and she assists her team in helping customers grow. Her goal is for clients to receive fast service and tailored IT solutions, all at a better value. Kim challenges her team to innovate, so the team can deliver beyond expectations.',
-            buttonText: 'Contact Kim'
+            buttonText: 'Contact Kim',
+            link: 'mailto:kim@betterdirect.com'
         },
         {
             name: 'Matthew Walz',
             title: 'SEWP Program Manager',
             photo: './assets/Contracts/2Git/matt.jpg',
             description: 'Matthew Walz is the NASA SEWP Program Manager at Better Direct, which is its largest revenue-generating contract. Matt works closely with federal procurement teams to deliver IT solutions to government agencies. He focuses on expanding partnerships with OEMs to ensure he has the best possible solutions for Better Direct’s clients.',
-            buttonText: 'Contact Matthew'
+            buttonText: 'Contact Matthew',
+            link: 'mailto:matthew.walz@betterdirect.com'
         }
     ];
 
@@ -173,7 +175,9 @@ const MAS = () => {
                                     </p>
 
                                     {/* Contact Button */}
-                                    <button className="w-full px-4 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors">
+                                   <button
+                                        onClick={() => window.location.href = member.link}
+                                        className="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400">
                                         {member.buttonText}
                                     </button>
                                 </div>

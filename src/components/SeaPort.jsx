@@ -8,7 +8,8 @@ const SeaPort = () => {
             title: 'Seaport Contract Manager',
             photo: './assets/Contracts/2Git/rashawn.jpg',
             description: 'Rashawn Hugg is Better Direct’s Senior Program Manager. He leads federal contract programs and project management teams, supporting agencies like NGA, DIA, and NSA. Rashawn develops partner relationships for the company as well as professional services initiatives. Rashawn’s goal is to ensure successful project completion for Better Direct’s customers.',
-            buttonText: 'Contact Rashawn'
+            buttonText: 'Contact Rashawn',
+            link: 'mailto:rashawn.hugg@betterdirect.com'
         }
     ];
 
@@ -167,7 +168,9 @@ const SeaPort = () => {
                                     </p>
 
                                     {/* Contact Button */}
-                                    <button className="w-full px-4 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors">
+                                    <button
+                                        onClick={() => window.location.href = member.link}
+                                        className="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400">
                                         {member.buttonText}
                                     </button>
                                 </div>

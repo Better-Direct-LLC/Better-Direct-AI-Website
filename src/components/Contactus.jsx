@@ -3,6 +3,33 @@ import React, { useState, useEffect } from 'react';
 const ContactUs = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState({});
+  
+  // Form state
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  
+  // CAPTCHA state
+  const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, answer: 0 });
+  const [captchaInput, setCaptchaInput] = useState('');
+  const [captchaError, setCaptchaError] = useState('');
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  // Generate random CAPTCHA
+  const generateCaptcha = () => {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    setCaptcha({ num1, num2, answer: num1 + num2 });
+    setCaptchaInput('');
+    setCaptchaError('');
+  };
+
+  // Initialize CAPTCHA on component mount
+  useEffect(() => {
+    generateCaptcha();
+  }, []);
 
   // Intersection Observer for scroll animations
   useEffect(() => {
@@ -268,18 +295,49 @@ const ContactUs = () => {
                 Fast Quotes. Proven Contracts. Expert Support
               </p>
 
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={(e) => {
+                e.preventDefault();
+                
+                // Validate CAPTCHA
+                if (parseInt(captchaInput) !== captcha.answer) {
+                  setCaptchaError('Incorrect answer. Please try again.');
+                  generateCaptcha();
+                  return;
+                }
+                
+                // Create mailto link
+                const subject = encodeURIComponent('Contact Form Submission from ' + formData.name);
+                const body = encodeURIComponent(
+                  `Name: ${formData.name}\n` +
+                  `Message: ${formData.message}`
+                );
+                const mailtoLink = `mailto:parth.bhatt@betterdirect.com?subject=${subject}&body=${body}`;
+                
+                // Open email client
+                window.location.href = mailtoLink;
+                
+                // Show success message
+                setSubmitMessage('Email client opened! Please send the email to complete your message.');
+                
+                // Reset form
+                setFormData({ name: '', email: '', message: '' });
+                generateCaptcha();
+              }}>
                 {/* Name and Email in a row */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <input
                     type="text"
                     placeholder="Name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
                     className="w-full px-4 py-3 bg-gray-200 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
                     required
                   />
                   <input
                     type="email"
                     placeholder="Email Address"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
                     className="w-full px-4 py-3 bg-gray-200 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
                     required
                   />
@@ -289,6 +347,8 @@ const ContactUs = () => {
                 <textarea
                   placeholder="Message"
                   rows="6"
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
                   className="w-full px-4 py-3 bg-gray-200 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none"
                   required
                 ></textarea>
@@ -296,12 +356,23 @@ const ContactUs = () => {
                 {/* Captcha and Submit */}
                 <div className="flex items-center justify-end gap-4">
                   <div className="flex items-center gap-2">
-                    <span className="text-gray-700 font-medium">5 + 1 =</span>
+                    <span className="text-gray-700 font-medium">{captcha.num1} + {captcha.num2} =</span>
                     <input
                       type="text"
+                      value={captchaInput}
+                      onChange={(e) => setCaptchaInput(e.target.value.replace(/[^0-9]/g, ''))}
                       className="w-20 px-3 py-2 bg-gray-200 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
                       required
+                      inputMode="numeric"
                     />
+                    <button 
+                      type="button" 
+                      onClick={generateCaptcha}
+                      className="ml-2 px-2 py-1 text-xs border border-cyan-400 rounded text-cyan-400 hover:bg-cyan-400 hover:text-white transition-all"
+                      title="Generate new question"
+                    >
+                      ↻
+                    </button>
                   </div>
                   <button
                     type="submit"
@@ -310,6 +381,18 @@ const ContactUs = () => {
                     SUBMIT
                   </button>
                 </div>
+                
+                {/* Error and Success Messages */}
+                {captchaError && (
+                  <div className="text-red-500 font-medium text-right">
+                    {captchaError}
+                  </div>
+                )}
+                {submitMessage && (
+                  <div className="text-green-600 font-medium text-right">
+                    {submitMessage}
+                  </div>
+                )}
               </form>
             </div>
           </div> {/* End grid */}

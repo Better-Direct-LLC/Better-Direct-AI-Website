@@ -8,21 +8,24 @@ const ITES = () => {
             title: 'Founder & President',
             photo: './assets/Contracts/2Git/mark.jpg',
             description: 'Mark Evans, a two-tour combat veteran and IT expert, founded Better Direct, growing it into a HUBZone-certified, Service-Disabled Veteran-Owned IT VAR with 45+ employees. With deep expertise in enterprise IT solutions, hardware procurement, and technology strategy, he leads with innovation, customer success, and community impact, guiding his team to deliver cutting-edge IT solutions.',
-            buttonText: 'Contact Mark'
+            buttonText: 'Contact Mark',
+            link: 'mailto:mark@betterdirect.com'
         },
         {
             name: 'KaTo Wong',
             title: 'Sales Manager, ITES-4H Contract Manager',
             photo: './assets/Contracts/2Git/kato.jpg',
             description: 'Kato Wong is a Better Direct Sales Manager. Since 2018, he has overseen the ITES-4H contract for the company. He focuses on building long-term relationships with his customers so he can better understand their operational requirements and align IT solutions to their needs.',
-            buttonText: 'Contact KaTo'
+            buttonText: 'Contact KaTo',
+            link: 'mailto:kato@betterdirect.com'
         },
         {
             name: 'Diana Zhong',
             title: 'Director of Operations and Finance, ITES-4H Contract Manager',
             photo: './assets/Contracts/2Git/diana.jpg',
             description: 'Diana Zhong is the Manager of Operations and Finance at Better Direct. In her Operations role, she aligns the departments with strategic goals and watches over the government projects so they run seamlessly. On the financial side, Diana optimizes the profitability of the company by making sure it runs efficiently, and by mitigating its financial risk. She also has the role of co-manager of the ITES-4H contract.',
-            buttonText: 'Contact Diana'
+            buttonText: 'Contact Diana',
+            link: 'mailto:diana@betterdirect.com'
         }
     ];
 
@@ -172,7 +175,9 @@ const ITES = () => {
                                     </p>
 
                                     {/* Contact Button */}
-                                    <button className="w-full px-4 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors">
+                                   <button
+                                        onClick={() => window.location.href = member.link}
+                                        className="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400">
                                         {member.buttonText}
                                     </button>
                                 </div>

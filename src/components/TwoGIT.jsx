@@ -8,21 +8,24 @@ const TwoGIT = () => {
       title: 'GSA & 2GIT Program Manager',
       photo: './assets/Contracts/2Git/rachel.png',
       description: 'Rachel Mock, Better Direct\'s GSA and 2GIT Program Manager, oversees the GSA Advantage storefront, vendor relations, and marketing. With over 10 years of experience, she delivers exceptional customer service and crafts efficient IT solutions for complex challenges.',
-      buttonText: 'Contact Rachel'
+      buttonText: 'Contact Rachel',
+      link: 'mailto:rachel.mock@betterdirect.com'
     },
     {
       name: 'Thien Duc Phung',
       title: 'GSA & 2GIT Contract Manager',
       photo: './assets/Contracts/2Git/Thien.jpg',
       description: 'Thien Duc Phung manages GSA and 2GIT contracts at Better Direct, ensuring current product listings, government compliance, and strong client relationships. Starting as a GSA Admin in 2022, he now leads catalog growth, bid responses, and revenue initiatives, working closely with the fulfillment team to address customer inquiries.',
-      buttonText: 'Contact Thien'
+      buttonText: 'Contact Thien',
+      link: 'mailto:thien@betterdirect.com'
     },
     {
       name: 'Devika N',
       title: 'Assistant GSA & 2GIT Program Manager',
       photo: './assets/Contracts/2Git/devika.jpg',
       description: 'Works as Assistant Program Manager at Better Direct, supporting GSA and 2GIT operations, including GSA Advantage storefronts, vendor coordination, and federal contract management. With 5+ years of product management experience, Devika specializes in workflow optimization, data-driven strategy, and cross-functional collaboration, leveraging tools like Airtable, Drift, and MySQL to streamline procurement and enhance engagement.',
-      buttonText: 'Contact Devika'
+      buttonText: 'Contact Devika',
+      link: 'mailto:devika.nhendanmadath@betterdirect.com'
     }
   ];
 
@@ -45,7 +48,7 @@ const TwoGIT = () => {
 
               {/* Right side - Logo */}
               <div className="flex justify-center">
-                <img 
+                <img
                   src="./assets/Contracts/2Git/2GIT.png"
                   alt="2GIT Logo"
                   className="w-64 h-auto"
@@ -150,7 +153,7 @@ const TwoGIT = () => {
                   {/* Photo with US flag background */}
                   <div className="mb-4">
                     <div className="w-full h-48 bg-gradient-to-r from-blue-800 via-red-600 to-blue-800 rounded-lg overflow-hidden">
-                      <img 
+                      <img
                         src={member.photo}
                         alt={member.name}
                         className="w-full h-full object-cover"
@@ -177,7 +180,9 @@ const TwoGIT = () => {
                   </p>
 
                   {/* Contact Button */}
-                  <button className="w-full px-4 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors">
+                  <button
+                    onClick={() => window.location.href = member.link}
+                    className="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400">
                     {member.buttonText}
                   </button>
                 </div>
@@ -195,7 +200,7 @@ const TwoGIT = () => {
               {/* Profile Photo */}
               <div className="flex-shrink-0">
                 <div className="w-20 h-20  overflow-hidden shadow-lg">
-                  <img 
+                  <img
                     src="./assets/Contracts/2Git/madison.jpg"
                     alt="Madison Alberts"
                     className="w-full h-full object-cover"

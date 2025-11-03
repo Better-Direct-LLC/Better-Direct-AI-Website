@@ -44,19 +44,22 @@ const Services = () => {
             name: 'Rashawn Hugg',
             photo: './assets/Services/display/rashawn.jpg',
             description: 'Rashawn Hugg is Better Direct\'s Senior Program Manager. He leads federal contract programs and project management teams, supporting agencies like NGA, DIA, and NSA. Rashawn develops partner relationships for the company as well as professional services initiatives. Rashawn\'s goal is to ensure successful project completion for Better Direct\'s customers.',
-            buttonText: 'Contact Rashawn'
+            buttonText: 'Contact Rashawn',
+            link: 'mailto:rashawn.hugg@betterdirect.com'
         },
         {
             name: 'Anthony Hernandez',
             photo: './assets/Services/display/anthony.jpg',
             description: 'Anthony Hernandez is the Project Manager at Better Direct. In this role, he leads the company\'s services team and handles installations, repairs, and custom manufacturing projects. Years ago he started in data entry at Better Direct, and has grown with the company to manage house accounts and high-value contracts. He meets Better Direct\'s high standards as he delivers excellent customer service.',
-            buttonText: 'Contact Anthony'
+            buttonText: 'Contact Anthony',
+            link: 'mailto:anthony@betterdirect.com'
         },
         {
             name: 'McKenna Mulligan',
             photo: './assets/Services/display/mckenna.jpg',
             description: 'McKenna Mulligan is a Project Manager at Better Direct, where she specializes in technology solutions and software implementations for government clients. Starting her career at the company as a Federal Sales Executive, she developed expertise in federal procurement and agency partnerships that now guide her project leadership. McKenna combines this government sector knowledge with her custom software development background to deliver impactful IT solutions across federal, state, and local agencies. She\'s focused on expanding the services department\'s impact while strengthening Better Direct\'s Tempe community roots as a HUBZone-certified, Service-Disabled Veteran-Owned IT VAR.',
-            buttonText: 'Contact McKenna'
+            buttonText: 'Contact McKenna',
+            link: 'mailto:mckenna.mulligan@betterdirect.com'
         }
     ];
 
@@ -398,7 +401,9 @@ const Services = () => {
                                     </p>
 
                                     {/* Contact Button */}
-                                    <button className="px-6 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors">
+                                    <button
+                                    onClick={() => window.location.href = member.link}
+                                    className="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400">
                                         {member.buttonText}
                                     </button>
                                 </div>

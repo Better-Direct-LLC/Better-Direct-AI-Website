@@ -8,14 +8,16 @@ const ADMC = () => {
             title: 'Sales Manager, ADMC-3 Contract Manager',
             photo: './assets/Contracts/2Git/kato.jpg',
             description: 'Kato Wong is a Better Direct Sales Manager. Since 2018, he has overseen the ADMC-3 and Army CHESS contracts for the company. He focuses on building long-term relationships with his customers so he can better understand their operational requirements and align IT solutions to their needs.',
-            buttonText: 'Contact KaTo'
+            buttonText: 'Contact KaTo',
+            link: 'mailto:kato@betterdirect.com'
         },
         {
             name: 'Diana Zhong',
             title: 'Director of Operations and Finance, ADMC-3 Contract Manager',
             photo: './assets/Contracts/2Git/diana.jpg',
             description: 'Diana Zhong is the Manager of Operations and Finance at Better Direct. In her Operations role, she aligns the departments with strategic goals and watches over the government projects so they run seamlessly. On the financial side, Diana optimizes the profitability of the company by making sure it runs efficiently, and by mitigating its financial risk. She also has the role of co-manager of the Army CHESS ADMC-3 contract.',
-            buttonText: 'Contact Diana'
+            buttonText: 'Contact Diana',
+            link: 'mailto:diana@betterdirect.com'
         }
     ];
 
@@ -160,7 +162,9 @@ const ADMC = () => {
                                     </p>
 
                                     {/* Contact Button */}
-                                    <button className="w-full px-4 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors">
+                                    <button
+                                        onClick={() => window.location.href = member.link}
+                                        className="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400">
                                         {member.buttonText}
                                     </button>
                                 </div>

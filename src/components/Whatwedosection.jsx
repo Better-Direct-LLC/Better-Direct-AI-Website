@@ -53,7 +53,7 @@ const WhatWeDoSection = () => {
                 </p>
                 {service.hasButton && (
                   <Link 
-                    to="/gsa"
+                    to="/mas"
                     className="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium rounded hover:bg-blue-600 hover:text-white transition-all duration-300"
                   >
                     Partner with us on GSA

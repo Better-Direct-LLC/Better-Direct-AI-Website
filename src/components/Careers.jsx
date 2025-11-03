@@ -630,7 +630,7 @@ const Careers = () => {
 
                                     {/* Apply Now Button */}
                                     <a
-                                        href="#apply"
+                                        href="https://form.jotform.com/252595661537164"
                                         className="px-6 py-3 mr-4 border-2 border-cyan-400 text-cyan-400 font-medium rounded hover:bg-cyan-400 hover:text-white transition-all duration-300 whitespace-nowrap"
                                     >
                                         Apply Now
@@ -832,7 +832,7 @@ const Careers = () => {
                         </p>
                         <div className="text-right">
                             <a
-                                href="#apply"
+                                href="https://form.jotform.com/252595661537164"
                                 className="inline-block px-8 py-3 border-2 border-white text-white font-medium rounded hover:bg-white hover:text-blue-600 transition-all duration-300"
                             >
                                 Apply Now
