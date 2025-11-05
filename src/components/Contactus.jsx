@@ -100,7 +100,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-blue-600">
+    <div className="min-h-screen" style={{ background: '#1161ad' }}>
       {/* Hero Section with Text */}
       <section 
         className="py-16" 
@@ -140,7 +140,7 @@ const ContactUs = () => {
               }`}
             >
               {/* Carousel Container */}
-              <div className="relative bg-gradient-to-br from-blue-900/80 via-blue-700/70 to-cyan-700/60 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden border border-cyan-400/30">
+              <div className="relative backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden border border-cyan-400/30">
                 {/* Decorative Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-400/10 via-blue-500/10 to-purple-600/10 pointer-events-none"></div>
                 {/* Image */}
@@ -158,7 +158,7 @@ const ContactUs = () => {
 
                 {/* Content */}
                 <div className="p-8">
-                  <h2 className="text-3xl font-bold text-cyan-200 mb-6 text-center drop-shadow-lg">
+                  <h2 className="text-3xl font-bold mb-6 text-center drop-shadow-lg" style={{color: "#6cb2ebff"}}>
                     {slides[currentSlide].title}
                   </h2>
 
@@ -166,12 +166,12 @@ const ContactUs = () => {
                   {slides[currentSlide].type === 'location' && (
                     <div className="text-center space-y-4">
                       <div>
-                        <p className="text-cyan-100 text-lg">
+                        <p className="text-lg" style={{ color: "#6cb2ebff" }}>
                           We're located at <strong className="text-cyan-300">{slides[currentSlide].address}</strong>
                         </p>
                       </div>
                       <div>
-                        <p className="text-cyan-100 text-lg">
+                        <p className="text-lg" style={{ color: "#6cb2ebff" }}>
                           <strong className="text-cyan-300">Mailing:</strong> {slides[currentSlide].mailing}
                         </p>
                       </div>
@@ -182,18 +182,18 @@ const ContactUs = () => {
                   {slides[currentSlide].type === 'contact' && (
                     <div className="text-center space-y-4">
                       <div>
-                        <p className="text-cyan-100 text-lg">
-                          <strong className="text-cyan-300">Call Us at:</strong> <a href="tel:4809213858" className="text-cyan-300 hover:text-cyan-100 underline">{slides[currentSlide].phone}</a>
+                        <p className="text-lg" style={{ color: "#bee3fcff " }}>
+                          <strong style={{ color: "#bee3fcff" }}>Call Us at:</strong> <a href="tel:4809213858" className="hover:text-cyan-100 underline">{slides[currentSlide].phone}</a>
                         </p>
                       </div>
                       <div>
-                        <p className="text-cyan-100 text-lg">
-                          <strong className="text-cyan-300">Fax:</strong> {slides[currentSlide].fax}
+                        <p className="text-lg" style={{ color: "#bee3fcff" }}>
+                          <strong >Fax:</strong> {slides[currentSlide].fax}
                         </p>
                       </div>
                       <div>
-                        <p className="text-cyan-100 text-lg">
-                          <strong className="text-cyan-300">Email:</strong> <a href={`mailto:${slides[currentSlide].email}`} className="text-cyan-300 hover:text-cyan-100 underline">{slides[currentSlide].email}</a>
+                        <p className="text-lg" style={{ color: "#bee3fcff" }}>
+                          <strong >Email:</strong> <a href={`mailto:${slides[currentSlide].email}`} className="hover:text-cyan-100 underline">{slides[currentSlide].email}</a>
                         </p>
                       </div>
                     </div>
@@ -206,10 +206,10 @@ const ContactUs = () => {
                         <tbody>
                           {slides[currentSlide].schedule.map((item, index) => (
                             <tr key={index} className="border-b-2 border-cyan-400/20 last:border-b-0">
-                              <td className="px-6 py-3 text-center font-semibold text-cyan-100 border-r-2 border-cyan-400/20">
+                              <td className="px-6 py-3 text-center font-semibold border-r-2 border-cyan-400/20" style={{ color: "#bee3fcff" }} >
                                 {item.day}
                               </td>
-                              <td className="px-6 py-3 text-center font-semibold text-cyan-300">
+                              <td className="px-6 py-3 text-center font-semibold" style={{ color: "#bee3fcff" }}>
                                 {item.hours}
                               </td>
                             </tr>
@@ -288,10 +288,10 @@ const ContactUs = () => {
 
             {/* Right side - Form */}
             <div className="order-1 md:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#0570c6" }}>
                 Your Trusted Partner for Government IT Procurement
               </h2>
-              <p className="text-xl text-blue-600 mb-8">
+              <p className="text-xl mb-8" style={{ color: "#0570c6" }}>
                 Fast Quotes. Proven Contracts. Expert Support
               </p>
 
@@ -311,7 +311,7 @@ const ContactUs = () => {
                   `Name: ${formData.name}\n` +
                   `Message: ${formData.message}`
                 );
-                const mailtoLink = `mailto:parth.bhatt@betterdirect.com?subject=${subject}&body=${body}`;
+                const mailtoLink = `mailto:info@betterdirect.com?subject=${subject}&body=${body}`;
                 
                 // Open email client
                 window.location.href = mailtoLink;
@@ -368,15 +368,17 @@ const ContactUs = () => {
                     <button 
                       type="button" 
                       onClick={generateCaptcha}
-                      className="ml-2 px-2 py-1 text-xs border border-cyan-400 rounded text-cyan-400 hover:bg-cyan-400 hover:text-white transition-all"
+                      className="ml-2 px-2 py-1 text-xs border rounded hover:bg-cyan-400 hover:text-white transition-all"
                       title="Generate new question"
+                      style={{ color: "#0570c6" , borderColor: "#0570c6" }}
                     >
                       ↻
                     </button>
                   </div>
                   <button
                     type="submit"
-                    className="px-8 py-3 bg-white border-2 border-cyan-400 text-cyan-400 font-bold rounded hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                    className="px-8 py-3 bg-white border-2 font-bold rounded hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                    style={{ color: "#0570c6" , borderColor: "#0570c6" }}
                   >
                     SUBMIT
                   </button>

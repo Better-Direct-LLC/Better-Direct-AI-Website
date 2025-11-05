@@ -24,16 +24,16 @@ const ADMC = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="bg-blue-600 py-16">
+            <section className="py-16" style={{ background: '#1161ad' }}>
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12">
                         <div className="grid md:grid-cols-2 gap-8 items-center">
                             {/* Left side - Text */}
                             <div>
-                                <h1 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
+                                <h1 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#0570c6' }}>
                                     The Only SDVOSB & HUBZone IT Provider in Arizona
                                 </h1>
-                                <p className="text-blue-600 leading-relaxed">
+                                <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                     If you're an OEM interested in joining our ADMC schedule
                                 </p>
                             </div>
@@ -62,19 +62,19 @@ const ADMC = () => {
                         <div className="md:col-span-2 space-y-8">
                             {/* Main heading card */}
                             <div className="bg-white rounded-lg shadow-lg p-8">
-                                <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+                                <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#0570c6' }}>
                                     Power Your IT Needs with Better Direct and the Army Desktop and Mobile Computing (ADMC) – 3 Contract </h2>
-                                <p className="text-blue-600 leading-relaxed mb-6">
+                                <p className="leading-relaxed mb-6" style={{ color: '#0570c6' }}>
                                     Searching for a fast, smart, and budget-friendly way to meet your agency’s IT demands? Better Direct is your premier partner under the Army Desktop and Mobile Computing (ADMC) – 3 contract, a mandatory-use Blanket Purchase Agreement (BPA) within the Computer Hardware Enterprise Software and Solutions (CHESS) program (BPA #W52P1J-20-D-0018). We deliver commercial off-the-shelf (COTS) IT hardware with unmatched value and expertise, tailored to the U.S. Army, Department of Defense (DoD), and all federal agency missions.</p>
 
-                                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     Why Better Direct Elevates ADMC – 3 Contract
                                 </h3>
-                                <p className="text-blue-600 leading-relaxed mb-4">
+                                <p className="leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                     At Better Direct, we don’t just process orders we maximize the ADMC – 3 contract to meet your needs. Here’s how we make it work for you:
                                 </p>
 
-                                <ul className="space-y-4 text-blue-600 mb-6">
+                                <ul className="space-y-4 mb-6" style={{ color: '#0570c6' }}>
                                     <li className="flex items-start">
                                         <span className="mr-3 font-bold">•</span>
                                         <div>
@@ -109,20 +109,20 @@ const ADMC = () => {
                                     </li>
                                 </ul>
 
-                                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     ADMC-3 Contract: “Searching for customized solutions to meet your agency’s IT demands?”
                                 </h3>
-                                <p className="text-blue-600 leading-relaxed mb-4">
+                                <p className="leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                     The ADMC-3 contract, as part of CHESS, equips the U.S. Army, DoD, and all federal agencies with efficient IT procurement. <strong>As the only Service-Disabled Veteran-Owned Small Business (SDVOSB) and Certified HUBZone</strong> vendor among 10 awardees, Better Direct enhances this BPA with:
                                 </p>
 
-                                <ul className="space-y-2 text-blue-600 ml-8 mb-6">
+                                <ul className="space-y-2 ml-8 mb-6" style={{ color: '#0570c6' }}>
                                     <li>• <strong>Budget-Friendly Value:</strong> Zero-fee structure and consolidated buys, driving a 130.25% sales increase in 2023 and 64.3% in 2024.</li>
                                     <li>• <strong>Scalable Options:</strong> Solutions for any purchase size, backed by strategic partnerships.</li>
                                     <li>• <strong>Rapid Deployment:</strong> Streamlined access, proven by exceptional value and mission success.</li>
                                 </ul>
 
-                                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     Let’s Optimize Your IT—Contact Us Today!
                                 </h3>
                             </div>
@@ -147,24 +147,25 @@ const ADMC = () => {
                                     </div>
 
                                     {/* Name */}
-                                    <h3 className="text-lg font-bold text-blue-600 mb-2">
+                                    <h3 className="text-lg font-bold mb-2" style={{ color: '#0570c6' }}>
                                         {member.name}
                                     </h3>
 
                                     {/* Title */}
-                                    <p className="text-sm font-semibold text-blue-600 mb-3">
+                                    <p className="text-sm font-semibold mb-3" style={{ color: '#0570c6' }}>
                                         {member.title}
                                     </p>
 
                                     {/* Description */}
-                                    <p className="text-blue-600 text-sm leading-relaxed mb-4">
+                                    <p className="text-sm leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                         {member.description}
                                     </p>
 
                                     {/* Contact Button */}
                                     <button
                                         onClick={() => window.location.href = member.link}
-                                        className="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                        className="px-6 py-2 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                        style={{ background: '#1161ad' }}>
                                         {member.buttonText}
                                     </button>
                                 </div>
@@ -195,10 +196,10 @@ const ADMC = () => {
 
                             {/* Content */}
                             <div>
-                                <h2 className="text-2xl font-bold text-blue-600 mb-4">
+                                <h2 className="text-2xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     Contact ADMC Sales
                                 </h2>
-                                <p className="text-blue-600 leading-relaxed">
+                                <p className="leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                     For your ADMC sales needs, partner with Better Direct to unlock tailored IT solutions and exceptional service. Our ITES sales team, led by Agness Tsang, is dedicated to delivering top-notch support, ensuring seamless procurement and compliance for your agency’s mission. Contact us today at (480) 921-3858 (ext – 697) or email agyness.tsang@betterdirect.com to get started!</p>
                             </div>
                         </div>

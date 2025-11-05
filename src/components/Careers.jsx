@@ -7,7 +7,7 @@ const Careers = () => {
     const jobListings = [
         {
             title: "Sales Executive",
-            color: "bg-cyan-400",
+            color: "#0570c6",
             location: "Better Direct – Tempe, AZ",
             company: "Better Direct LLC – A leading provider of innovative technology solutions serving government and commercial clients nationwide.",
             description: [
@@ -44,7 +44,7 @@ const Careers = () => {
         },
         {
             title: "Systems Engineer",
-            color: "bg-blue-700",
+            color: "#1161ad",
             location: "Better Direct – Tempe, AZ",
             company: "Better Direct LLC – A leading provider of technology solutions, specializing in enterprise infrastructure and government systems integration.",
             description: [
@@ -91,7 +91,7 @@ const Careers = () => {
         },
         {
             title: "Program Manager",
-            color: "bg-cyan-400",
+            color: "#0570c6",
             location: "Better Direct – Tempe, AZ",
             company: "Better Direct LLC – A leading provider of innovative technology solutions serving government and commercial clients nationwide.",
             description: [
@@ -132,7 +132,7 @@ const Careers = () => {
         },
         {
             title: "Fiber Optic Technician",
-            color: "bg-blue-700",
+            color: "#1161ad",
             location: "Better Direct – Tempe, AZ",
             company: "We are Better Direct, a leader in Value-Added Resell IT services, hardware, and software located in Tempe, AZ. We enjoy serving all 50 states and US Federal offices abroad. We are seeking a skilled and eager Fiber Optic Technician to join our team.",
             description: [
@@ -199,7 +199,7 @@ const Careers = () => {
         },
         {
             title: "Audio Visual Installation Specialist",
-            color: "bg-cyan-400",
+            color: "#0570c6",
             location: "Better Direct – Tempe, AZ",
             clearance: "U.S. Citizen (required)",
             travel: "Required (domestic travel to customer sites as needed)",
@@ -238,7 +238,7 @@ const Careers = () => {
         },
         {
             title: "Software Developer",
-            color: "bg-blue-700",
+            color: "#1161ad",
             location: "Better Direct – Tempe, AZ",
             company: "We are Better Direct, a leader in Value-Added Resell IT services, hardware, and software located in Tempe, AZ. We enjoy serving all 50 states and US Federal offices abroad. We are seeking a skilled and eager Software Developer to join our team.",
             description: [
@@ -270,7 +270,7 @@ const Careers = () => {
         },
         {
             title: "Associate Developer",
-            color: "bg-cyan-400",
+            color: "#0570c6",
             location: "Better Direct – Tempe, AZ",
             travel: "Required (domestic travel to customer sites as needed)",
             company: "Better Direct, headquartered in Tempe, Arizona, is a trusted IT and technology solutions provider serving government and commercial clients nationwide. We deliver advanced hardware, software, and professional services with a strong commitment to quality, compliance, and customer satisfaction.",
@@ -315,7 +315,7 @@ const Careers = () => {
         },
         {
             title: "Telecommunications Technician (Contractor / 1099)",
-            color: "bg-blue-700",
+            color: "#1161ad",
             location: "Tempe, AZ",
             employmentType: "Contractor / 1099 (as-needed basis; potential for full-time employment)",
             company: "Better Direct LLC – A leading provider of innovative technology solutions, empowering organizations to transform how they manage and deliver critical services in government and commercial sectors.",
@@ -351,7 +351,7 @@ const Careers = () => {
         },
         {
             title: "Fiber Splicing Technician (Contractor / 1099)",
-            color: "bg-cyan-400",
+            color: "#0570c6",
             location: "Tempe, AZ",
             employmentType: "Contractor / 1099 (as-needed basis; potential for full-time employment)",
             company: "Better Direct LLC – A leading provider of technology solutions, enabling organizations to transform and optimize their infrastructure for government and enterprise needs.",
@@ -385,7 +385,7 @@ const Careers = () => {
         },
         {
             title: "Software Architect (Contractor / 1099)",
-            color: "bg-blue-700",
+            color: "#1161ad",
             location: "Tempe, AZ",
             employmentType: "Contractor / 1099 (as-needed basis; potential for full-time employment)",
             company: "Better Direct LLC – A leading provider of technology solutions, driving innovation in enterprise and cloud-based applications for government and commercial clients.",
@@ -418,7 +418,7 @@ const Careers = () => {
         },
         {
             title: "Infrastructure Technician (Contractor / 1099)",
-            color: "bg-cyan-400",
+            color: "#0570c6",
             location: "Tempe, AZ",
             employmentType: "Contractor / 1099 (as-needed basis; potential for full-time employment)",
             company: "Better Direct LLC – A leading provider of technology solutions, delivering robust infrastructure for enterprise and government clients.",
@@ -452,7 +452,7 @@ const Careers = () => {
         },
         {
             title: "Application Developer (Contractor / 1099)",
-            color: "bg-blue-700",
+            color: "#1161ad",
             location: "Tempe, AZ (hybrid or remote options available)",
             employmentType: "Contractor / 1099 (as-needed basis; potential for full-time employment)",
             company: "Better Direct LLC – A leading provider of technology solutions, delivering innovative applications for government and enterprise clients.",
@@ -483,7 +483,7 @@ const Careers = () => {
         },
         {
             title: "Scrum Master (Contractor / 1099)",
-            color: "bg-cyan-400",
+            color: "#0570c6",
             location: "Tempe, AZ",
             employmentType: "Contractor / 1099 (as-needed basis; potential for full-time employment)",
             company: "Better Direct LLC – A leading provider of technology solutions, fostering collaboration and innovation in software development.",
@@ -516,7 +516,7 @@ const Careers = () => {
         },
         {
             title: "Software Engineer (Contractor / 1099)",
-            color: "bg-blue-700",
+            color: "#1161ad",
             location: "Tempe, AZ",
             employmentType: "Contractor / 1099 (as-needed basis; potential for full-time employment)",
             company: "Better Direct LLC – A leading provider of technology solutions, driving IT modernization and cybersecurity initiatives.",
@@ -549,7 +549,7 @@ const Careers = () => {
         },
         {
             title: "Website Designer (Contractor / 1099)",
-            color: "bg-cyan-400",
+            color: "#0570c6",
             location: "Tempe, AZ",
             employmentType: "Contractor / 1099 (as-needed basis; potential for full-time employment)",
             company: "Better Direct LLC – A leading provider of technology solutions, creating accessible and innovative digital experiences for government and enterprise clients.",
@@ -597,10 +597,10 @@ const Careers = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="bg-blue-600 py-16">
+            <section className="py-16" style={{ background: '#1161ad' }}>
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-lg shadow-2xl px-8 md:px-12 py-6">
-                        <h1 className="text-3xl md:text-4xl font-bold text-blue-600 text-center">
+                        <h1 className="text-3xl md:text-4xl font-bold text-center" style={{ color: '#0570c6' }}>
                             Join a Team That Powers Possibility
                         </h1>
                     </div>
@@ -610,7 +610,7 @@ const Careers = () => {
             {/* Job Listings Section */}
             <section className="py-16 bg-white">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-bold text-blue-600 text-center mb-12">
+                    <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#0570c6' }}>
                         Teams & Open Roles
                     </h2>
 
@@ -622,7 +622,8 @@ const Careers = () => {
                                     {/* Job Title Card */}
                                     <button
                                         onClick={() => toggleJob(index)}
-                                        className={`${job.color} text-white px-6 py-4 flex-1 flex items-center justify-between hover:opacity-90 transition-opacity`}
+                                        className={`text-white px-6 py-4 flex-1 flex items-center justify-between hover:opacity-90 transition-opacity`}
+                                        style={{ background: job.color }}
                                     >
                                         <span className="font-semibold text-lg text-left">{job.title}</span>
                                         <div className="w-3 h-3 bg-white rounded-full"></div>
@@ -631,7 +632,8 @@ const Careers = () => {
                                     {/* Apply Now Button */}
                                     <a
                                         href="https://form.jotform.com/252595661537164"
-                                        className="px-6 py-3 mr-4 border-2 border-cyan-400 text-cyan-400 font-medium rounded hover:bg-cyan-400 hover:text-white transition-all duration-300 whitespace-nowrap"
+                                        className="px-6 py-3 mr-4 border-2 text-cyan-400 font-medium rounded hover:bg-cyan-400 hover:text-white transition-all duration-300 whitespace-nowrap"
+                                        style={{ border: "2px solid #0570c6",  color: "#0570c6" }}
                                     >
                                         Apply Now
                                     </a>
@@ -642,7 +644,7 @@ const Careers = () => {
                                     className={`transition-all duration-500 ease-in-out overflow-hidden ${expandedJob === index ? 'max-h-[3000px] opacity-100' : 'max-h-0 opacity-0'
                                         }`}
                                 >
-                                    <div className={`${job.color} text-white p-8`}>
+                                    <div className={`text-white p-8`} style={{ background: job.color }}>
                                         <h3 className="font-bold text-xl mb-4">Job description:</h3>
                                         {Array.isArray(job.description)
                                             ? job.description?.map((desc, i) => (
@@ -799,18 +801,18 @@ const Careers = () => {
             </section>
 
             {/* Team Photos Section */}
-            <section className="bg-blue-600 py-16">
+            <section className="py-16" style={{ background: '#1161ad' }}>
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-lg shadow-2xl p-8">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
                             {teamPhotos.map((photo, index) => (
-                                <div key={index} className="overflow-hidden rounded-lg shadow-lg">
+                                <div key={index} className="overflow-hidden rounded-lg shadow-lg flex items-center justify-center bg-white aspect-[4/3] w-full max-w-[420px] mx-auto">
                                     <img
                                         src={photo.src}
                                         alt={photo.alt}
-                                        className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                        className="object-contain w-full h-full max-w-[420px] max-h-[340px] hover:scale-105 transition-transform duration-300"
                                         onError={(e) => {
-                                            e.target.src = `https://via.placeholder.com/300x300?text=Team+${index + 1}`;
+                                            e.target.src = `https://via.placeholder.com/700x600?text=Team+${index + 1}`;
                                         }}
                                     />
                                 </div>
@@ -823,7 +825,7 @@ const Careers = () => {
             {/* Bottom CTA Section */}
             <section className="py-16 bg-white">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-blue-600 text-white rounded-lg shadow-2xl p-8 md:p-12">
+                    <div className="text-white rounded-lg shadow-2xl p-8 md:p-12" style={{ background: '#1161ad' }}>
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
                             Better Direct LLC – We're Hiring!
                         </h2>

@@ -36,8 +36,9 @@ const Navbar = () => {
           <div className="flex justify-end items-center gap-3">
             {/* Email us button */}
             <button
-              className="group relative px-6 py-2.5 border-2 border-blue-600 text-blue-600 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent cursor-pointer"
-              onClick={() => window.location.href = 'mailto:info@betterdirectai.com'}
+              className="group relative px-6 py-2.5 border-2 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent cursor-pointer"
+              style={{ color: '#1161ad', borderColor: '#1161ad' }}
+              onClick={() => window.location.href = 'mailto:info@betterdirect.com'}
             >
               <span className="relative inline-flex items-center gap-1">
                 Email us
@@ -48,15 +49,18 @@ const Navbar = () => {
             </button>
 
             {/* Phone button */}
-            <p
+            <a
               href="tel:4809213858"
-              className="px-6 py-2.5 bg-blue-600 text-white font-medium text-sm rounded hover:bg-blue-700 transition-colors duration-200"
+              className="px-6 py-2.5 font-medium text-sm rounded transition-colors duration-200"
+              style={{ background: '#0570c6', color: 'white' }}
+              onMouseOver={e => e.currentTarget.style.background = '#1161ad'}
+              onMouseOut={e => e.currentTarget.style.background = '#0570c6'}
             >
-              Phone — 480.921.3858
-            </p>
+              Phone  480.921.3858
+            </a>
 
             {/* Buy Now button */}
-            <Link to="/buy-now" className="group relative px-6 py-2.5 border-2 border-blue-600 text-blue-600 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent cursor-pointer">
+            <Link to="/buy-now" className="group relative px-6 py-2.5 border-2 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent cursor-pointer" style={{ color: '#1161ad', borderColor: '#1161ad' }}>
               <span className="relative inline-flex items-center gap-1">
                 Buy Now
                 <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
@@ -89,23 +93,24 @@ const Navbar = () => {
               <div className="group relative">
                 <Link
                   to="/about-us"
-                  className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200 py-2"
+                  className="font-medium text-sm whitespace-nowrap transition-colors duration-200 py-2"
+                  style={{ color: '#1161ad' }}
                 >
                   About Us
                 </Link>
                 {/* Dropdown */}
                 <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[200px] border-t-4 border-t-blue-600">
-                    <Link to="/certifications" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                  <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[200px] border-t-4" style={{ borderTopColor: '#1161ad', borderColor: '#1161ad' }}>
+                    <Link to="/certifications" className="block px-4 py-2 text-sm" style={{ color: '#1161ad' }}>
                       Certifications
                     </Link>
-                    <a href="https://drive.google.com/file/d/1Ktch401esB3V1p8dNACra15UUbHVUc_p/view" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <a href="https://drive.google.com/file/d/1Ktch401esB3V1p8dNACra15UUbHVUc_p/view" className="block px-4 py-2 text-sm" style={{ color: '#1161ad' }}>
                       Credit Application
                     </a>
-                    <Link to="/employee-review" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <Link to="/employee-review" className="block px-4 py-2 text-sm" style={{ color: '#1161ad' }}>
                       Employee Review
                     </Link>
-                    <a href="https://drive.google.com/file/d/1ErvMYOaUJKVTVquuXcaWNO-Nrni2bTLC/view" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <a href="https://drive.google.com/file/d/1ErvMYOaUJKVTVquuXcaWNO-Nrni2bTLC/view" className="block px-4 py-2 text-sm" style={{ color: '#1161ad' }}>
                       W-9
                     </a>
                   </div>
@@ -117,28 +122,29 @@ const Navbar = () => {
                 <Link
                   to="/buy-now"
                   className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200 py-2"
+                  style={{ color: '#1161ad' }}
                 >
                   Buy Now
                 </Link>
                 {/* Dropdown - Add your Buy Now dropdown items here */}
                 <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[200px] border-t-4 border-t-blue-600">
-                    <a href="https://global.channelonline.com/bdc/gsastore/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fgsastore%2FsDashboard%2Fmain" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                  <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[200px] border-t-4" style={{ borderTopColor: '#1161ad', borderColor: '#1161ad' }}>
+                    <a href="https://global.channelonline.com/bdc/gsastore/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fgsastore%2FsDashboard%2Fmain" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
                       GSA Store
                     </a>
-                    <a href="https://global.channelonline.com/bdc/gsastore/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fgsastore%2FsDashboard%2Fmain" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <a href="https://global.channelonline.com/bdc/gsastore/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fgsastore%2FsDashboard%2Fmain" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
                       2GIT Store
                     </a>
-                    <a href="https://global.channelonline.com/bdc/admc3/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fadmc3" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <a href="https://global.channelonline.com/bdc/admc3/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fadmc3" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
                       ADMC 3 Store
                     </a>
-                    <a href="https://global.channelonline.com/bdc/sewp/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fsewp%2FsDashboard%2Fmain" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <a href="https://global.channelonline.com/bdc/sewp/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fsewp%2FsDashboard%2Fmain" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
                       SEWP Store
                     </a>
-                    <a href="https://global.channelonline.com/bdc/storesite/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fstoresite" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <a href="https://global.channelonline.com/bdc/storesite/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fstoresite" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
                       Open Market
                     </a>
-                    <a href="https://global.channelonline.com/bdc/admc3/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fadmc3" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <a href="https://global.channelonline.com/bdc/admc3/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fadmc3" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
                       ITES-4H Store
                     </a>
                   </div>
@@ -148,6 +154,7 @@ const Navbar = () => {
               <Link
                 to="/capability-statement"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                style={{ color: '#1161ad' }}
               >
                 Capability statement
               </Link>
@@ -155,6 +162,7 @@ const Navbar = () => {
               <Link
                 to="/careers"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                style={{ color: '#1161ad' }}
               >
                 Careers
               </Link>
@@ -162,6 +170,7 @@ const Navbar = () => {
               <Link
                 to="/contact-us"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                style={{ color: '#1161ad' }}
               >
                 Contact Us
               </Link>
@@ -171,28 +180,29 @@ const Navbar = () => {
                 <Link
                   to="/contracts"
                   className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200 py-2"
+                  style={{ color: '#1161ad' }}
                 >
                   Contracts
                 </Link>
                 {/* Dropdown - Add your Contracts dropdown items here */}
                 <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[200px] border-t-4 border-t-blue-600">
-                    <Link to="/2git" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                  <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[200px] border-t-4" style={{ borderTopColor: '#1161ad', borderColor: '#1161ad' }}>
+                    <Link to="/2git" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
                       GSA 2GIT
                     </Link>
-                    <Link to="/mas" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <Link to="/mas" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
                       GSA MAS
                     </Link>
-                    <Link to="/sewp" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <Link to="/sewp" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
                       SEWP V
                     </Link>
-                    <Link to="/admc" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <Link to="/admc" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
                       ADMC 3
                     </Link>
-                    <Link to="/ites" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <Link to="/ites" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
                       ITES-4H
                     </Link>
-                    <Link to="/seaport" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50">
+                    <Link to="/seaport" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
                       SEAPORT
                     </Link>
                   </div>
@@ -202,6 +212,7 @@ const Navbar = () => {
               <Link
                 to="/"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                style={{ color: '#1161ad' }}
               >
                 Home
               </Link>
@@ -209,6 +220,7 @@ const Navbar = () => {
               <Link
                 to="/news"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                style={{ color: '#1161ad' }}
               >
                 News
               </Link>
@@ -216,6 +228,7 @@ const Navbar = () => {
               <Link
                 to="/services"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                style={{ color: '#1161ad' }}
               >
                 Services
               </Link>
@@ -223,6 +236,7 @@ const Navbar = () => {
               <Link
                 to="/success-stories"
                 className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                style={{ color: '#1161ad' }}
               >
                 Success Stories
               </Link>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ServicesSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -59,10 +60,15 @@ const ServicesSection = () => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h2 className="inline-block bg-blue-600 text-white px-8 py-3 rounded text-2xl font-bold mb-6">
+          <Link
+            to="/services"
+            className="inline-block text-white px-8 py-3 rounded text-2xl font-bold mb-6 focus:outline-none focus:ring-2 focus:ring-blue-400 hover:bg-cyan-300 hover:shadow-lg transition-colors transition-shadow duration-200 cursor-pointer"
+            aria-label="Go to Services page"
+            style={{ background: '#1161ad' }}
+          >
             Services
-          </h2>
-          <p className="text-blue-600 font-medium mb-8">
+          </Link>
+          <p className="font-medium mb-8" style={{ color: '#0570c6' }}>
             Empowering Your IT Infrastructure with Expert Solutions
           </p>
         </div>
@@ -72,7 +78,7 @@ const ServicesSection = () => {
           <div className={`text-center py-12 transition-opacity duration-700 ${fade ? 'opacity-0' : 'opacity-100'}`}
             key={currentSlide}
           >
-            <h3 className="text-3xl font-bold text-blue-600 mb-4">
+            <h3 className="text-3xl font-bold mb-4" style={{ color: '#0570c6' }}>
               {services[currentSlide].title}
             </h3>
             <p className="text-gray-700">
@@ -83,7 +89,8 @@ const ServicesSection = () => {
           {/* Navigation arrows */}
           <button 
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
+            style={{ background: '#1161ad' }}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -91,7 +98,8 @@ const ServicesSection = () => {
           </button>
           <button 
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
+            style={{ background: '#1161ad' }}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

@@ -32,17 +32,17 @@ const SuccessStories = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-blue-600 py-16">
+      <section className="py-16" style={{ background: '#1161ad' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Left side - Text */}
               <div>
-                <h1 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6 text-center md:text-left">
+                <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center md:text-left" style={{ color: '#0570c6' }}>
                   Better Direct's Mission to Power Federal IT
                 </h1>
-                <div className="w-16 h-1 bg-blue-600 mb-6 mx-auto md:mx-0"></div>
-                <p className="text-blue-600 leading-relaxed">
+                <div className="w-16 h-1 mb-6 mx-auto md:mx-0" style={{ background: '#1161ad' }}></div>
+                <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                   Founded in 2006 by Army Major Mark S. Evans (Ret.), Better Direct has grown from a veteran-led vision into a nationwide leader in IT solutions for the U.S. government. As the only dual-certified SDVOSB and HUBZone value-added reseller in Arizona, Better Direct supports federal agencies with over 400,000 products from 140+ OEMs, spanning data centers, end-user devices, cybersecurity, and cloud solutions. With an impeccable record of 20,000+ orders fulfilled annually, a 100% RFQ responsiveness rate, and tailored innovations like $800,000 worth of ruggedized high-performance workstations, Better Direct consistently delivers mission-critical technology when and where it's needed most. Their story is one of resilience, precision, and unwavering commitment to serving those who serve the nation.
                 </p>
               </div>
@@ -67,11 +67,11 @@ const SuccessStories = () => {
       <section className="py-16 bg-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 text-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6" style={{ color: '#0570c6' }}>
               Empowering Mission-Critical Connectivity Better Direct Elevates Wireless Infrastructure at Joint Base Charleston
             </h2>
-            <div className="w-16 h-1 bg-blue-600 mx-auto mb-6"></div>
-            <p className="text-blue-600 leading-relaxed text-center">
+            <div className="w-16 h-1 mx-auto mb-6" style={{ background: '#1161ad' }}></div>
+            <p className=" leading-relaxed text-center" style={{ color: '#0570c6' }}>
               Better Direct recently partnered with the 628th Communications Squadron (628 CS) at Joint Base Charleston to deliver a seamless, state-of-the-art wireless upgrade that enhances mission readiness and operational efficiency. By modernizing the base's wireless infrastructure, Better Direct not only strengthened connectivity across critical areas but also earned an outstanding CPARS rating, reflecting exceptional performance and reliability.
             </p>
           </div>
@@ -82,20 +82,21 @@ const SuccessStories = () => {
       <section className="py-16 bg-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-blue-600 text-center mb-6">
+            <h2 className="text-3xl font-bold text-center mb-6" style={{ color: '#0570c6' }}>
               Project Highlights
             </h2>
-            <div className="w-16 h-1 bg-blue-600 mx-auto mb-12"></div>
+            <div className="w-16 h-1 mx-auto mb-12" style={{ background: '#1161ad' }}></div>
 
             {/* Grid of highlights */}
             <div className="grid md:grid-cols-3 gap-8">
               {projectHighlights.map((highlight, index) => (
                 <div key={index} className="space-y-3">
-                  <h3 className="text-lg font-bold text-blue-600">
+                  <h3 className="text-lg font-bold" style={{ color: '#0570c6' }}>
                     {highlight.title}
                   </h3>
-                  <p 
-                    className="text-blue-600 leading-relaxed text-sm"
+                  <p
+                    className="leading-relaxed text-sm"
+                    style={{ color: '#0570c6' }}
                     dangerouslySetInnerHTML={{ __html: highlight.content }}
                   />
                 </div>

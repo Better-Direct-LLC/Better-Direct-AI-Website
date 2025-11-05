@@ -17,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 py-10">
+    <footer className="py-10" style={{ background: '#1161ad' }}>
       <div className="max-w-5xl mx-auto px-4">
         <div className="bg-white rounded-2xl shadow-xl px-8 py-8 flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-0 relative">
           {/* Logo */}
@@ -35,37 +35,40 @@ const Footer = () => {
           {/* Links */}
           <div className="flex-1 grid grid-cols-2 gap-4 items-center justify-items-center md:pl-12">
             <div className="flex flex-col gap-2 items-center">
-              <Link to="/about-us" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors">About us</Link>
-              <Link to="/buy-now" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors">Buy Now</Link>
-              <Link to="/careers" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors">Careers</Link>
-              <Link to="/contact-us" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors">Contact us</Link>
+              <Link to="/about-us" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors" style={{ color: "#0570c6" }}>About us</Link>
+              <Link to="/buy-now" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors" style={{ color: "#0570c6" }}>Buy Now</Link>
+              <Link to="/careers" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors" style={{ color: "#0570c6" }}>Careers</Link>
+              <Link to="/contact-us" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors" style={{ color: "#0570c6" }}>Contact us</Link>
             </div>
             <div className="flex flex-col gap-2 items-center">
-              <Link to="/contracts" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors">Contracts</Link>
-              <Link to="/" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors">Home</Link>
-              <Link to="/services" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors">Services</Link>
-              <Link to="/success-stories" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors">Success Stories</Link>
+              <Link to="/contracts" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors" style={{ color: "#0570c6" }}>Contracts</Link>
+              <Link to="/" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors" style={{ color: "#0570c6" }}>Home</Link>
+              <Link to="/services" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors" style={{ color: "#0570c6" }}>Services</Link>
+              <Link to="/success-stories" onClick={scrollToTop} className="text-blue-600 hover:text-blue-800 font-semibold text-sm transition-colors" style={{ color: "#0570c6" }}>Success Stories</Link>
             </div>
           </div>
         </div>
         {/* Contact & Social Buttons */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-8">
           <button 
-            onClick={() => window.location.href = 'mailto:info@betterdirectai.com'}
-            className="flex items-center gap-2 px-5 py-2 border-2 border-white text-white font-medium text-sm rounded-full bg-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-300 shadow"
+            onClick={() => window.location.href = 'mailto:info@betterdirect.com'}
+            className="flex items-center gap-2 px-5 py-2 border-2 border-white text-white font-medium text-sm rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 shadow"
+            style={{ background: '#1161ad' }}
           >
             <FaEnvelope /> Email us
           </button>
           <a 
             href="tel:4809213858"
-            className="flex items-center gap-2 px-5 py-2 border-2 border-white text-white font-medium text-sm rounded-full bg-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-300 shadow"
+            className="flex items-center gap-2 px-5 py-2 border-2 border-white text-white font-medium text-sm rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 shadow"
+            style={{ background: '#1161ad' }}
           >
             <FaPhone /> 480.921.3858
           </a>
           <Link
             to="/buy-now"
             onClick={scrollToTop}
-            className="flex items-center gap-2 px-5 py-2 border-2 border-white text-white font-medium text-sm rounded-full bg-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-300 shadow"
+            className="flex items-center gap-2 px-5 py-2 border-2 border-white text-white font-medium text-sm rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 shadow"
+            style={{ background: '#1161ad' }}
           >
             <FaShoppingCart /> Buy Now
           </Link>

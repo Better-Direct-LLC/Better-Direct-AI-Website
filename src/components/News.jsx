@@ -27,14 +27,14 @@ const News = () => {
       {/* CISCO CCNA Section */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-600 text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12" style={{ color: '#0570c6' }}>
             CISCO CCNA
           </h1>
 
           <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
             {/* Left side - Text */}
             <div>
-              <p className="text-blue-600 leading-relaxed">
+              <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                 At Better Direct, our Cisco CCNA team specializes in designing and deploying network solutions tailored to our customers' unique needs. We ensure seamless integration with in-house clustered systems and prioritize ease of management. Our team builds robust virtualization infrastructures with enterprise-grade storage, enabling high availability and fault tolerance. We deploy ISP-level services with automated failover, monitoring, and redundancy, while leveraging SD-WAN to achieve sub-second failover. By integrating Next-Generation Firewalls (NGFW), we enforce strict security policies, segmentation, and compliance with government standards, delivering reliable, secure, and future-ready network solutions for our clients.
               </p>
             </div>
@@ -57,15 +57,15 @@ const News = () => {
       {/* AI Solutions Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-600 text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12" style={{ color: '#0570c6' }}>
             AI Solutions
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* Left side - Text */}
             <div>
-              <p className="text-blue-600 leading-relaxed">
-                At Better Direct, our <strong className="text-blue-700">AI Solution Team</strong> is dedicated to driving innovation and efficiency across the organization by leveraging the latest advancements in artificial intelligence and automation. Our mission is to empower teams with intelligent solutions that reduce manual effort, improve accuracy, and accelerate outcomes. A key focus of our work is supporting the sales team by building AI-driven solutions that simplify the <strong className="text-blue-700">RFQ (Request for Quote) process</strong>, from intake to response. Our Software Development and AI teams are building a new CRM product for Better Direct, and including features many other CRMs lack. With decades of experience using these products, Better Direct has identified many features to assist not just the sales team but our purchasing team and finance department as well. We are also integrating AI tools that allow sales representatives to shift their focus from administrative tasks to customer engagement, where their impact is greatest. Included in the design is even motivational tools for the teams. In addition, we are enhancing collaboration by creating a seamless flow of information between sales, operations, and customers, ensuring alignment and improving the overall customer experience.
+              <p className="leading-relaxed" style={{ color: '#0570c6' }}>
+                At Better Direct, our <strong style={{ color: '#0570c6' }}>AI Solution Team</strong> is dedicated to driving innovation and efficiency across the organization by leveraging the latest advancements in artificial intelligence and automation. Our mission is to empower teams with intelligent solutions that reduce manual effort, improve accuracy, and accelerate outcomes. A key focus of our work is supporting the sales team by building AI-driven solutions that simplify the <strong style={{ color: '#0570c6' }}>RFQ (Request for Quote) process</strong>, from intake to response. Our Software Development and AI teams are building a new CRM product for Better Direct, and including features many other CRMs lack. With decades of experience using these products, Better Direct has identified many features to assist not just the sales team but our purchasing team and finance department as well. We are also integrating AI tools that allow sales representatives to shift their focus from administrative tasks to customer engagement, where their impact is greatest. Included in the design is even motivational tools for the teams. In addition, we are enhancing collaboration by creating a seamless flow of information between sales, operations, and customers, ensuring alignment and improving the overall customer experience.
               </p>
             </div>
 

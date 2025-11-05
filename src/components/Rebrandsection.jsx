@@ -5,7 +5,7 @@ const RebrandSection = () => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-blue-600 text-center mb-12">
+        <h2 className="text-4xl font-bold text-center mb-12" style={{ color: '#0570c6' }}>
           Better Direct is Now Better Direct AI
         </h2>
         
@@ -20,7 +20,7 @@ const RebrandSection = () => {
           </div>
 
           {/* Right side - Text content */}
-          <div className="bg-blue-600 text-white p-8 rounded-lg">
+          <div className="text-white p-8 rounded-lg" style={{ background: '#1161ad' }}>
             <p className="mb-4">
               We're excited to share that Better Direct is officially operating as <strong>Better Direct AI</strong>! This change reflects our continued focus on leveraging cutting-edge AI solutions to deliver exceptional value to our customers.
             </p>

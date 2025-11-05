@@ -13,7 +13,7 @@ const CommunitySection = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-blue-600 text-center mb-8">
+        <h2 className="text-4xl font-bold text-center mb-8" style={{ color: '#0570c6' }}>
           Keeping the community in mind
         </h2>
         
@@ -23,13 +23,14 @@ const CommunitySection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {images.map((image, index) => (
-            <div key={index} className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src={image.src} 
+            <div key={index} className="overflow-hidden rounded-lg shadow-lg group transition-shadow duration-300">
+              <img
+                src={image.src}
                 alt={image.alt}
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                className="w-full object-contain transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl"
+                style={{ maxHeight: '600px', maxWidth: '800px', margin: '0 auto' }}
                 onError={(e) => {
-                  e.target.src = `https://via.placeholder.com/400x300?text=Community+${index + 1}`;
+                  e.target.src = `https://via.placeholder.com/800x600?text=Community+${index + 1}`;
                 }}
               />
             </div>

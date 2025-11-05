@@ -148,26 +148,26 @@ const Contracts = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Carousel Section */}
-      <section className="bg-blue-600 py-16">
+      <section className="py-16" style={{ backgroundColor : "#1161ad"}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Left side - Text */}
               <div>
-                <h1 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
+                <h1 className="text-3xl md:text-4xl font-bold mb-6" style={{color: "#0570c6"}}>
                   Federal Contracts
                 </h1>
-                <p className="text-blue-600 leading-relaxed">
+                <p className="leading-relaxed" style={{ color: "#0570c6" }}>
                   Better Direct is your trusted partner for federal IT procurement, leveraging premier contracts like GSA's 2GIT BPA, GSA MAS, NASA SEWP V, Army CHESS ADMC-3, and Navy SeaPort-NxG to deliver innovative, compliant, and cost-effective IT solutions. As a Service-Disabled Veteran-Owned Small Business (SDVOSB) and Certified HUBZone company, we process 20,000 orders annually with 60% year-over-year revenue growth, providing access to over 400,000 products from 2,000+ OEMs, offering tailored expertise, seamless acquisition, and rapid deployment for federal, state, and local agency missions, backed by proven success like $40M+ in Navy repairs.
                 </p>
               </div>
 
               {/* Right side - Carousel */}
               <div className="relative">
-                <div className="bg-blue-600 rounded-lg overflow-hidden shadow-xl">
+                <div className="rounded-lg overflow-hidden shadow-xl" style={{ backgroundColor : "#1161ad"}}>
                   {/* Carousel Image */}
                   <div className={`relative h-0 transition-all duration-500 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`} style={{paddingBottom: '56.25%'}}>
-                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-700 via-blue-600 to-cyan-600">
+                    <div className="absolute inset-0 flex items-center justify-center">
                       <img 
                         src={carouselSlides[currentSlide].image}
                         alt={carouselSlides[currentSlide].title}
@@ -180,7 +180,7 @@ const Contracts = () => {
                   </div>
 
                   {/* Text Overlay */}
-                  <div className="bg-blue-600 text-white text-center py-6">
+                  <div className="text-white text-center py-6" style={{ backgroundColor : "#1161ad"}}>
                     <h3 className="text-2xl font-bold mb-2">
                       {carouselSlides[currentSlide].title}
                     </h3>
@@ -195,10 +195,10 @@ const Contracts = () => {
                       <button
                         key={index}
                         onClick={() => goToSlide(index)}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 border-2 ${
+                        className={`rounded-full transition-all duration-300 border-2 focus:outline-none ${
                           currentSlide === index
-                            ? 'bg-blue-600 border-white scale-125 shadow-lg'
-                            : 'bg-white/50 border-transparent opacity-70'
+                            ? 'bg-[#0570c6] border-white shadow-lg w-4 h-4 scale-125'
+                            : 'bg-white/50 border-transparent opacity-70 w-3 h-3'
                         }`}
                         aria-label={`Go to slide ${index + 1}`}
                       />
@@ -258,20 +258,21 @@ const Contracts = () => {
                       e.target.src = 'https://via.placeholder.com/80x80?text=Logo';
                     }}
                   />
-                  <h2 className="text-xl font-bold text-blue-600">
+                  <h2 className="text-xl font-bold" style={{ color: "#1161ad" }}>
                     {contract.title}
                   </h2>
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-700 leading-relaxed mb-6">
+                <p className="leading-relaxed mb-6" style={{ color: "#0570c6" }}>
                   {contract.description}
                 </p>
 
                 {/* Button */}
                 <Link 
                   to={contract.buttonLink}
-                  className="inline-block px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-medium rounded hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                  className="inline-block px-6 py-3 border-2 font-medium rounded hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                  style={{ color: "#0570c6" , borderColor: "#0570c6"}}
                 >
                   {contract.buttonText}
                 </Link>
@@ -288,17 +289,17 @@ const Contracts = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Left side - Text */}
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: "#0570c6" }}>
                   State Contracts
                 </h2>
-                <p className="text-blue-600 leading-relaxed">
+                <p className="leading-relaxed" style={{ color: "#0570c6" }}>
                   Better Direct partners with NYSOGS, WSCA-NASPO, and CMAS to provide cost-effective, environmentally sustainable products and services. NYSOGS supports New York State agencies, local governments, and nonprofits with centralized, efficient solutions. WSCA-NASPO contracts offer MRO products to public agencies across participating states. CMAS establishes multiple award agreements for California, enabling multiple contractors to supply similar products/services at competitive prices.
                 </p>
               </div>
 
               {/* Right side - Carousel */}
               <div className="relative">
-                <div className="bg-blue-600 rounded-lg overflow-hidden shadow-xl">
+                <div className="rounded-lg overflow-hidden shadow-xl" style={{ backgroundColor : "#1161ad"}}>
                   {/* Carousel Image and Text */}
                   <div className="p-8">
                     <div className={`bg-white rounded-lg mb-6 p-6 flex items-center justify-center h-64 transition-all duration-500 ${isStateTransitioning ? 'opacity-0' : 'opacity-100'}`}> 
@@ -329,8 +330,10 @@ const Contracts = () => {
                       <button
                         key={index}
                         onClick={() => goToStateSlide(index)}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                          currentStateSlide === index ? 'bg-white' : 'bg-white bg-opacity-50'
+                        className={`rounded-full transition-all duration-300 border-2 focus:outline-none ${
+                          currentStateSlide === index
+                            ? 'bg-[#0570c6] border-white shadow-lg w-4 h-4 scale-125'
+                            : 'bg-white/50 border-transparent opacity-70 w-3 h-3'
                         }`}
                         aria-label={`Go to slide ${index + 1}`}
                       />

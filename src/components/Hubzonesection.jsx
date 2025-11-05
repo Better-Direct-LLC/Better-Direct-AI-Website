@@ -2,11 +2,11 @@ import React from 'react';
 
 const HubZoneSection = () => {
   return (
-    <section className="bg-blue-600 py-16">
+    <section className="py-16" style={{ background: '#1161ad' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main heading */}
         <div className="bg-white rounded-lg p-8 mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-600 text-center mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6" style={{ color: '#0570c6' }}>
             Arizona's Only HUBZone & SDVOSB Partner for Federal Contracts
           </h2>
           <p className="text-center text-gray-700">
@@ -19,7 +19,7 @@ const HubZoneSection = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {/* HUBZONE Column */}
             <div>
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">
+              <h3 className="text-2xl font-bold mb-4" style={{ color: '#0570c6' }}>
                 HUBZONE
               </h3>
               <p className="text-gray-700 mb-4">
@@ -32,7 +32,7 @@ const HubZoneSection = () => {
 
             {/* SDVOSB Column */}
             <div>
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">
+              <h3 className="text-2xl font-bold mb-4" style={{ color: '#0570c6' }}>
                 SDVOSB
               </h3>
               <p className="text-gray-700 mb-4">

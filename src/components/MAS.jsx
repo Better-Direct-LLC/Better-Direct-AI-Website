@@ -32,16 +32,16 @@ const MAS = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="bg-blue-600 py-16">
+            <section className="py-16" style= {{ background: '#1161ad' }}>
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12">
                         <div className="grid md:grid-cols-2 gap-8 items-center">
                             {/* Left side - Text */}
                             <div>
-                                <h1 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
+                                <h1 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#0570c6' }}>
                                     The Only SDVOSB & HUBZone IT Provider in Arizona
                                 </h1>
-                                <p className="text-blue-600 leading-relaxed">
+                                <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                     If you're an OEM interested in joining our GSA schedule
                                 </p>
                             </div>
@@ -70,19 +70,19 @@ const MAS = () => {
                         <div className="md:col-span-2 space-y-8">
                             {/* Main heading card */}
                             <div className="bg-white rounded-lg shadow-lg p-8">
-                                <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+                                <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#0570c6' }}>
                                     Elevate Your IT Procurement with Better Direct and the General Services Administration (GSA) Multiple Award Schedule (MAS) Blanket Purchase Agreement (BPA)       </h2>
-                                <p className="text-blue-600 leading-relaxed mb-6">
+                                <p className="leading-relaxed mb-6" style={{ color: '#0570c6' }}>
                                     Looking for a faster, smarter, and more cost-effective way to meet your agency’s IT needs? At Better Direct, we’re more than a vendor; we’re your strategic partner under the General Services Administration (GSA) Multiple Award Schedule (MAS) Contract #GS-35F-0503X. We deliver top-tier IT hardware, software, and services with unmatched value and expertise, providing access to over 400,000 products from 140+ leading OEMs (e.g., Oracle, HP, Dell) and tailored solutions to drive federal, state, and local government missions forward, backed by proven results, including over $40 million in Navy repairs and counting.       </p>
 
-                                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     Why Better Direct Elevates GSA MAS Contract
                                 </h3>
-                                <p className="text-blue-600 leading-relaxed mb-4">
-                                    At Better Direct, we transform the GSA MAS into your strategic advantage. Here’s what sets us apart: 
+                                <p className="leading-relaxed mb-4" style={{ color: '#0570c6' }}>
+                                    At Better Direct, we transform the GSA MAS into your strategic advantage. Here’s what sets us apart:
                                 </p>
 
-                                <ul className="space-y-4 text-blue-600 mb-6">
+                                <ul className="space-y-4 mb-6" style={{ color: '#0570c6' }}>
                                     <li className="flex items-start">
                                         <span className="mr-3 font-bold">•</span>
                                         <div>
@@ -95,7 +95,7 @@ const MAS = () => {
                                     </li>
                                 </ul>
 
-                                <ul className="space-y-2 text-blue-600 ml-8 mb-6">
+                                <ul className="space-y-2 ml-8 mb-6" style={{ color: '#0570c6' }}>
                                     <li>• <strong>IT Hardware (SIN 33411):</strong> Desktops, servers, and more.</li>
                                     <li>• <strong>Furniture & Related Products (SIN 33721):</strong> Office furniture to support your IT setup.</li>
                                     <li>• <strong>IT Professional Services (SIN 54151):</strong> Cybersecurity support and other expert help.</li>
@@ -105,7 +105,7 @@ const MAS = () => {
                                     <li>• <strong>IT Maintenance (SIN 811212):</strong> Services to keep everything running smoothly.</li>
                                 </ul>
 
-                                <ul className="space-y-4 text-blue-600 mb-6">
+                                <ul className="space-y-4 mb-6" style={{ color: '#0570c6' }}>
                                     <li className="flex items-start">
                                         <span className="mr-3 font-bold">•</span>
                                         <div>
@@ -123,19 +123,19 @@ const MAS = () => {
                                     </li>
                                 </ul>
 
-                                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     GSA MAS: Your Gateway to IT Success with Better Direct
                                 </h3>
-                                <p className="text-blue-600 leading-relaxed mb-4">
+                                <p className="leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                     Running through July 14, 2026, the GSA MAS equips your agency with efficient IT modernization. Built for clients like the Department of Defense (DoD) and state/local buyers via GSA’s Cooperative Purchasing Program, it provides:</p>
 
-                                <ul className="space-y-2 text-blue-600 ml-8 mb-6">
+                                <ul className="space-y-2 ml-8 mb-6" style={{ color: '#0570c6' }}>
                                     <li>• <strong>Budget-Friendly Value:</strong> Pre-negotiated rates stretch your funding across diverse needs.</li>
                                     <li>• <strong>Scalable Options:</strong> Handles everything from small buys to complex Blanket Purchase Agreements (BPAs).</li>
                                     <li>• <strong>Rapid Deployment:</strong> Streamlined access gets technology in your hands sooner.</li>
                                 </ul>
 
-                                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     Let’s Optimize Your IT—Contact Us Today!
                                 </h3>
                             </div>
@@ -160,24 +160,25 @@ const MAS = () => {
                                     </div>
 
                                     {/* Name */}
-                                    <h3 className="text-lg font-bold text-blue-600 mb-2">
+                                    <h3 className="text-lg font-bold mb-2" style={{ color: '#0570c6' }}>
                                         {member.name}
                                     </h3>
 
                                     {/* Title */}
-                                    <p className="text-sm font-semibold text-blue-600 mb-3">
+                                    <p className="text-sm font-semibold" style={{ color: '#0570c6' }}>
                                         {member.title}
                                     </p>
 
                                     {/* Description */}
-                                    <p className="text-blue-600 text-sm leading-relaxed mb-4">
+                                    <p className="text-sm leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                         {member.description}
                                     </p>
 
                                     {/* Contact Button */}
                                     <button
                                         onClick={() => window.location.href = member.link}
-                                        className="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                        className="px-6 py-2 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                        style= {{ background: '#1161ad' }}>
                                         {member.buttonText}
                                     </button>
                                 </div>
@@ -208,10 +209,10 @@ const MAS = () => {
 
                             {/* Content */}
                             <div>
-                                <h2 className="text-2xl font-bold text-blue-600 mb-4">
+                                <h2 className="text-2xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     Contact GSA Sales
                                 </h2>
-                                <p className="text-blue-600 leading-relaxed">
+                                <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                     For your GSA sales needs, partner with Better Direct to unlock tailored IT solutions and exceptional service. Our GSA sales team, led by Madi Alberts, is dedicated to delivering top-notch support, ensuring seamless procurement and compliance for your agency’s mission. Contact us today at (480) 921-3858 ext.703 or email madison.alberts@betterdirect.com to get started!</p>
                             </div>
                         </div>

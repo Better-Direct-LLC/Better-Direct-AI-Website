@@ -24,16 +24,16 @@ const MAS = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="bg-blue-600 py-16">
+            <section className="py-16" style={{ background: '#1161ad' }}>
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12">
                         <div className="grid md:grid-cols-2 gap-8 items-center">
                             {/* Left side - Text */}
                             <div>
-                                <h1 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
+                                <h1 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#0570c6' }}>
                                     The Only SDVOSB & HUBZone IT Provider in Arizona
                                 </h1>
-                                <p className="text-blue-600 leading-relaxed">
+                                <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                     If you're an OEM interested in joining our SEWP schedule
                                 </p>
                             </div>
@@ -62,19 +62,19 @@ const MAS = () => {
                         <div className="md:col-span-2 space-y-8">
                             {/* Main heading card */}
                             <div className="bg-white rounded-lg shadow-lg p-8">
-                                <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+                                <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#0570c6' }}>
                                     Power Your IT Needs with Better Direct and the Solutions for Enterprise-Wide Procurement (SEWP) V Contract </h2>
-                                <p className="text-blue-600 leading-relaxed mb-6">
+                                <p className="leading-relaxed mb-6" style={{ color: '#0570c6' }}>
                                     Searching for a fast, smart, and budget-friendly way to meet your agency’s IT demands? Better Direct is your premier partner under NASA’s Solutions for Enterprise-Wide Procurement (SEWP V) contract, a Government-Wide Acquisition Contract (GWAC). Holding three of the five available contracts Group A (NNG15SD45B), Group B (NNG15SD10B), and Group C (NNG15SD65B), we deliver cutting-edge IT products and services with exceptional value and expertise, tailored to federal agency missions.</p>
 
-                                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     Why Better Direct Elevates SEWP V Contract
                                 </h3>
-                                <p className="text-blue-600 leading-relaxed mb-4">
+                                <p className="leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                     At Better Direct, we don’t just process orders we maximize the SEWP V contract to meet your needs. Here’s how we make it work for you:
                                 </p>
 
-                                <ul className="space-y-4 text-blue-600 mb-6">
+                                <ul className="space-y-4 mb-6" style={{ color: '#0570c6' }}>
                                     <li className="flex items-start">
                                         <span className="mr-3 font-bold">•</span>
                                         <div>
@@ -122,20 +122,20 @@ const MAS = () => {
                                     </li>
                                 </ul>
 
-                                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     SEWP V Contract: “Looking for a cost-effective solution to meet your agency’s IT needs?”
                                 </h3>
-                                <p className="text-blue-600 leading-relaxed mb-4">
+                                <p className="leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                     The SEWP V contract equips federal agencies with efficient, flexible IT acquisition. As a Service-Disabled Veteran-Owned Small Business (SDVOSB) and Certified HUBZone company, Better Direct enhances this GWAC with:
                                 </p>
 
-                                <ul className="space-y-2 text-blue-600 ml-8 mb-6">
+                                <ul className="space-y-2 ml-8 mb-6" style={{ color: '#0570c6' }}>
                                     <li>• <strong>Budget-Friendly Value:</strong> Competitive rates from top-tier vendors, maximizing your funds.</li>
                                     <li>• <strong>Scalable Options:</strong> Contract options for quick buys or large-scale projects.</li>
                                     <li>• <strong>Rapid Deployment:</strong> Streamlined processes, proven by over $40 million in Navy repairs and counting.</li>
                                 </ul>
 
-                                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     Let’s Optimize Your IT—Contact Us Today!
                                 </h3>
                             </div>
@@ -160,24 +160,25 @@ const MAS = () => {
                                     </div>
 
                                     {/* Name */}
-                                    <h3 className="text-lg font-bold text-blue-600 mb-2">
+                                    <h3 className="text-lg font-bold mb-2" style={{ color: '#0570c6' }}>
                                         {member.name}
                                     </h3>
 
                                     {/* Title */}
-                                    <p className="text-sm font-semibold text-blue-600 mb-3">
+                                    <p className="text-sm font-semibold" style={{ color: '#0570c6' }}>
                                         {member.title}
                                     </p>
 
                                     {/* Description */}
-                                    <p className="text-blue-600 text-sm leading-relaxed mb-4">
+                                    <p className="text-sm leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                         {member.description}
                                     </p>
 
                                     {/* Contact Button */}
                                    <button
                                         onClick={() => window.location.href = member.link}
-                                        className="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                        className="px-6 py-2 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                        style={{ backgroundColor: '#1161ad' }}>
                                         {member.buttonText}
                                     </button>
                                 </div>
@@ -208,10 +209,10 @@ const MAS = () => {
 
                             {/* Content */}
                             <div>
-                                <h2 className="text-2xl font-bold text-blue-600 mb-4">
+                                <h2 className="text-2xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     Contact SEWP Sales
                                 </h2>
-                                <p className="text-blue-600 leading-relaxed">
+                                <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                     For your SEWP sales needs, partner with Better Direct to unlock tailored IT solutions and exceptional service. Our SEWP sales team, led by Kim Lambert, is dedicated to delivering top-notch support, ensuring seamless procurement and compliance for your agency’s mission. Contact us today at (480) 921-3858 (ext – 133) or email kim@betterdirect.com to get started!</p>
                             </div>
                         </div>

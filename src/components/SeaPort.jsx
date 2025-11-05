@@ -16,16 +16,16 @@ const SeaPort = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="bg-blue-600 py-16">
+            <section className="py-16" style={{ background: '#1161ad' }}>
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12">
                         <div className="grid md:grid-cols-2 gap-8 items-center">
                             {/* Left side - Text */}
                             <div>
-                                <h1 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
+                                <h1 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#0570c6' }}>
                                     The Only SDVOSB & HUBZone IT Provider in Arizona
                                 </h1>
-                                <p className="text-blue-600 leading-relaxed">
+                                <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                     If you’re an OEM interested in partnering on an opportunity, contact us.
                                 </p>
                             </div>
@@ -54,19 +54,19 @@ const SeaPort = () => {
                         <div className="md:col-span-2 space-y-8">
                             {/* Main heading card */}
                             <div className="bg-white rounded-lg shadow-lg p-8">
-                                <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+                                <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#0570c6' }}>
                                     Power Your IT Needs with Better Direct and the SeaPort Next Generation (SeaPort-NxG) Contract</h2>
-                                <p className="text-blue-600 leading-relaxed mb-6">
+                                <p className="leading-relaxed mb-6" style={{ color: '#0570c6' }}>
                                     Searching for a fast, smart, and cost-effective way to support your Navy missions? Better Direct is your premier partner under the U.S. Navy’s SeaPort Next Generation (SeaPort-NxG) contract (N0017825D7129), a Multiple Award Indefinite Delivery/Indefinite Quantity (IDIQ) vehicle. Recently awarded to us, this $4 billion contract delivers engineering, program management, and IT services with unmatched expertise, empowering commands like NAVSEA, NAVWAR, NAVSUP, MSC, NAVFAC, ONR, and the United States Marine Corps (USMC) through January 1, 2029.
                                 </p>
-                                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     Why Better Direct Elevates SeaPort-NxG Contract
                                 </h3>
-                                <p className="text-blue-600 leading-relaxed mb-4">
+                                <p className="leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                     At Better Direct, we don’t just deliver services—we maximize the SeaPort-NxG contract to meet your needs. Here’s how we make it work for you:
                                 </p>
 
-                                <ul className="space-y-4 text-blue-600 mb-6">
+                                <ul className="space-y-4 mb-6" style={{ color: '#0570c6' }}>
                                     <li className="flex items-start">
                                         <span className="mr-3 font-bold">•</span>
                                         <div>
@@ -115,20 +115,20 @@ const SeaPort = () => {
                                     </li>
                                 </ul>
 
-                                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     SeaPort-NxG Contract: Your Gateway to Mission Success with Better Direct
                                 </h3>
-                                <p className="text-blue-600 leading-relaxed mb-4">
+                                <p className="leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                     Spanning January 2, 2019, to January 1, 2029, the SeaPort-NxG contract equips the Department of the Navy (DON) with efficient, long-term procurement. Better Direct enhances this IDIQ with:
                                 </p>
 
-                                <ul className="space-y-2 text-blue-600 ml-8 mb-6">
+                                <ul className="space-y-2 ml-8 mb-6" style={{ color: '#0570c6' }}>
                                     <li>• <strong>Budget-Friendly Value:</strong> Competitive rates for engineering and program management, maximizing your $4 billion ceiling.</li>
                                     <li>• <strong>Scalable Options:</strong> Custom TOs for emerging tech or multi-phase projects.</li>
                                     <li>• <strong>Rapid Deployment:</strong> Proven expertise driving high-impact initiatives like AI-driven systems and secure IT.</li>
                                 </ul>
 
-                                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     Let’s Optimize Your IT—Contact Us Today!
                                 </h3>
                             </div>
@@ -153,24 +153,25 @@ const SeaPort = () => {
                                     </div>
 
                                     {/* Name */}
-                                    <h3 className="text-lg font-bold text-blue-600 mb-2">
+                                    <h3 className="text-lg font-bold mb-2" style={{ color: '#0570c6' }}>
                                         {member.name}
                                     </h3>
 
                                     {/* Title */}
-                                    <p className="text-sm font-semibold text-blue-600 mb-3">
+                                    <p className="text-sm font-semibold" style={{ color: '#0570c6' }}>
                                         {member.title}
                                     </p>
 
                                     {/* Description */}
-                                    <p className="text-blue-600 text-sm leading-relaxed mb-4">
+                                    <p className="text-sm leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                         {member.description}
                                     </p>
 
                                     {/* Contact Button */}
                                     <button
                                         onClick={() => window.location.href = member.link}
-                                        className="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                        className="px-6 py-2 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                        style={{ background: '#1161ad' }}>
                                         {member.buttonText}
                                     </button>
                                 </div>
@@ -201,10 +202,10 @@ const SeaPort = () => {
 
                             {/* Content */}
                             <div>
-                                <h2 className="text-2xl font-bold text-blue-600 mb-4">
+                                <h2 className="text-2xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     Let’s Optimize Your Mission—Contact Us Today!
                                 </h2>
-                                <p className="text-blue-600 leading-relaxed">
+                                <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                     Team up with Better Direct to leverage the full power of the SeaPort-NxG contract. Reach our dedicated expert, Anthony Hernandez, by email anthony@betterdirect.com or by phone at 480.921.3858 Ext 121.</p>
                             </div>
                         </div>

@@ -4,13 +4,13 @@ import Hero_section from '.././assets/Hero_section.jpeg';
 
 const HeroSection = () => {
   return (
-    <section className="bg-blue-600 py-20">
+    <section className="py-20" style={{ background: '#1161ad' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-lg shadow-xl overflow-hidden">
           <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
             {/* Left side - Text content */}
             <div className="flex flex-col justify-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#0570c6' }}>
                 Leading SDVOSB & HUBZone IT Provider in Arizona
               </h1>
               <p className="text-gray-700 mb-8">
@@ -19,7 +19,8 @@ const HeroSection = () => {
               <div>
                 <Link 
                   to="/contracts"
-                  className="inline-block px-8 py-3 border-2 border-blue-600 text-blue-600 font-medium rounded hover:bg-blue-600 hover:text-white transition-all duration-300"
+                  className="inline-block px-8 py-3 border-2 font-medium rounded hover:bg-blue-600 hover:text-white transition-all duration-300"
+                  style={{ color: '#0570c6' , borderColor: '#0570c6' }}
                 >
                   Explore our Contracts
                 </Link>

@@ -138,16 +138,16 @@ const Services = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="bg-blue-600 py-16">
+            <section className="py-16" style={{ background: '#1161ad' }}>
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12">
                         <div className="grid md:grid-cols-2 gap-8 items-center">
                             {/* Left side - Text */}
                             <div>
-                                <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6">
+                                <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#0570c6' }} >
                                     Services
                                 </h1>
-                                <p className="text-blue-600 leading-relaxed">
+                                <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                     As a small business doing big things, we provide not only top-tier IT hardware and software solutions, but also a full range of professional services to support organizations through every stage of their technology needs. Our offerings include expert installation, configuration, and customization, along with tailored implementation services to ensure seamless integration. We specialize in custom project management and consulting, delivering strategic guidance and hands-on support for complex IT initiatives. Additionally, we offer customized AI solutions designed to meet specific business goals, helping clients harness the power of intelligent automation and data-driven innovation.
                                 </p>
                             </div>
@@ -173,7 +173,7 @@ const Services = () => {
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Left side description */}
                     <div className="mb-12 flex justify-center items-center">
-                        <p className="text-blue-600 leading-relaxed max-w-md text-center">
+                        <p className="leading-relaxed max-w-md text-center" style={{ color: '#0570c6' }}>
                             <strong>Combine Better Direct's Services with your hardware and software purchases</strong>
                             <br /><br />
                             When you hire the expertise of Better Direct's services team together with your hardware and software, you ensure consistency to your system. Check out our many services here today.
@@ -184,10 +184,10 @@ const Services = () => {
                     <div className="grid md:grid-cols-2 gap-6">
                         {services.map((service, index) => (
                             <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                                     {service.title}
                                 </h3>
-                                <p className="text-blue-600 leading-relaxed">
+                                <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                     {service.description}
                                 </p>
                             </div>
@@ -197,7 +197,7 @@ const Services = () => {
             </section>
 
             {/* Meet Our Services Team Section */}
-            <section className="py-16 bg-blue-600">
+            <section className="py-16" style={{ background: '#1161ad' }}>
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12">
                         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -211,7 +211,7 @@ const Services = () => {
                                             onClick={prevVideo}
                                             className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition-all z-10"
                                             aria-label="Previous video"
-                                            style={{ zIndex: 2 }}
+                                            style={{ zIndex: 2 , background: '#1161ad'  }}
                                         >
                                             <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M15 19l-7-7 7-7" /></svg>
                                         </button>
@@ -241,7 +241,7 @@ const Services = () => {
                                                         onClick={() => setPlayerOpen(true)}
                                                         aria-label="Play video"
                                                     >
-                                                        <svg className="w-8 h-8 text-blue-600 ml-1" viewBox="0 0 24 24" fill="currentColor">
+                                                        <svg className="w-8 h-8 ml-1" style={{ color: '#0570c6' }} viewBox="0 0 24 24" fill="currentColor">
                                                             <path d="M8 5v14l11-7z" />
                                                         </svg>
                                                     </button>
@@ -251,16 +251,17 @@ const Services = () => {
                                         {/* Right Arrow */}
                                         <button
                                             onClick={nextVideo}
-                                            className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition-all z-10"
+                                            className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-white rounded-full shadow hover:bg-blue-700 transition-all z-10"
                                             aria-label="Next video"
-                                            style={{ zIndex: 2 }}
+                                            style={{ zIndex: 2 , background: '#1161ad'  }}
                                         >
                                             <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M9 5l7 7-7 7" /></svg>
                                         </button>
                                         {/* Close button for player */}
                                         {playerOpen && (
                                             <button
-                                                className="absolute top-2 right-2 bg-blue-600 text-white rounded-full p-2 shadow-lg hover:bg-blue-800 transition-colors"
+                                                className="absolute top-2 right-2 text-white rounded-full p-2 shadow-lg hover:bg-blue-800 transition-colors"
+                                                style={{ background: '#1161ad' }}
                                                 onClick={() => setPlayerOpen(false)}
                                                 aria-label="Close player"
                                             >
@@ -296,11 +297,11 @@ const Services = () => {
 
                             {/* Right side - Text */}
                             <div>
-                                <h2 className="text-3xl font-bold text-blue-600 mb-6">
+                                <h2 className="text-3xl font-bold mb-6" style={{ color: '#0570c6' }}>
                                     Meet our Services Team
                                 </h2>
-                                <div className="w-16 h-1 bg-blue-600 mb-6"></div>
-                                <p className="text-blue-600 leading-relaxed">
+                                <div className="w-16 h-1" style={{ background: '#0570c6' }}></div>
+                                <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                     Our Services Team can assist you with your project, beginning with custom project design and ending with implementation of your new software or installation of your hardware – from servers to computer stations and more.
                                 </p>
                             </div>
@@ -315,11 +316,11 @@ const Services = () => {
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         {/* Left side - Text */}
                         <div>
-                            <h2 className="text-3xl font-bold text-blue-600 mb-6">
+                            <h2 className="text-3xl font-bold mb-6" style={{ color: '#0570c6' }}>
                                 AI SERVICES
                             </h2>
-                            <div className="w-16 h-1 bg-blue-600 mb-6"></div>
-                            <p className="text-blue-600 leading-relaxed">
+                            <div className="w-16 h-1 mb-6" style={{ background: '#1161ad' }}></div>
+                            <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                 Our AI Services are designed to help businesses harness the power of artificial intelligence to drive smarter decision-making, improve efficiency, and unlock new opportunities. We offer customized AI solutions tailored to your specific needs—ranging from predictive analytics and process automation to intelligent data analysis and machine learning integration. Whether you're exploring AI for the first time or scaling existing capabilities, we provide the strategic guidance, development, and implementation support needed to turn your AI vision into reality.
                             </p>
                         </div>
@@ -357,11 +358,11 @@ const Services = () => {
 
                         {/* Right side - Text */}
                         <div>
-                            <h2 className="text-3xl font-bold text-blue-600 mb-6">
+                            <h2 className="text-3xl font-bold mb-6" style={{ color: '#0570c6' }}>
                                 CUSTOMIZED PROJECT MANAGEMENT
                             </h2>
-                            <div className="w-16 h-1 bg-blue-600 mb-6"></div>
-                            <p className="text-blue-600 leading-relaxed">
+                            <div className="w-16 h-1 mb-6" style={{ background: '#1161ad' }}></div>
+                            <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                 Our Customized Project Management services are tailored to fit the unique needs, goals, and complexity of each client's initiative. We adapt our methodologies to align with your organization's workflows, timelines, and resource requirements whether it's a small-scale deployment or a large, multi-phase IT project. With a focus on clear communication, risk mitigation, and results-driven execution, we ensure that every project is managed efficiently and delivered with precision.
                             </p>
                         </div>
@@ -370,7 +371,7 @@ const Services = () => {
             </section>
 
             {/* Team Members Section */}
-            <section className="py-16 bg-blue-600">
+            <section className="py-16" style={{ background: '#1161ad' }}>
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12">
                         <div className="grid md:grid-cols-3 gap-8">
@@ -391,19 +392,19 @@ const Services = () => {
                                     </div>
 
                                     {/* Name */}
-                                    <h3 className="text-xl font-bold text-blue-600 mb-3">
+                                    <h3 className="text-xl font-bold mb-3" style={{ color: '#0570c6' }}>
                                         {member.name}
                                     </h3>
 
                                     {/* Description */}
-                                    <p className="text-blue-600 text-sm leading-relaxed mb-4">
+                                    <p className="text-sm leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                         {member.description}
                                     </p>
 
                                     {/* Contact Button */}
                                     <button
                                     onClick={() => window.location.href = member.link}
-                                    className="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                    className="px-6 py-2" style={{ background: '#1161ad', color: '#ffffff' }}>
                                         {member.buttonText}
                                     </button>
                                 </div>
@@ -423,14 +424,22 @@ const Services = () => {
                                             onClick={() => toggleFaq(index)}
                                             className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                                         >
-                                            <span className="text-blue-600 font-medium">{faq.question}</span>
+                                            <span className="font-medium" style={{ color: '#0570c6' }}>{faq.question}</span>
                                             <div className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0 ml-4">
-                                                <span className="text-gray-600">+</span>
+                                                {expandedFaq === index ? (
+                                                    <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                                        <path d="M6 15l6-6 6 6" strokeLinecap="round" strokeLinejoin="round" />
+                                                    </svg>
+                                                ) : (
+                                                    <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                                        <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+                                                    </svg>
+                                                )}
                                             </div>
                                         </button>
                                         {expandedFaq === index && (
                                             <div className="px-6 pb-4">
-                                                <p className="text-gray-700">{faq.answer}</p>
+                                                <p className="" style={{ color: '#0570c6' }}>{faq.answer}</p>
                                             </div>
                                         )}
                                     </div>
@@ -444,7 +453,7 @@ const Services = () => {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Left side - Contact Form */}
-                        <div className="bg-blue-600 text-white rounded-lg p-8">
+                        <div className="text-white rounded-lg p-8" style={{ background: '#1161ad' }}>
                             <h2 className="text-3xl font-bold mb-4">
                                 Get in Touch With Us
                             </h2>
@@ -452,21 +461,32 @@ const Services = () => {
                                 Have questions or need support? We're here to help. Whether you're looking to learn more about our services, explore partnership opportunities, or just say hello, our team is ready to connect. Reach out today we'd love to hear from you.
                             </p>
 
-                            <form className="space-y-4">
+                            <form className="space-y-4" onSubmit={e => {
+                                e.preventDefault();
+                                const firstName = e.target[0].value;
+                                const lastName = e.target[1].value;
+                                const email = e.target[2].value;
+                                const subject = encodeURIComponent(`Contact from ${firstName} ${lastName}`);
+                                const body = encodeURIComponent(`Name: ${firstName} ${lastName}\nEmail: ${email}`);
+                                window.location.href = `mailto:info@betterdirect.com?subject=${subject}&body=${body}`;
+                            }}>
                                 <input
                                     type="text"
                                     placeholder="First Name"
                                     className="w-full px-4 py-3 bg-white rounded text-gray-700 focus:outline-none focus:ring-2 focus:ring-white"
+                                    required
                                 />
                                 <input
                                     type="text"
                                     placeholder="Last Name"
                                     className="w-full px-4 py-3 bg-white rounded text-gray-700 focus:outline-none focus:ring-2 focus:ring-white"
+                                    required
                                 />
                                 <input
                                     type="email"
                                     placeholder="Email"
                                     className="w-full px-4 py-3 bg-white rounded text-gray-700 focus:outline-none focus:ring-2 focus:ring-white"
+                                    required
                                 />
                                 <button
                                     type="submit"
@@ -480,17 +500,22 @@ const Services = () => {
                         {/* Right side - Social Media */}
                         <div className="flex items-center justify-center">
                             <div className="flex gap-4">
-                                <a href="#" className="w-12 h-12 bg-blue-600 rounded flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
+                                <a href="https://www.facebook.com/betterdirectllc/" className="w-12 h-12 bg-blue-600 rounded flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
                                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
                                 </a>
-                                <a href="#" className="w-12 h-12 bg-blue-500 rounded flex items-center justify-center text-white hover:bg-blue-600 transition-colors">
+                                <a href="https://www.linkedin.com/company/betterdirect" className="w-12 h-12 bg-blue-500 rounded flex items-center justify-center text-white hover:bg-blue-600 transition-colors">
                                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
                                 </a>
-                                <a href="#" className="w-12 h-12 bg-pink-600 rounded flex items-center justify-center text-white hover:bg-pink-700 transition-colors">
+                                <a href="https://www.instagram.com/betterdirectllc/?bpref=instagram" className="w-12 h-12 bg-pink-600 rounded flex items-center justify-center text-white hover:bg-pink-700 transition-colors">
                                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
                                 </a>
-                                <a href="#" className="w-12 h-12 bg-black rounded flex items-center justify-center text-white hover:bg-gray-800 transition-colors">
+                                <a href="https://x.com/BetterDirect?bpref=twitter" className="w-12 h-12 bg-black rounded flex items-center justify-center text-white hover:bg-gray-800 transition-colors">
                                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                                </a>
+                                <a href="https://www.pinterest.com/betterdirectllc/?eq=better%20direc&etslf=9902?bpref=pinterest" className="w-12 h-12 bg-red-600 rounded flex items-center justify-center text-white hover:bg-red-700 transition-colors" aria-label="Pinterest">
+                                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.14 2.53 7.67 6.13 9.09-.08-.77-.15-1.95.03-2.79.16-.7 1.04-4.47 1.04-4.47s-.26-.53-.26-1.31c0-1.23.71-2.15 1.6-2.15.75 0 1.12.56 1.12 1.23 0 .75-.48 1.87-.73 2.91-.21.89.44 1.62 1.31 1.62 1.57 0 2.78-1.66 2.78-4.05 0-2.12-1.53-3.6-3.71-3.6-2.53 0-4.01 1.89-4.01 3.85 0 .76.29 1.58.65 2.02.07.09.08.17.06.26-.07.29-.22.89-.25 1.01-.04.17-.13.21-.3.13-1.13-.52-1.84-2.14-1.84-3.45 0-2.8 2.04-5.38 5.89-5.38 3.09 0 5.5 2.2 5.5 5.13 0 3.08-1.94 5.56-4.63 5.56-1.01 0-1.96-.53-2.29-1.13l-.62 2.36c-.18.7-.54 1.58-.8 2.12.6.18 1.24.28 1.91.28 5.5 0 9.96-4.46 9.96-9.96s-4.46-9.96-9.96-9.96z" />
+                                    </svg>
                                 </a>
                             </div>
                         </div>

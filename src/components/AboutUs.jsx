@@ -87,7 +87,7 @@ const AboutUs = () => {
       bio: 'Thien Duc Phung, oversees GSA and 2GIT contracts at Better Direct. Thien\'s focus with managing these contracts is to keep product listings current, ensure government compliance, and maintain strong client relationships. He began at Better Direct as a GSA Admin in 2022, and has been promoted to now lead catalog growth, bid responses, and revenue-driving initiatives, collaborating closely with our fulfillment team to resolve customer inquiries.',
       imagePosition: 'right'
     },
-    
+
     {
       name: 'Matthew Walz',
       title: 'SEWP Program Manager',
@@ -118,12 +118,12 @@ const AboutUs = () => {
   const teamGrid = [
     { name: 'Mark Evans', title: 'President', image: './assets/AboutUs/mark.jpg' },
     { name: 'Diana Zhong', title: 'Financial Quantitative Analyst', image: './assets/AboutUs/diana.jpg' },
-    { name: 'Rashawn Hugg', title: 'Senior Program Manager', image: './assets/AboutUs/rashawn.jpg' },
+    { name: 'Rashawn Hugg', title: 'Senior Program Manager', image: './assets/AboutUs/video/rashawn.png' },
     { name: 'Chase Cai', title: 'Purchasing Manager', image: './assets/AboutUs/chase.jpg' },
-    { name: 'Kim Lambert', title: 'Sales Manager/Deputy SEWP Program Manager', image: './assets/AboutUs/kim.jpg' },
-    { name: 'Kato Wong', title: 'Sales Manager, ADMC-3 Program Manager', image: './assets/AboutUs/kato.jpg' },
-    { name: 'Matt Walz', title: 'SEWP Program Manager', image: './assets/AboutUs/matt.jpg' },
-    { name: 'Thien Duc Phung', title: 'GSA & 2GIT Contract Manager', image: './assets/AboutUs/thein.jpg' },
+    { name: 'Kim Lambert', title: 'Sales Manager/Deputy SEWP Program Manager', image: './assets/AboutUs/video/kim.jpg' },
+    { name: 'Kato Wong', title: 'Sales Manager, ADMC-3 Program Manager', image: './assets/AboutUs/video/kato.png' },
+    { name: 'Matt Walz', title: 'SEWP Program Manager', image: './assets/AboutUs/video/matt.png' },
+    { name: 'Thien Duc Phung', title: 'GSA & 2GIT Contract Manager', image: './assets/AboutUs/video/thien.png' },
     { name: 'Rachel Mock', title: 'GSA & 2GIT Program Manager', image: './assets/AboutUs/rachel.jpg' },
     { name: 'Anthony Hernandez', title: 'Project Manager', image: './assets/AboutUs/anthony.jpg' },
     { name: 'McKenna Mulligan', title: 'Project Manager', image: './assets/AboutUs/mckenna.jpg' }
@@ -134,30 +134,29 @@ const AboutUs = () => {
       {/* Hero Section with Background Image and Animated Text */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image with strong blue tint and moved down */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: 'url(./assets/AboutUs/Group-scaled.jpg)'
           }}
         >
-          <div className="absolute inset-0 bg-blue-500 opacity-40 mix-blend-overlay"></div>
+          <div className="absolute inset-0 opacity-40 mix-blend-overlay" style={{ background: '#1161ad' }}></div>
         </div>
 
         {/* Animated Text Overlay - nearly transparent */}
         <div className="relative w-full flex items-center justify-center px-4 py-20">
           <div
-            className={`rounded-xl shadow-2xl p-6 md:p-10 max-w-5xl w-full transition-all duration-1000 transform ${
-              showHeroText
+            className={`rounded-xl shadow-2xl p-6 md:p-10 max-w-5xl w-full transition-all duration-1000 transform ${showHeroText
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-10 opacity-0'
-            }`}
+              }`}
             style={{ background: showHeroText ? 'rgba(248, 248, 248, 0.33)' : 'rgba(255, 255, 255, 0)' }}
           >
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 mb-4 text-start leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-start leading-tight" style={{color: "#0570c6"}}>
               Rooted in Our Community, Driven by Innovation
             </h1>
-            <div className="w-16 h-1 bg-blue-400 mb-6 md:mb-8"></div>
-            <p className="text-sm md:text-base text-blue-900 text-start leading-relaxed">
+            <div className="w-16 h-1 mb-6 md:mb-8" style={{ background: '#1161ad' }}></div>
+            <p className="text-sm md:text-base text-start leading-relaxed" style={{color: "#0570c6"}}>
               Since 2006, we've grown alongside Tempe, Arizona, creating opportunities for local talent and building IT solutions that make a difference. As a HUBZone-certified business, we take pride in employing community members who bring skill, dedication, and fresh ideas to every project, strengthening both our company and the neighborhoods we serve.
             </p>
           </div>
@@ -165,7 +164,7 @@ const AboutUs = () => {
       </section>
 
       {/* Company Description Section */}
-      <section className="bg-blue-600 py-16">
+      <section className="py-16" style={{ background: '#1161ad' }}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-white leading-relaxed">
             Better Direct, LLC is a value-added reseller and manufacturer of information technology hardware, software, and related services headquartered in Tempe, Arizona. The Company was founded in 2006 and provides products and services to customers across all 50 states, as well as U.S. federal offices overseas. Better Direct is certified as a Historically Underutilized Business Zone (HUBZone), Service-Disabled Veteran-Owned Small Business (SDVOSB), and Small Disadvantaged Business (SDB). The Company is a prime contract holder under several federal procurement programs, including the GSA Multiple Award Schedule, 2nd Generation Information Technology (2GIT), NASA SEWP V (Groups A, B, and C), Army CHESS ADMC-3, and Navy SeaPort Next Generation. Better Direct offers more than 2,000 brands and approximately 400,000 products, and maintains two database centers with a focus on developing artificial intelligence solutions.
@@ -177,11 +176,10 @@ const AboutUs = () => {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {teamMembers.map((member, index) => (
-            <div 
-              key={index} 
-              className={`grid md:grid-cols-2 gap-8 items-center mb-16 ${
-                index !== teamMembers.length - 1 ? 'pb-16 border-b border-gray-200' : ''
-              }`}
+            <div
+              key={index}
+              className={`grid md:grid-cols-2 gap-8 items-center mb-16 ${index !== teamMembers.length - 1 ? 'pb-16 border-b border-gray-200' : ''
+                }`}
             >
               {/* Image and Video - Order changes based on imagePosition */}
               <div className={`${member.imagePosition === 'right' ? 'md:order-2' : ''}`}>
@@ -198,7 +196,7 @@ const AboutUs = () => {
                         allowFullScreen
                       ></iframe>
                       {/* Close button */}
-                      <button 
+                      <button
                         onClick={() => setCurrentVideo(null)}
                         className="absolute top-2 right-2 bg-black bg-opacity-50 text-white rounded-full p-1 hover:bg-opacity-70 transition-all"
                       >
@@ -210,26 +208,26 @@ const AboutUs = () => {
                   ) : (
                     // Image with Play Button
                     <>
-                      <img 
-                        src={member.image} 
+                      <img
+                        src={member.image}
                         alt={member.name}
                         className="w-full h-full object-cover"
-                        style={{ height: '300px'}}
+                        style={{ height: '300px' }}
                         onError={(e) => {
                           e.target.src = 'https://via.placeholder.com/420x300?text=' + encodeURIComponent(member.name);
                         }}
                       />
                       {/* Video Play Button Overlay */}
-                      <button 
+                      <button
                         onClick={() => setCurrentVideo(member.videoUrl)}
                         className="absolute inset-0 flex items-center justify-center group hover:bg-black hover:bg-opacity-20 transition-all duration-300"
                       >
-                          <div className="w-16 h-16 flex items-center justify-center">
-                            <svg className="w-14 h-14" viewBox="0 0 56 56" fill="none">
-                              <circle cx="28" cy="28" r="26" stroke="#60a5fa" strokeWidth="4" fill="transparent" />
-                              <polygon points="22,18 22,38 40,28" fill="#60a5fa" />
-                            </svg>
-                          </div>
+                        <div className="w-16 h-16 flex items-center justify-center">
+                          <svg className="w-14 h-14" viewBox="0 0 56 56" fill="none">
+                            <circle cx="28" cy="28" r="26" stroke="#0570c6 " strokeWidth="4" fill="transparent" />
+                            <polygon points="22,18 22,38 40,28" fill="#0570c6" />
+                          </svg>
+                        </div>
                       </button>
                     </>
                   )}
@@ -238,18 +236,18 @@ const AboutUs = () => {
 
               {/* Text Content */}
               <div className={`${member.imagePosition === 'right' ? 'md:order-1' : ''}`}>
-                <h2 className="text-3xl font-bold text-blue-600 mb-2">
+                <h2 className="text-3xl font-bold mb-2" style={{color: "#0570c6"}}>
                   {member.name}
                 </h2>
-                <p className="text-blue-800 mb-4 font-bold">
+                <p className="mb-4 font-bold" style={{color: "#0570c6"}}>
                   {member.title}
                 </p>
-                <div className="w-16 h-1 bg-blue-400 mb-4"></div>
-                <p className="text-gray-700 leading-relaxed">
-                  <span className="block rounded-lg px-4 py-3 text-blue-900">
+                <div className="w-16 h-1" style={{ background: '#1161ad' }}></div>
+                <p className="text-gray-700 leading-relaxed" style={{color: "#0570c6"}}>
+                  <span className="block rounded-lg px-4 py-3">
                     {member.bio.split(member.name).map((part, i, arr) =>
                       i < arr.length - 1
-                        ? <>{part}<b className="font-bold text-blue-700">{member.name}</b></>
+                        ? <>{part}<b className="font-bold" style={{color: "#0570c6"}}>{member.name}</b></>
                         : part
                     )}
                   </span>
@@ -266,11 +264,11 @@ const AboutUs = () => {
           <div className="flex flex-col md:flex-row gap-8 items-start">
             {/* Left: Title and Paragraph (1/3) */}
             <div className="md:w-1/3 w-full flex-shrink-0">
-              <h2 className="text-3xl font-bold text-blue-600 mb-4">
+              <h2 className="text-3xl font-bold mb-4" style={{color: "#0570c6"}}>
                 People Who Make a Difference
               </h2>
-              <div className="w-16 h-1 bg-blue-400 mb-4"></div>
-              <p className="text-gray-700 max-w-md">
+              <div className="w-16 h-1" style={{ background: '#1161ad' }}></div>
+              <p className="max-w-md" style={{color: "#0570c6"}}>
                 Our team is the driving force behind everything we do. They are not just employees, they are innovators, problem-solvers, and champions of the community. More than half of our staff live locally, and many have found opportunities here that they might not have had at larger IT firms. By providing meaningful careers, mentorship, and a supportive environment, we help our team unlock their full potential, create lasting impact, and deliver exceptional IT solutions that benefit both our clients and the community we proudly call home.
               </p>
             </div>
@@ -278,18 +276,28 @@ const AboutUs = () => {
             <div className="md:w-2/3 w-full">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {teamGrid.map((person, index) => (
-                  <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <img 
-                      src={person.image} 
+                  <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center">
+                    {/* <img
+                      src={person.image}
                       alt={person.name}
-                      className="w-full h-30 object-cover object-center rounded-t-lg"
+                      className="object-cover object-center rounded-md mt-4"
+                      style={{ width: '120px', height: '120px', objectPosition: person.name === 'Rashawn Hugg' ? '10% center' : 'center' }}
+                      onError={(e) => {
+                        e.target.src = 'https://via.placeholder.com/120x120?text=' + encodeURIComponent(person.name);
+                      }}
+                    /> */}
+                    <img
+                      src={person.image}
+                      alt={person.name}
+                      className="w-full h-full object-cover object-center"
+                      style={{ objectPosition: person.name === 'Rashawn Hugg' ? '5% center' : 'center' }}
                       onError={(e) => {
                         e.target.src = 'https://via.placeholder.com/300x300?text=' + encodeURIComponent(person.name);
                       }}
                     />
-                    <div className="p-4">
-                      <h3 className="font-bold text-blue-600 mb-1">{person.name}</h3>
-                      <p className="text-sm text-gray-600">{person.title}</p>
+                    <div className="p-4 w-full flex-1 flex flex-col justify-center items-center">
+                      <h3 className="font-bold mb-1 text-center" style={{color: "#0570c6"}}>{person.name}</h3>
+                      <p className="text-sm text-gray-600 text-center" style={{color: "#0570c6"}}>{person.title}</p>
                     </div>
                   </div>
                 ))}

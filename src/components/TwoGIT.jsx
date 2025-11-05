@@ -32,16 +32,16 @@ const TwoGIT = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-blue-600 py-16">
+      <section className="py-16" style= {{ background: '#1161ad' }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Left side - Text */}
               <div>
-                <h1 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6">
+                <h1 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#0570c6' }}>
                   The Only SDVOSB & HUBZone IT Provider in Arizona
                 </h1>
-                <p className="text-blue-600 leading-relaxed">
+                <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                   If you're an OEM interested in joining our 2GIT schedule
                 </p>
               </div>
@@ -70,21 +70,21 @@ const TwoGIT = () => {
             <div className="md:col-span-2 space-y-8">
               {/* Main heading card */}
               <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#0570c6' }}>
                   Elevate Your IT Procurement with Better Direct and the 2nd Generation Information Technology (2GIT) Blanket Purchase Agreement (BPA)
                 </h2>
-                <p className="text-blue-600 leading-relaxed mb-6">
+                <p className="leading-relaxed mb-6" style={{ color: '#0570c6' }}>
                   Looking for a smarter, faster, and more affordable way to power your agency's IT needs? Better Direct is your premier partner under the 2nd Generation Information Technology (2GIT) Blanket Purchase Agreement (BPA), managed by the U.S. General Services Administration (GSA) — Contract #47QTCA21A000P. We deliver cutting-edge IT hardware, software, and services with exceptional value, expertise, and efficiency— tailored to federal, state, local, tribal, and regional government missions.
                 </p>
 
-                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                <h3 className="text-xl font-bold" style={{ color: '#0570c6' }}>
                   Why Better Direct Stands Out with 2GIT
                 </h3>
-                <p className="text-blue-600 leading-relaxed mb-4">
+                <p className="leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                   At Better Direct, we go beyond simply fulfilling orders —we turn the 2GIT BPA into your strategic advantage. Here's how we maximize its value for you:
                 </p>
 
-                <ul className="space-y-4 text-blue-600 mb-6">
+                <ul className="space-y-4 mb-6" style={{ color: '#0570c6' }}>
                   <li className="flex items-start">
                     <span className="mr-3 font-bold">•</span>
                     <div>
@@ -99,14 +99,14 @@ const TwoGIT = () => {
                   </li>
                 </ul>
 
-                <ul className="space-y-2 text-blue-600 ml-8 mb-6">
+                <ul className="space-y-2 ml-8 mb-6" style={{ color: '#0570c6' }}>
                   <li>• <strong>IT Hardware (SIN 33411):</strong> Desktops, servers, and more.</li>
                   <li>• <strong>IT Services (SIN 54151):</strong> Cybersecurity support and other expert help.</li>
                   <li>• <strong>Software Licenses (SIN 511210):</strong> Critical applications for your operations.</li>
                   <li>• <strong>IT Maintenance (SIN 811212):</strong> Services to keep everything running reliably.</li>
                 </ul>
 
-                <ul className="space-y-4 text-blue-600 mb-6">
+                <ul className="space-y-4 mb-6" style={{ color: '#0570c6' }}>
                   <li className="flex items-start">
                     <span className="mr-3 font-bold">•</span>
                     <div>
@@ -127,20 +127,20 @@ const TwoGIT = () => {
                   </li>
                 </ul>
 
-                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                   Unlock IT Excellence with the 2GIT contract and Better Direct
                 </h3>
-                <p className="text-blue-600 leading-relaxed mb-4">
+                <p className="leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                   The 2GIT Blanket Purchase Agreement (BPA), [available through March 30, 2026], empowers your agency to modernize IT with ease and efficiency. Tailored for clients like the U.S. Air Force, Department of Defense (DoD), and state/local buyers through GSA's Cooperative Purchasing Program, it delivers:
                 </p>
 
-                <ul className="space-y-2 text-blue-600 ml-8 mb-6">
+                <ul className="space-y-2 ml-8 mb-6" style={{ color: '#0570c6' }}>
                   <li>• <strong>Cost Efficiency:</strong> Competitive pricing from 70+ pre-vetted vendors, including 50+ small businesses, under IT Schedule 70.</li>
                   <li>• <strong>Versatility:</strong> Scales from small upgrades to enterprise-wide deployments.</li>
                   <li>• <strong>Speed:</strong> Lowest Price Technically Acceptable (LPTA) standards accelerate acquisition.</li>
                 </ul>
 
-                <h3 className="text-xl font-bold text-blue-600 mb-4">
+                <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
                   Ready to Transform Your IT? Contact Us!
                 </h3>
               </div>
@@ -165,24 +165,25 @@ const TwoGIT = () => {
                   </div>
 
                   {/* Name */}
-                  <h3 className="text-lg font-bold text-blue-600 mb-2">
+                  <h3 className="text-lg font-bold mb-2" style={{ color: '#0570c6' }}>
                     {member.name}
                   </h3>
 
                   {/* Title */}
-                  <p className="text-sm font-semibold text-blue-600 mb-3">
+                  <p className="text-sm font-semibold" style={{ color: '#0570c6' }}>
                     {member.title}
                   </p>
 
                   {/* Description */}
-                  <p className="text-blue-600 text-sm leading-relaxed mb-4">
+                  <p className="text-sm leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                     {member.description}
                   </p>
 
                   {/* Contact Button */}
                   <button
                     onClick={() => window.location.href = member.link}
-                    className="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    className="px-6 py-2 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    style={{ background: '#1161ad' }}>
                     {member.buttonText}
                   </button>
                 </div>
@@ -213,11 +214,11 @@ const TwoGIT = () => {
 
               {/* Content */}
               <div>
-                <h2 className="text-2xl font-bold text-blue-600 mb-4">
+                <h2 className="text-2xl font-bold mb-4" style={{ color: '#0570c6' }}>
                   Contact 2GIT Sales
                 </h2>
-                <p className="text-blue-600 leading-relaxed">
-                  For your 2GIT sales needs, partner with Better Direct to unlock tailored IT solutions and exceptional service. Our GSA sales team, led by Madi Alberts, is dedicated to delivering top-notch support, ensuring seamless procurement and compliance for your agency's mission. Contact us today at <a href="tel:4809213858" className="text-blue-700 underline hover:text-blue-800">(480) 921-3858</a> ext.703 or email <a href="mailto:madison.alberts@betterdirect.com" className="text-blue-700 underline hover:text-blue-800">madison.alberts@betterdirect.com</a> to get started!
+                <p className="leading-relaxed" style={{ color: '#0570c6' }}>
+                  For your 2GIT sales needs, partner with Better Direct to unlock tailored IT solutions and exceptional service. Our GSA sales team, led by Madi Alberts, is dedicated to delivering top-notch support, ensuring seamless procurement and compliance for your agency's mission. Contact us today at <a href="tel:4809213858" className="underline hover:text-blue-800">(480) 921-3858</a> ext.703 or email <a href="mailto:madison.alberts@betterdirect.com" className="underline hover:text-blue-800">madison.alberts@betterdirect.com</a> to get started!
                 </p>
               </div>
             </div>

@@ -71,7 +71,7 @@ const EmployeeReview = () => {
                 <section className="py-16">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="bg-white rounded-lg shadow-2xl p-8 text-center">
-                            <h1 className="text-4xl md:text-5xl font-bold text-blue-600">
+                            <h1 className="text-4xl md:text-5xl font-bold" style={{ color: "#0570c6" }}>
                                 What Our Employees Say
                             </h1>
                         </div>
@@ -89,14 +89,14 @@ const EmployeeReview = () => {
                                 className={`bg-white rounded-lg shadow-xl p-8 transition-all duration-700 ease-out ${visible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                                 style={{ willChange: 'opacity, transform' }}
                             >
-                                <h2 className="text-2xl font-bold text-blue-600 mb-2">
+                                <h2 className="text-2xl font-bold mb-2" style={{ color: "#0570c6" }}>
                                     {testimonial.title}
                                 </h2>
-                                <p className="text-blue-600 font-medium mb-4">
+                                <p className="font-medium mb-4" style={{ color: "#0570c6" }}>
                                     {testimonial.role}
                                 </p>
-                                <div className="border-l-4 border-blue-400 pl-6">
-                                    <p className="text-blue-600 leading-relaxed italic">
+                                <div className="border-l-4 pl-6" style={{ borderColor: "#0570c6" }}>
+                                    <p className="leading-relaxed italic" style={{ color: "#0570c6" }}>
                                         {testimonial.quote}
                                     </p>
                                 </div>
