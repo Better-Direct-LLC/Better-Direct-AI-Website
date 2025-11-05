@@ -238,7 +238,7 @@ const ContactUs = () => {
               {/* Navigation Arrows - Hidden by default, animated on hover */}
               <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 hidden md:flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full shadow-lg transition-all duration-500 z-10 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 hover:bg-white/30 hover:scale-110"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/30 backdrop-blur-sm rounded-full shadow-lg transition-all duration-500 z-10 hover:bg-white/50 hover:scale-110"
                 aria-label="Previous slide"
               >
                 <svg
@@ -253,7 +253,7 @@ const ContactUs = () => {
 
               <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 hidden md:flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full shadow-lg transition-all duration-500 z-10 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 hover:bg-white/30 hover:scale-110"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/30 backdrop-blur-sm rounded-full shadow-lg transition-all duration-500 z-10 hover:bg-white/50 hover:scale-110"
                 aria-label="Next slide"
               >
                 <svg
