@@ -490,7 +490,7 @@ const Services = () => {
                                 />
                                 <button
                                     type="submit"
-                                    className="w-full px-6 py-3 border-2 border-white text-white font-medium rounded hover:bg-white hover:text-blue-600 transition-all duration-300"
+                                    className="w-full px-6 py-3 border-2 border-white text-white font-medium rounded transition-all duration-300 hover:bg-[#0570c6] hover:text-white hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#0570c6] cursor-pointer"
                                 >
                                     Email Us
                                 </button>
