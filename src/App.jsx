@@ -1,6 +1,7 @@
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import AboutUs from './components/AboutUs';
@@ -24,6 +25,7 @@ import SeaPort from './components/SeaPort';
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <div className="App">
         {/* Navbar appears on all pages */}
         <Navbar />
