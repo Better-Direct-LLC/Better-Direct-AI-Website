@@ -200,7 +200,24 @@ const ADMC = () => {
                                     Contact ADMC Sales
                                 </h2>
                                 <p className="leading-relaxed mb-4" style={{ color: '#0570c6' }}>
-                                    For your ADMC sales needs, partner with Better Direct to unlock tailored IT solutions and exceptional service. Our ITES sales team, led by Agness Tsang, is dedicated to delivering top-notch support, ensuring seamless procurement and compliance for your agency’s mission. Contact us today at (480) 921-3858 (ext – 697) or email agyness.tsang@betterdirect.com to get started!</p>
+                                    For your ADMC sales needs, partner with Better Direct to unlock tailored IT solutions and exceptional service. Our ITES sales team, led by Agness Tsang, is dedicated to delivering top-notch support, ensuring seamless procurement and compliance for your agency’s mission. Contact us today at{' '}
+                                    <a
+                                        href="tel:+14809213858"
+                                        className="underline cursor-pointer"
+                                        style={{ color: '#0570c6' }}
+                                    >
+                                        (480) 921-3858 (ext – 697)
+                                    </a>
+                                    {' '}or email{' '}
+                                    <a
+                                        href="mailto:agyness.tsang@betterdirect.com"
+                                        className="underline cursor-pointer"
+                                        style={{ color: '#0570c6' }}
+                                    >
+                                        agyness.tsang@betterdirect.com
+                                    </a>
+                                    {' '}to get started!
+                                </p>
                             </div>
                         </div>
                     </div>

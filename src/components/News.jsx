@@ -109,7 +109,7 @@ const News = () => {
                     aria-label="Expand image"
                     style={{ background: 'rgba(0,0,0,0.05)' }}
                   >
-                    <span className="bg-blue-600 rounded-full p-2 shadow-lg">
+                    <span className="bg-blue-600 rounded-full p-2 shadow-lg hover:scale-105 cursor-pointer">
                       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                         <line x1="12" y1="5" x2="12" y2="19" />
                         <line x1="5" y1="12" x2="19" y2="12" />
@@ -124,7 +124,7 @@ const News = () => {
         {/* Modal for full image popup */}
         {modalOpen && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 transition-all duration-300"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 transition-all duration-300 hover:scale-105"
             onClick={closeModal}
           >
             <div className="relative max-w-3xl w-full mx-4" onClick={e => e.stopPropagation()}>
@@ -138,7 +138,7 @@ const News = () => {
                 }}
               />
               <button
-                className="absolute top-2 right-2 bg-blue-600 text-white rounded-full p-2 shadow-lg hover:bg-blue-800 transition-colors"
+                className="absolute top-2 right-2 bg-blue-600 text-white rounded-full p-2 shadow-lg hover:bg-blue-800 transition-colors hover:scale-105 cursor-pointer"
                 onClick={closeModal}
                 aria-label="Close"
               >

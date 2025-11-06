@@ -14,7 +14,7 @@ const WhatWeDoSection = () => {
     {
       title: 'Tailored IT Solutions for Every Industry',
       description: 'We provide technology solutions for Federal, State, and Local Government, Education, and Commercial Enterprises covering planning, implementation, installation, and training.',
-      image: image2 
+      image: image2
     },
     {
       title: 'Partnership with OEMs',
@@ -30,13 +30,13 @@ const WhatWeDoSection = () => {
         <h2 className="text-4xl font-bold text-center mb-12" style={{ color: '#0570c6' }}>
           What do we do?
         </h2>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="rounded-lg flex items-center justify-center h-48 overflow-hidden mt-4">
-                <img 
-                  src={service.image} 
+                <img
+                  src={service.image}
                   alt={service.title}
                   className="w-full h-full object-contain"
                   onError={(e) => {
@@ -52,10 +52,18 @@ const WhatWeDoSection = () => {
                   {service.description}
                 </p>
                 {service.hasButton && (
-                  <Link 
+                  <Link
                     to="/mas"
-                    className="inline-block px-6 py-2 border-2 font-medium rounded hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                    className="inline-block px-6 py-2 border-2 font-medium rounded transition-all duration-300"
                     style={{ color: '#0570c6', borderColor: '#0570c6' }}
+                    onMouseEnter={e => {
+                      e.target.style.backgroundColor = '#0570c6';
+                      e.target.style.color = '#fff';
+                    }}
+                    onMouseLeave={e => {
+                      e.target.style.backgroundColor = '';
+                      e.target.style.color = '#0570c6';
+                    }}
                   >
                     Partner with us on GSA
                   </Link>

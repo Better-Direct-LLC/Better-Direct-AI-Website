@@ -49,7 +49,7 @@ function ImageCarousel() {
         {/* Left Arrow (always visible) */}
         <button
           onClick={prev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center border-2 border-white bg-white bg-opacity-90 rounded-full shadow-2xl hover:bg-blue-600 hover:text-white text-blue-700 transition-all duration-300 z-20"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center border-2 border-white bg-white bg-opacity-90 rounded-full shadow-2xl hover:bg-blue-600 hover:text-white text-blue-700 transition-all duration-300 z-20 hover:scale-105 cursor-pointer "
           aria-label="Previous image"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ function ImageCarousel() {
         {/* Right Arrow (always visible) */}
         <button
           onClick={next}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center border-2 border-white bg-white bg-opacity-90 rounded-full shadow-2xl hover:bg-blue-600 hover:text-white text-blue-700 transition-all duration-300 z-20"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center border-2 border-white bg-white bg-opacity-90 rounded-full shadow-2xl hover:bg-blue-600 hover:text-white text-blue-700 transition-all duration-300 z-20 hover:scale-105 cursor-pointer"
           aria-label="Next image"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
@@ -104,7 +104,7 @@ const BuyNow = () => {
     {
       title: 'SEWP Contract Solutions',
       description: 'Through the NASA SEWP V contract, Better Direct provides cutting-edge IT solutions to Federal agencies across all departments.',
-      buttonText: 'Learn More',
+      buttonText: 'Request a Quote',
       buttonLink: '/contracts',
       logo: './assets/BuyNow/sewp.png',
     }
@@ -171,7 +171,7 @@ const BuyNow = () => {
                     </p>
                     <Link
                       to={carouselItems[currentSlide].buttonLink}
-                      className="inline-block px-6 py-3 border-2 border-white text-white font-medium rounded hover:bg-white hover: transition-all duration-300"
+                      className="inline-block px-6 py-3 border-2 border-white text-white font-medium rounded hover:scale-105 cursor-pointer transition-all duration-300"
                     >
                       {carouselItems[currentSlide].buttonText}
                     </Link>
@@ -183,7 +183,7 @@ const BuyNow = () => {
             {/* Left Arrow */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white bg-opacity-80 rounded-full shadow-lg hover:bg-opacity-100 hover:scale-110 transition-all duration-300 group"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white bg-opacity-80 rounded-full shadow-lg hover:bg-opacity-100 hover:scale-110 transition-all duration-300 group hover:scale-105 cursor-pointer"
               aria-label="Previous slide"
             >
               <svg
@@ -199,7 +199,7 @@ const BuyNow = () => {
             {/* Right Arrow */}
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white bg-opacity-80 rounded-full shadow-lg hover:bg-opacity-100 hover:scale-110 transition-all duration-300 group"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white bg-opacity-80 rounded-full shadow-lg hover:bg-opacity-100 hover:scale-110 transition-all duration-300 group hover:scale-105 cursor-pointer"
               aria-label="Next slide"
             >
               <svg

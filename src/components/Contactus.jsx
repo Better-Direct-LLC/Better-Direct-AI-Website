@@ -3,14 +3,14 @@ import React, { useState, useEffect } from 'react';
 const ContactUs = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState({});
-  
+
   // Form state
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
-  
+
   // CAPTCHA state
   const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, answer: 0 });
   const [captchaInput, setCaptchaInput] = useState('');
@@ -102,26 +102,24 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen" style={{ background: '#1161ad' }}>
       {/* Hero Section with Text */}
-      <section 
-        className="py-16" 
-        id="hero-section" 
+      <section
+        className="py-16"
+        id="hero-section"
         data-animate
       >
-        <div 
-          className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${
-            isVisible['hero-section'] 
-              ? 'opacity-100 translate-y-0' 
+        <div
+          className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${isVisible['hero-section']
+              ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-10'
-          }`}
+            }`}
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left side - Text */}
-            <div 
-              className={`text-white transition-all duration-1000 delay-200 ${
-                isVisible['hero-section'] 
-                  ? 'opacity-100 translate-x-0' 
+            <div
+              className={`text-white transition-all duration-1000 delay-200 ${isVisible['hero-section']
+                  ? 'opacity-100 translate-x-0'
                   : 'opacity-0 -translate-x-10'
-              }`}
+                }`}
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Let's Connect -Your IT Solutions Start Here
@@ -132,12 +130,11 @@ const ContactUs = () => {
             </div>
 
             {/* Right side - Carousel */}
-            <div 
-              className={`relative group transition-all duration-1000 delay-400 ${
-                isVisible['hero-section'] 
-                  ? 'opacity-100 translate-x-0' 
+            <div
+              className={`relative group transition-all duration-1000 delay-400 ${isVisible['hero-section']
+                  ? 'opacity-100 translate-x-0'
                   : 'opacity-0 translate-x-10'
-              }`}
+                }`}
             >
               {/* Carousel Container */}
               <div className="relative backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden border border-cyan-400/30">
@@ -145,7 +142,7 @@ const ContactUs = () => {
                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-400/10 via-blue-500/10 to-purple-600/10 pointer-events-none"></div>
                 {/* Image */}
                 <div className="h-64 overflow-hidden relative">
-                  <img 
+                  <img
                     src={slides[currentSlide].image}
                     alt={slides[currentSlide].title}
                     className="w-full h-full object-cover transition-all duration-500"
@@ -158,7 +155,7 @@ const ContactUs = () => {
 
                 {/* Content */}
                 <div className="p-8">
-                  <h2 className="text-3xl font-bold mb-6 text-center drop-shadow-lg" style={{color: "#6cb2ebff"}}>
+                  <h2 className="text-3xl font-bold mb-6 text-center drop-shadow-lg" style={{ color: "#6cb2ebff" }}>
                     {slides[currentSlide].title}
                   </h2>
 
@@ -226,9 +223,8 @@ const ContactUs = () => {
                     <button
                       key={index}
                       onClick={() => goToSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        currentSlide === index ? 'bg-white' : 'bg-white/40'
-                      }`}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index ? 'bg-white' : 'bg-white/40'
+                        }`}
                       aria-label={`Go to slide ${index + 1}`}
                     />
                   ))}
@@ -238,7 +234,7 @@ const ContactUs = () => {
               {/* Navigation Arrows - Hidden by default, animated on hover */}
               <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/30 backdrop-blur-sm rounded-full shadow-lg transition-all duration-500 z-10 hover:bg-white/50 hover:scale-110"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/30 backdrop-blur-sm rounded-full shadow-lg transition-all duration-500 z-10 hover:bg-white/50 hover:scale-110 hover:scale-105 cursor-pointer"
                 aria-label="Previous slide"
               >
                 <svg
@@ -253,7 +249,7 @@ const ContactUs = () => {
 
               <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/30 backdrop-blur-sm rounded-full shadow-lg transition-all duration-500 z-10 hover:bg-white/50 hover:scale-110"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/30 backdrop-blur-sm rounded-full shadow-lg transition-all duration-500 z-10 hover:bg-white/50 hover:scale-110 hover:scale-105 cursor-pointer"
                 aria-label="Next slide"
               >
                 <svg
@@ -276,7 +272,7 @@ const ContactUs = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left side - Image */}
             <div className="order-2 md:order-1">
-              <img 
+              <img
                 src="./assets/Contactus/bd.jpg"
                 alt="Better Direct Presentation"
                 className="w-full h-auto rounded-lg shadow-xl"
@@ -297,14 +293,14 @@ const ContactUs = () => {
 
               <form className="space-y-4" onSubmit={(e) => {
                 e.preventDefault();
-                
+
                 // Validate CAPTCHA
                 if (parseInt(captchaInput) !== captcha.answer) {
                   setCaptchaError('Incorrect answer. Please try again.');
                   generateCaptcha();
                   return;
                 }
-                
+
                 // Create mailto link
                 const subject = encodeURIComponent('Contact Form Submission from ' + formData.name);
                 const body = encodeURIComponent(
@@ -312,13 +308,13 @@ const ContactUs = () => {
                   `Message: ${formData.message}`
                 );
                 const mailtoLink = `mailto:info@betterdirect.com?subject=${subject}&body=${body}`;
-                
+
                 // Open email client
                 window.location.href = mailtoLink;
-                
+
                 // Show success message
                 setSubmitMessage('Email client opened! Please send the email to complete your message.');
-                
+
                 // Reset form
                 setFormData({ name: '', email: '', message: '' });
                 generateCaptcha();
@@ -329,7 +325,7 @@ const ContactUs = () => {
                     type="text"
                     placeholder="Name"
                     value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-200 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
                     required
                   />
@@ -337,7 +333,7 @@ const ContactUs = () => {
                     type="email"
                     placeholder="Email Address"
                     value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 bg-gray-200 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
                     required
                   />
@@ -348,7 +344,7 @@ const ContactUs = () => {
                   placeholder="Message"
                   rows="6"
                   value={formData.message}
-                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 bg-gray-200 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none"
                   required
                 ></textarea>
@@ -365,25 +361,45 @@ const ContactUs = () => {
                       required
                       inputMode="numeric"
                     />
-                    <button 
-                      type="button" 
+                    <button
+                      type="button"
                       onClick={generateCaptcha}
-                      className="ml-2 px-2 py-1 text-xs border rounded hover:bg-cyan-400 hover:text-white transition-all"
+                      className="ml-2 px-2 py-1 text-xs border rounded hover:bg-cyan-400 hover:text-white transition-all cursor-pointer"
                       title="Generate new question"
-                      style={{ color: "#0570c6" , borderColor: "#0570c6" }}
-                    >
-                      ↻
-                    </button>
-                  </div>
-                  <button
+                      style={{ color: "#0570c6", borderColor: "#0570c6" }}
+                      onMouseEnter={e => {
+                      e.target.style.backgroundColor = '#0570c6';
+                      e.target.style.color = '#fff';
+                      e.target.style.borderColor = '#0570c6';
+                    }}
+                    onMouseLeave={e => {
+                      e.target.style.backgroundColor = '#fff';
+                      e.target.style.color = '#0570c6';
+                      e.target.style.borderColor = '#0570c6';
+                    }}
+                  >
+                    ↻
+                  </button>
+                </div>
+                <button
                     type="submit"
-                    className="px-8 py-3 bg-white border-2 font-bold rounded hover:bg-cyan-400 hover:text-white transition-all duration-300"
-                    style={{ color: "#0570c6" , borderColor: "#0570c6" }}
+                    className="px-8 py-3 bg-white border-2 font-bold rounded transition-all duration-300 hover-scale-105 cursor-pointer"
+                    style={{ color: "#0570c6", borderColor: "#0570c6" }}
+                    onMouseEnter={e => {
+                      e.target.style.backgroundColor = '#0570c6';
+                      e.target.style.color = '#fff';
+                      e.target.style.borderColor = '#0570c6';
+                    }}
+                    onMouseLeave={e => {
+                      e.target.style.backgroundColor = '#fff';
+                      e.target.style.color = '#0570c6';
+                      e.target.style.borderColor = '#0570c6';
+                    }}
                   >
                     SUBMIT
                   </button>
                 </div>
-                
+
                 {/* Error and Success Messages */}
                 {captchaError && (
                   <div className="text-red-500 font-medium text-right">

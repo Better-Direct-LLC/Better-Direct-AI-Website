@@ -209,7 +209,7 @@ const Services = () => {
                                         {/* Left Arrow */}
                                         <button
                                             onClick={prevVideo}
-                                            className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition-all z-10"
+                                            className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition-all z-10 hover:scale-105 cursor-pointer"
                                             aria-label="Previous video"
                                             style={{ zIndex: 2 , background: '#1161ad'  }}
                                         >
@@ -237,7 +237,7 @@ const Services = () => {
                                                 />
                                                 {/* Play button overlay */}
                                                 <div className="absolute inset-0 flex items-center justify-center">
-                                                    <button className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all"
+                                                    <button className="w-16 h-16 bg-white bg-opacity-80 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all hover:scale-105 cursor-pointer"
                                                         onClick={() => setPlayerOpen(true)}
                                                         aria-label="Play video"
                                                     >
@@ -251,7 +251,7 @@ const Services = () => {
                                         {/* Right Arrow */}
                                         <button
                                             onClick={nextVideo}
-                                            className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-white rounded-full shadow hover:bg-blue-700 transition-all z-10"
+                                            className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-white rounded-full shadow hover:bg-blue-700 transition-all z-10 hover:scale-105 cursor-pointer"
                                             aria-label="Next video"
                                             style={{ zIndex: 2 , background: '#1161ad'  }}
                                         >
@@ -260,7 +260,7 @@ const Services = () => {
                                         {/* Close button for player */}
                                         {playerOpen && (
                                             <button
-                                                className="absolute top-2 right-2 text-white rounded-full p-2 shadow-lg hover:bg-blue-800 transition-colors"
+                                                className="absolute top-2 right-2 text-white rounded-full p-2 shadow-lg hover:bg-blue-800 transition-colors hover:scale-105 cursor-pointer"
                                                 style={{ background: '#1161ad' }}
                                                 onClick={() => setPlayerOpen(false)}
                                                 aria-label="Close player"
@@ -280,7 +280,7 @@ const Services = () => {
                                         <button
                                             key={video.id}
                                             onClick={() => setCurrentVideo(index)}
-                                            className={`relative rounded overflow-hidden ${currentVideo === index ? 'ring-4 ring-blue-600' : ''}`}
+                                            className={`relative rounded overflow-hidden hover:scale-105 cursor-pointer ${currentVideo === index ? 'ring-4 ring-blue-600' : ''}`}
                                         >
                                             <img
                                                 src={video.thumbnail}

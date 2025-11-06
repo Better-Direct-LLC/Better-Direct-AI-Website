@@ -626,14 +626,35 @@ const Careers = () => {
                                         style={{ background: job.color }}
                                     >
                                         <span className="font-semibold text-lg text-left">{job.title}</span>
-                                        <div className="w-3 h-3 bg-white rounded-full"></div>
+                                        {/* Arrow Icon */}
+                                        <span className="ml-4">
+                                            {expandedJob === index ? (
+                                                // Upward arrow (chevron up)
+                                                <svg width="20" height="20" fill="none" stroke="white" strokeWidth="2" viewBox="0 0 24 24">
+                                                    <path d="M18 15l-6-6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+                                                </svg>
+                                            ) : (
+                                                // Downward arrow (chevron down)
+                                                <svg width="20" height="20" fill="none" stroke="white" strokeWidth="2" viewBox="0 0 24 24">
+                                                    <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+                                                </svg>
+                                            )}
+                                        </span>
                                     </button>
 
                                     {/* Apply Now Button */}
                                     <a
                                         href="https://form.jotform.com/252595661537164"
-                                        className="px-6 py-3 mr-4 border-2 text-cyan-400 font-medium rounded hover:bg-cyan-400 hover:text-white transition-all duration-300 whitespace-nowrap"
-                                        style={{ border: "2px solid #0570c6",  color: "#0570c6" }}
+                                        className="px-6 py-3 mr-4 border-2 font-medium rounded transition-all hover:scale-105 duration-300 whitespace-nowrap"
+                                        style={{ border: "2px solid #0570c6", color: "#0570c6" }}
+                                        onMouseEnter={e => {
+                                            e.target.style.backgroundColor = '#0570c6';
+                                            e.target.style.color = '#fff';
+                                        }}
+                                        onMouseLeave={e => {
+                                            e.target.style.backgroundColor = '';
+                                            e.target.style.color = '#0570c6';
+                                        }}
                                     >
                                         Apply Now
                                     </a>

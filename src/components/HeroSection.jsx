@@ -17,10 +17,18 @@ const HeroSection = () => {
                 If you're an OEM interested in joining our GSA schedule
               </p>
               <div>
-                <Link 
+                <Link
                   to="/contracts"
-                  className="inline-block px-8 py-3 border-2 font-medium rounded hover:bg-blue-600 hover:text-white transition-all duration-300"
-                  style={{ color: '#0570c6' , borderColor: '#0570c6' }}
+                  className="inline-block px-8 py-3 border-2 font-medium rounded transition-all duration-300"
+                  style={{ color: '#0570c6', borderColor: '#0570c6' }}
+                  onMouseEnter={e => {
+                    e.target.style.backgroundColor = '#0570c6';
+                    e.target.style.color = '#fff';
+                  }}
+                  onMouseLeave={e => {
+                    e.target.style.backgroundColor = '';
+                    e.target.style.color = '#0570c6';
+                  }}
                 >
                   Explore our Contracts
                 </Link>
@@ -29,9 +37,9 @@ const HeroSection = () => {
 
             {/* Right side - Image */}
             <div className="flex items-center justify-center">
-              <img 
+              <img
                 src={Hero_section}
-                alt="Better Direct Team" 
+                alt="Better Direct Team"
                 className="w-full h-auto rounded-lg shadow-lg object-cover"
                 onError={(e) => {
                   e.target.src = 'https://via.placeholder.com/600x400?text=Team+Photo';

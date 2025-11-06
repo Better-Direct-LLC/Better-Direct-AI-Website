@@ -32,7 +32,7 @@ const MAS = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="py-16" style= {{ background: '#1161ad' }}>
+            <section className="py-16" style={{ background: '#1161ad' }}>
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-lg shadow-2xl p-8 md:p-12">
                         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -45,7 +45,7 @@ const MAS = () => {
                                     If you're an OEM interested in joining our GSA schedule
                                 </p>
                             </div>
-        
+
                             {/* Right side - Logo */}
                             <div className="flex justify-center">
                                 <img
@@ -178,7 +178,7 @@ const MAS = () => {
                                     <button
                                         onClick={() => window.location.href = member.link}
                                         className="px-6 py-2 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400"
-                                        style= {{ background: '#1161ad' }}>
+                                        style={{ background: '#1161ad' }}>
                                         {member.buttonText}
                                     </button>
                                 </div>
@@ -213,7 +213,24 @@ const MAS = () => {
                                     Contact GSA Sales
                                 </h2>
                                 <p className="leading-relaxed" style={{ color: '#0570c6' }}>
-                                    For your GSA sales needs, partner with Better Direct to unlock tailored IT solutions and exceptional service. Our GSA sales team, led by Madi Alberts, is dedicated to delivering top-notch support, ensuring seamless procurement and compliance for your agency’s mission. Contact us today at (480) 921-3858 ext.703 or email madison.alberts@betterdirect.com to get started!</p>
+                                    For your GSA sales needs, partner with Better Direct to unlock tailored IT solutions and exceptional service. Our GSA sales team, led by Madi Alberts, is dedicated to delivering top-notch support, ensuring seamless procurement and compliance for your agency’s mission. Contact us today at{' '}
+                                    <a
+                                        href="tel:+14809213858"
+                                        className="underline cursor-pointer"
+                                        style={{ color: '#0570c6' }}
+                                    >
+                                        (480) 921-3858 ext.703
+                                    </a>
+                                    {' '}or{' '}
+                                    <a
+                                        href="mailto:madison.alberts@betterdirect.com"
+                                        className="underline cursor-pointer"
+                                        style={{ color: '#0570c6' }}
+                                    >
+                                        madison.alberts@betterdirect.com
+                                    </a>
+                                    {' '}to get started!
+                                </p>
                             </div>
                         </div>
                     </div>

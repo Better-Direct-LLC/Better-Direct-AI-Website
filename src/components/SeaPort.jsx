@@ -206,7 +206,24 @@ const SeaPort = () => {
                                     Let’s Optimize Your Mission—Contact Us Today!
                                 </h2>
                                 <p className="leading-relaxed" style={{ color: '#0570c6' }}>
-                                    Team up with Better Direct to leverage the full power of the SeaPort-NxG contract. Reach our dedicated expert, Anthony Hernandez, by email anthony@betterdirect.com or by phone at 480.921.3858 Ext 121.</p>
+                                    Team up with Better Direct to leverage the full power of the SeaPort-NxG contract. Reach our dedicated expert, Anthony Hernandez, by email{' '}
+                                    <a
+                                        href="mailto:anthony@betterdirect.com"
+                                        className="underline cursor-pointer"
+                                        style={{ color: '#0570c6' }}
+                                    >
+                                        anthony@betterdirect.com
+                                    </a>
+                                    {' '}or by phone at{' '}
+                                    <a
+                                        href="tel:+14809213858"
+                                        className="underline cursor-pointer"
+                                        style={{ color: '#0570c6' }}
+                                    >
+                                        480.921.3858 Ext 121
+                                    </a>
+                                    .
+                                </p>
                             </div>
                         </div>
                     </div>

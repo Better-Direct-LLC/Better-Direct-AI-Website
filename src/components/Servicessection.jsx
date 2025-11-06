@@ -87,18 +87,18 @@ const ServicesSection = () => {
           </div>
 
           {/* Navigation arrows */}
-          <button 
+          <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 text-white p-2 rounded-full hover:bg-blue-700 transition-colors hover:scale-105 cursor-pointer"
             style={{ background: '#1161ad' }}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <button 
+          <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 text-white p-2 rounded-full hover:bg-blue-700 transition-colors hover:scale-105 cursor-pointer"
             style={{ background: '#1161ad' }}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,9 +112,8 @@ const ServicesSection = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  currentSlide === index ? 'bg-blue-600 w-8' : 'bg-gray-400'
-                }`}
+                className={`h-2 rounded-full transition-all duration-300 ${currentSlide === index ? 'w-8' : 'w-2 bg-gray-400'}`}
+                style={currentSlide === index ? { background: '#1161ad' } : {}}
               />
             ))}
           </div>
