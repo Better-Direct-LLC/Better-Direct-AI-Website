@@ -579,6 +579,46 @@ const Careers = () => {
             additionalInfo: "Why Join Better Direct LLC? Better Direct LLC offers a creative and collaborative environment where you can design impactful digital experiences. Enjoy competitive pay, flexible work options, and the opportunity to grow into a full-time role with a company dedicated to innovation and accessibility.",
             jobType: "Contractor / 1099",
             workLocation: "In person"
+        },
+        {
+            title: "UI/UX Designer",
+            color: "#1161ad",
+            location: "Tempe, Arizona (Onsite, Full-Time)",
+            company: "Better Direct LLC – A leading provider of technology solutions, helping organizations transform the way they manage and deliver services.",
+            description: [
+                "About Us:",
+                "Better Direct LLC is a leading provider of technology solutions, helping organizations transform the way they manage and deliver services. We are implementing a cutting-edge Customer Relationship Management (CRM) system with integrated AI features to enhance efficiency, user experience, and customer engagement.",
+                "",
+                "Position Overview:",
+                "We are seeking a UI/UX Designer with at least two years of experience to join our team in Tempe, AZ. This individual will play a key role in designing intuitive, user-centered interfaces and experiences for our new CRM system. The designer will work closely with our Software Development team and AI Engineers to create seamless integrations of AI-driven features within the CRM platform.",
+                "",
+                "Required Information:",
+                "• Provide us with your link to previous work (Portfolio Website, Designs, Prototypes or Wireframes)"
+            ],
+            responsibilities: [
+                "Partner with developers, AI engineers, and business stakeholders to design user-friendly CRM workflows and AI-powered tools.",
+                "Conduct user research, gather requirements, and translate insights into wireframes, mockups, and prototypes.",
+                "Design and refine end-to-end user experiences with a strong focus on usability, accessibility, and efficiency.",
+                "Build and maintain design systems, style guides, and ensure visual consistency across the product.",
+                "Conduct usability testing, analyze feedback, and iterate designs for improvement.",
+                "Support integration of AI features, ensuring they provide clear, valuable, and intuitive interactions.",
+                "Stay up to date with design trends, emerging technologies, and best practices in UI/UX and AI-driven interfaces."
+            ],
+            qualifications: [
+                "Bachelor’s degree in Design, HCI, Computer Science, or related field (or equivalent experience).",
+                "2+ years of professional UI/UX design experience.",
+                "Proficiency with modern design/prototyping tools (Figma, Sketch, Adobe XD, InVision).",
+                "Strong ability to create wireframes, prototypes, and polished UI designs.",
+                "Working knowledge of HTML, CSS, and JavaScript (able to support or write light frontend code when needed).",
+                "Solid understanding of design principles, user research, usability testing, and responsive design.",
+                "Experience collaborating with developers and technical teams in agile environments.",
+                "Familiarity with CRM platforms and/or AI-driven applications is a plus.",
+                "Excellent communication, collaboration, and problem-solving skills.",
+                "Detail-oriented with the ability to balance creativity and practical implementation."
+            ],
+            additionalInfo: "What We Offer: • Competitive salary and benefits package. • Opportunity to work on innovative projects at the intersection of CRM and AI. • Collaborative onsite work environment in Tempe, AZ. • Professional growth and skill development opportunities.",
+            jobType: "Full-time",
+            workLocation: "In person"
         }
     ];
 
@@ -622,7 +662,7 @@ const Careers = () => {
                                     {/* Job Title Card */}
                                     <button
                                         onClick={() => toggleJob(index)}
-                                        className={`text-white px-6 py-4 flex-1 flex items-center justify-between hover:opacity-90 transition-opacity`}
+                                        className={`text-white px-6 py-4 flex-1 flex items-center justify-between hover:opacity-90 transition-opacity cursor-pointer`}
                                         style={{ background: job.color }}
                                     >
                                         <span className="font-semibold text-lg text-left">{job.title}</span>
