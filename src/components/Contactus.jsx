@@ -1,6 +1,23 @@
 import React, { useState, useEffect } from 'react';
 
 const ContactUs = () => {
+  // Editable CC email list
+  const ccEmails = [
+    'mark@betterdirect.com',
+    'kim@betterdirect.com',
+    'agyness.tsang@betterdirect.com'
+    // Add more emails as needed
+  ];
+
+  // Generate mailto link with CC
+  const generateMailtoLink = (primaryEmail, subject = '', body = '') => {
+    const ccString = ccEmails.join(',');
+    let link = `mailto:${primaryEmail}?cc=${encodeURIComponent(ccString)}`;
+    if (subject) link += `&subject=${encodeURIComponent(subject)}`;
+    if (body) link += `&body=${encodeURIComponent(body)}`;
+    return link;
+  };
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState({});
 
@@ -190,7 +207,7 @@ const ContactUs = () => {
                       </div>
                       <div>
                         <p className="text-lg" style={{ color: "#ffffff" }}>
-                          <strong >Email:</strong> <a href={`mailto:${slides[currentSlide].email}`} className="hover:text-white underline">{slides[currentSlide].email}</a>
+                          <strong >Email:</strong> <a href={generateMailtoLink(slides[currentSlide].email)} className="hover:text-white underline">{slides[currentSlide].email}</a>
                         </p>
                       </div>
                     </div>
@@ -307,7 +324,7 @@ const ContactUs = () => {
                   `Name: ${formData.name}\n` +
                   `Message: ${formData.message}`
                 );
-                const mailtoLink = `mailto:info@betterdirect.com?subject=${subject}&body=${body}`;
+                const mailtoLink = generateMailtoLink('info@betterdirect.com', subject, body);
 
                 // Open email client
                 window.location.href = mailtoLink;

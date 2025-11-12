@@ -2,6 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '.././assets/Logo1.png';
 
+// Editable CC email list
+const ccEmails = [
+  'mark@betterdirect.com',
+  'kim@betterdirect.com',
+  // Add more emails as needed
+];
+
+// Generate mailto link with CC
+const mailtoLink = `mailto:info@betterdirect.com?cc=${encodeURIComponent(ccEmails.join(','))}`;
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navRef = useRef(null);
@@ -38,7 +47,7 @@ const Navbar = () => {
             <button
               className="group relative px-6 py-2.5 border-2 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent cursor-pointer hover:scale-105"
               style={{ color: '#1161ad', borderColor: '#1161ad' }}
-              onClick={() => window.location.href = 'mailto:info@betterdirect.com'}
+              onClick={() => window.location.href = mailtoLink}
             >
               <span className="relative inline-flex items-center gap-1">
                 Email us

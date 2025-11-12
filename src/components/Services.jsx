@@ -45,21 +45,21 @@ const Services = () => {
             photo: './assets/Services/display/rashawn.jpg',
             description: 'Rashawn Hugg is Better Direct\'s Senior Program Manager. He leads federal contract programs and project management teams, supporting agencies like NGA, DIA, and NSA. Rashawn develops partner relationships for the company as well as professional services initiatives. Rashawn\'s goal is to ensure successful project completion for Better Direct\'s customers.',
             buttonText: 'Contact Rashawn',
-            link: 'mailto:rashawn.hugg@betterdirect.com'
+            email: 'rashawn.hugg@betterdirect.com'
         },
         {
             name: 'Anthony Hernandez',
             photo: './assets/Services/display/anthony.jpg',
             description: 'Anthony Hernandez is the Project Manager at Better Direct. In this role, he leads the company\'s services team and handles installations, repairs, and custom manufacturing projects. Years ago he started in data entry at Better Direct, and has grown with the company to manage house accounts and high-value contracts. He meets Better Direct\'s high standards as he delivers excellent customer service.',
             buttonText: 'Contact Anthony',
-            link: 'mailto:anthony@betterdirect.com'
+            email: 'anthony@betterdirect.com'
         },
         {
             name: 'McKenna Mulligan',
             photo: './assets/Services/display/mckenna.jpg',
             description: 'McKenna Mulligan is a Project Manager at Better Direct, where she specializes in technology solutions and software implementations for government clients. Starting her career at the company as a Federal Sales Executive, she developed expertise in federal procurement and agency partnerships that now guide her project leadership. McKenna combines this government sector knowledge with her custom software development background to deliver impactful IT solutions across federal, state, and local agencies. She\'s focused on expanding the services department\'s impact while strengthening Better Direct\'s Tempe community roots as a HUBZone-certified, Service-Disabled Veteran-Owned IT VAR.',
             buttonText: 'Contact McKenna',
-            link: 'mailto:mckenna.mulligan@betterdirect.com'
+            email: 'mckenna.mulligan@betterdirect.com'
         }
     ];
 
@@ -133,6 +133,32 @@ const Services = () => {
 
     const prevVideo = () => {
         setCurrentVideo((prev) => (prev - 1 + videos.length) % videos.length);
+    };
+
+        // ========== EDITABLE CC CONFIGURATION ==========
+    // Add or remove emails here as needed
+    const additionalCCEmails = [
+        'info@betterdirect.com',
+        'mark@betterdirect.com',
+    ];
+    // ================================================
+
+    // Function to generate mailto link with CC
+    const generateMailtoLink = (primaryEmail) => {
+        // Get all other team member emails except the primary one
+        const otherTeamEmails = teamMembers
+            .filter(member => member.email !== primaryEmail)
+            .map(member => member.email);
+
+        // Combine team emails with additional CC emails
+        const allCCs = [...otherTeamEmails, ...additionalCCEmails];
+
+        // Remove duplicates and filter out the primary email if it exists in additional CCs
+        const uniqueCCs = [...new Set(allCCs)].filter(email => email !== primaryEmail);
+
+        // Create the mailto link with CC
+        const ccString = uniqueCCs.join(',');
+        return `mailto:${primaryEmail}?cc=${encodeURIComponent(ccString)}`;
     };
 
     return (
@@ -403,8 +429,8 @@ const Services = () => {
 
                                     {/* Contact Button */}
                                     <button
-                                    onClick={() => window.location.href = member.link}
-                                    className="px-6 py-2" style={{ background: '#1161ad', color: '#ffffff' }}>
+                                    onClick={() => window.location.href = generateMailtoLink(member.email)}
+                                    className="px-6 py-2 cursor-pointer hover:scale-105 transition-transform duration-200" style={{ background: '#1161ad', color: '#ffffff' }}>
                                         {member.buttonText}
                                     </button>
                                 </div>
@@ -427,11 +453,11 @@ const Services = () => {
                                             <span className="font-medium" style={{ color: '#0570c6' }}>{faq.question}</span>
                                             <div className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0 ml-4">
                                                 {expandedFaq === index ? (
-                                                    <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                                    <svg className="w-4 h-4 text-gray-600 cursor-pointer" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                                         <path d="M6 15l6-6 6 6" strokeLinecap="round" strokeLinejoin="round" />
                                                     </svg>
                                                 ) : (
-                                                    <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                                    <svg className="w-4 h-4 text-gray-600 cursor-pointer" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                                         <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
                                                     </svg>
                                                 )}
@@ -468,7 +494,7 @@ const Services = () => {
                                 const email = e.target[2].value;
                                 const subject = encodeURIComponent(`Contact from ${firstName} ${lastName}`);
                                 const body = encodeURIComponent(`Name: ${firstName} ${lastName}\nEmail: ${email}`);
-                                window.location.href = `mailto:info@betterdirect.com?subject=${subject}&body=${body}`;
+                                window.location.href = generateMailtoLink('info@betterdirect.com', subject, body);
                             }}>
                                 <input
                                     type="text"

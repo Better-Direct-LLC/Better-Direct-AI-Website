@@ -1,3 +1,12 @@
+  // Editable CC email list
+  const ccEmails = [
+    'mark@betterdirect.com',
+    'kim@betterdirect.com',
+    // Add more emails as needed
+  ];
+
+  // Generate mailto link with CC
+  const mailtoLink = `mailto:info@betterdirect.com?cc=${encodeURIComponent(ccEmails.join(','))}`;
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -307,8 +316,8 @@ const BuyNow = () => {
                 <div>
                   <h3 className="text-2xl font-bold  mb-3" style={{ color: "#0570c6" }}>Email us</h3>
                   <a
-                    href="mailto:info@betterdirect.com"
-                    className=" hover:text-blue-800 font-medium"
+                    href={mailtoLink}
+                    className="hover:text-blue-800 font-medium"
                     style={{ color: "#0570c6" }}
                   >
                     info@betterdirect.com
