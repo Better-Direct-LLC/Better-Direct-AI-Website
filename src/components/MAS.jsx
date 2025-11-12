@@ -9,7 +9,7 @@ const MAS = () => {
             photo: './assets/Contracts/2Git/rachel.png',
             description: 'Rachel Mock, Better Direct\'s GSA and 2GIT Program Manager, oversees the GSA Advantage storefront, vendor relations, and marketing. With over 10 years of experience, she delivers exceptional customer service and crafts efficient IT solutions for complex challenges.',
             buttonText: 'Contact Rachel',
-            link: 'mailto:rachel.mock@betterdirect.com'
+            email: 'rachel.mock@betterdirect.com'
         },
         {
             name: 'Thien Duc Phung',
@@ -17,7 +17,7 @@ const MAS = () => {
             photo: './assets/Contracts/2Git/Thien.jpg',
             description: 'Thien Duc Phung manages GSA and 2GIT contracts at Better Direct, ensuring current product listings, government compliance, and strong client relationships. Starting as a GSA Admin in 2022, he now leads catalog growth, bid responses, and revenue initiatives, working closely with the fulfillment team to address customer inquiries.',
             buttonText: 'Contact Thien',
-            link: 'mailto:thien@betterdirect.com'
+            email: 'thien@betterdirect.com'
         },
         {
             name: 'Devika N',
@@ -25,9 +25,37 @@ const MAS = () => {
             photo: './assets/Contracts/2Git/devika.jpg',
             description: 'Works as Assistant Program Manager at Better Direct, supporting GSA and 2GIT operations, including GSA Advantage storefronts, vendor coordination, and federal contract management. With 5+ years of product management experience, Devika specializes in workflow optimization, data-driven strategy, and cross-functional collaboration, leveraging tools like Airtable, Drift, and MySQL to streamline procurement and enhance engagement.',
             buttonText: 'Contact Devika',
-            link: 'mailto:devika.nhendanmadath@betterdirect.com'
+            email: 'devika.nhendanmadath@betterdirect.com'
         }
     ];
+
+             // ========== EDITABLE CC CONFIGURATION ==========
+    // Add or remove emails here as needed
+    const additionalCCEmails = [
+        'info@betterdirect.com',
+        'mark@betterdirect.com'
+        // Add more emails below as needed:
+    ];
+    // ================================================
+
+    // Function to generate mailto link with CC
+    const generateMailtoLink = (primaryEmail) => {
+        // Get all other team member emails except the primary one
+        const otherTeamEmails = teamMembers
+            .filter(member => member.email !== primaryEmail)
+            .map(member => member.email);
+
+        // Combine team emails with additional CC emails
+        const allCCs = [...otherTeamEmails, ...additionalCCEmails];
+
+        // Remove duplicates and filter out the primary email if it exists in additional CCs
+        const uniqueCCs = [...new Set(allCCs)].filter(email => email !== primaryEmail);
+
+        // Create the mailto link with CC
+        const ccString = uniqueCCs.join(',');
+        return `mailto:${primaryEmail}?cc=${encodeURIComponent(ccString)}`;
+    }; 
+    
 
     return (
         <div className="min-h-screen">
@@ -176,7 +204,7 @@ const MAS = () => {
 
                                     {/* Contact Button */}
                                     <button
-                                        onClick={() => window.location.href = member.link}
+                                        onClick={() => window.location.href = generateMailtoLink(member.email)}
                                         className="px-6 py-2 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400"
                                         style={{ background: '#1161ad' }}>
                                         {member.buttonText}
@@ -223,7 +251,7 @@ const MAS = () => {
                                     </a>
                                     {' '}or{' '}
                                     <a
-                                        href="mailto:madison.alberts@betterdirect.com"
+                                        onClick={() => window.location.href = generateMailtoLink('madison.alberts@betterdirect.com')}
                                         className="underline cursor-pointer"
                                         style={{ color: '#0570c6' }}
                                     >

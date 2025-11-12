@@ -9,7 +9,7 @@ const MAS = () => {
             photo: './assets/Contracts/2Git/kim.jpg',
             description: 'Kim Lambert is a Sales Manager at Better Direct who leads a dynamic sales team. She works on developing strong partnerships with distributors and manufacturers, and she assists her team in helping customers grow. Her goal is for clients to receive fast service and tailored IT solutions, all at a better value. Kim challenges her team to innovate, so the team can deliver beyond expectations.',
             buttonText: 'Contact Kim',
-            link: 'mailto:kim@betterdirect.com'
+            email: 'kim@betterdirect.com'
         },
         {
             name: 'Matthew Walz',
@@ -17,9 +17,37 @@ const MAS = () => {
             photo: './assets/Contracts/2Git/matt.jpg',
             description: 'Matthew Walz is the NASA SEWP Program Manager at Better Direct, which is its largest revenue-generating contract. Matt works closely with federal procurement teams to deliver IT solutions to government agencies. He focuses on expanding partnerships with OEMs to ensure he has the best possible solutions for Better Direct’s clients.',
             buttonText: 'Contact Matthew',
-            link: 'mailto:matthew.walz@betterdirect.com'
+            email: 'matthew.walz@betterdirect.com'
         }
     ];
+
+             // ========== EDITABLE CC CONFIGURATION ==========
+    // Add or remove emails here as needed
+    const additionalCCEmails = [
+        'info@betterdirect.com',
+        'mark@betterdirect.com'
+        // Add more emails below as needed:
+    ];
+    // ================================================
+
+    // Function to generate mailto link with CC
+    const generateMailtoLink = (primaryEmail) => {
+        // Get all other team member emails except the primary one
+        const otherTeamEmails = teamMembers
+            .filter(member => member.email !== primaryEmail)
+            .map(member => member.email);
+
+        // Combine team emails with additional CC emails
+        const allCCs = [...otherTeamEmails, ...additionalCCEmails];
+
+        // Remove duplicates and filter out the primary email if it exists in additional CCs
+        const uniqueCCs = [...new Set(allCCs)].filter(email => email !== primaryEmail);
+
+        // Create the mailto link with CC
+        const ccString = uniqueCCs.join(',');
+        return `mailto:${primaryEmail}?cc=${encodeURIComponent(ccString)}`;
+    }; 
+    
 
     return (
         <div className="min-h-screen">
@@ -176,7 +204,7 @@ const MAS = () => {
 
                                     {/* Contact Button */}
                                     <button
-                                        onClick={() => window.location.href = member.link}
+                                        onClick={() => window.location.href = generateMailtoLink(member.email)}
                                         className="px-6 py-2 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400"
                                         style={{ backgroundColor: '#1161ad' }}>
                                         {member.buttonText}
@@ -223,7 +251,7 @@ const MAS = () => {
                                     </a>
                                     {' '}or email{' '}
                                     <a
-                                        href="mailto:kim@betterdirect.com"
+                                        onClick={() => window.location.href = generateMailtoLink('kim@betterdirect.com')}
                                         className="underline cursor-pointer"
                                         style={{ color: '#0570c6' }}
                                     >

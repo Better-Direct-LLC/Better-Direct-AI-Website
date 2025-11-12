@@ -9,7 +9,7 @@ const ITES = () => {
             photo: './assets/Contracts/2Git/mark.jpg',
             description: 'Mark Evans, a two-tour combat veteran and IT expert, founded Better Direct, growing it into a HUBZone-certified, Service-Disabled Veteran-Owned IT VAR with 45+ employees. With deep expertise in enterprise IT solutions, hardware procurement, and technology strategy, he leads with innovation, customer success, and community impact, guiding his team to deliver cutting-edge IT solutions.',
             buttonText: 'Contact Mark',
-            link: 'mailto:mark@betterdirect.com'
+            email: 'mark@betterdirect.com'
         },
         {
             name: 'KaTo Wong',
@@ -17,7 +17,7 @@ const ITES = () => {
             photo: './assets/Contracts/2Git/kato.jpg',
             description: 'Kato Wong is a Better Direct Sales Manager. Since 2018, he has overseen the ITES-4H contract for the company. He focuses on building long-term relationships with his customers so he can better understand their operational requirements and align IT solutions to their needs.',
             buttonText: 'Contact KaTo',
-            link: 'mailto:kato@betterdirect.com'
+            email: 'kato@betterdirect.com'
         },
         {
             name: 'Diana Zhong',
@@ -25,9 +25,36 @@ const ITES = () => {
             photo: './assets/Contracts/2Git/diana.jpg',
             description: 'Diana Zhong is the Manager of Operations and Finance at Better Direct. In her Operations role, she aligns the departments with strategic goals and watches over the government projects so they run seamlessly. On the financial side, Diana optimizes the profitability of the company by making sure it runs efficiently, and by mitigating its financial risk. She also has the role of co-manager of the ITES-4H contract.',
             buttonText: 'Contact Diana',
-            link: 'mailto:diana@betterdirect.com'
+            email: 'diana@betterdirect.com'
         }
     ];
+
+    // ========== EDITABLE CC CONFIGURATION ==========
+    // Add or remove emails here as needed
+    const additionalCCEmails = [
+        'info@betterdirect.com',
+        // Add more emails below as needed:
+    ];
+    // ================================================
+
+    // Function to generate mailto link with CC
+    const generateMailtoLink = (primaryEmail) => {
+        // Get all other team member emails except the primary one
+        const otherTeamEmails = teamMembers
+            .filter(member => member.email !== primaryEmail)
+            .map(member => member.email);
+
+        // Combine team emails with additional CC emails
+        const allCCs = [...otherTeamEmails, ...additionalCCEmails];
+
+        // Remove duplicates and filter out the primary email if it exists in additional CCs
+        const uniqueCCs = [...new Set(allCCs)].filter(email => email !== primaryEmail);
+
+        // Create the mailto link with CC
+        const ccString = uniqueCCs.join(',');
+        return `mailto:${primaryEmail}?cc=${encodeURIComponent(ccString)}`;
+    };
+
 
     return (
         <div className="min-h-screen">
@@ -150,7 +177,7 @@ const ITES = () => {
                                                     src={member.photo}
                                                     alt={member.name}
                                                     className="max-h-44 max-w-full object-contain rounded-lg shadow"
-                                                    style={{background: 'linear-gradient(to right, #1e3a8a, #b91c1c, #1e3a8a)'}}
+                                                    style={{ background: 'linear-gradient(to right, #1e3a8a, #b91c1c, #1e3a8a)' }}
                                                     onError={(e) => {
                                                         e.target.src = 'https://via.placeholder.com/300x300?text=' + encodeURIComponent(member.name);
                                                     }}
@@ -175,8 +202,8 @@ const ITES = () => {
                                     </p>
 
                                     {/* Contact Button */}
-                                   <button
-                                        onClick={() => window.location.href = member.link}
+                                    <button
+                                        onClick={() => window.location.href = generateMailtoLink(member.email)}
                                         className="px-6 py-2 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400"
                                         style={{ background: '#1161ad' }}>
                                         {member.buttonText}
@@ -222,10 +249,10 @@ const ITES = () => {
                         </p>
                         <div className="space-y-3" style={{ color: '#0570c6' }}>
                             <p>
-                                <strong>Chase Cai –</strong> <a href="tel:4809213858" className="underline hover:text-blue-800" style={{ color: '#0570c6' }}>480-921-3858</a> Ext 320 | <a href="mailto:chase@betterdirect.com" className="underline hover:text-blue-800" style={{ color: '#0570c6' }}>chase@betterdirect.com</a>
+                                <strong>Chase Cai –</strong> <a href="tel:4809213858" className="underline hover:text-blue-800" style={{ color: '#0570c6' }}>480-921-3858</a> Ext 320 | <a onClick={() => window.location.href = generateMailtoLink('chase@betterdirect.com')} className="underline cursor-pointer" style={{ color: '#0570c6' }}>chase@betterdirect.com</a>
                             </p>
                             <p>
-                                <strong>Diana Zhong –</strong> <a href="tel:4809213858" className="underline hover:text-blue-800" style={{ color: '#0570c6' }}>480-921-3858</a> Ext 275 | <a href="mailto:diana@betterdirect.com" className="underline hover:text-blue-800" style={{ color: '#0570c6' }}>diana@betterdirect.com</a>
+                                <strong>Diana Zhong –</strong> <a href="tel:4809213858" className="underline hover:text-blue-800" style={{ color: '#0570c6' }}>480-921-3858</a> Ext 275 | <a onClick={() => window.location.href = generateMailtoLink('diana@betterdirect.com')} className="underline cursor-pointer" style={{ color: '#0570c6' }}>diana@betterdirect.com</a>
                             </p>
                         </div>
                         <p className="font-medium" style={{ color: '#0570c6' }}>

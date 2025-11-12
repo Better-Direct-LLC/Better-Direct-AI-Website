@@ -9,9 +9,39 @@ const SeaPort = () => {
             photo: './assets/Contracts/2Git/rashawn.jpg',
             description: 'Rashawn Hugg is Better Direct’s Senior Program Manager. He leads federal contract programs and project management teams, supporting agencies like NGA, DIA, and NSA. Rashawn develops partner relationships for the company as well as professional services initiatives. Rashawn’s goal is to ensure successful project completion for Better Direct’s customers.',
             buttonText: 'Contact Rashawn',
-            link: 'mailto:rashawn.hugg@betterdirect.com'
+            email: 'rashawn.hugg@betterdirect.com'
         }
     ];
+
+    
+         // ========== EDITABLE CC CONFIGURATION ==========
+    // Add or remove emails here as needed
+    const additionalCCEmails = [
+        'info@betterdirect.com',
+        'mark@betterdirect.com',
+        'anthony@betterdirect.com',
+        // Add more emails below as needed:
+    ];
+    // ================================================
+
+    // Function to generate mailto link with CC
+    const generateMailtoLink = (primaryEmail) => {
+        // Get all other team member emails except the primary one
+        const otherTeamEmails = teamMembers
+            .filter(member => member.email !== primaryEmail)
+            .map(member => member.email);
+
+        // Combine team emails with additional CC emails
+        const allCCs = [...otherTeamEmails, ...additionalCCEmails];
+
+        // Remove duplicates and filter out the primary email if it exists in additional CCs
+        const uniqueCCs = [...new Set(allCCs)].filter(email => email !== primaryEmail);
+
+        // Create the mailto link with CC
+        const ccString = uniqueCCs.join(',');
+        return `mailto:${primaryEmail}?cc=${encodeURIComponent(ccString)}`;
+    }; 
+    
 
     return (
         <div className="min-h-screen">
@@ -169,7 +199,7 @@ const SeaPort = () => {
 
                                     {/* Contact Button */}
                                     <button
-                                        onClick={() => window.location.href = member.link}
+                                        onClick={() => window.location.href = generateMailtoLink(member.email)}
                                         className="px-6 py-2 text-white font-medium rounded shadow hover:bg-blue-700 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400"
                                         style={{ background: '#1161ad' }}>
                                         {member.buttonText}
@@ -208,7 +238,7 @@ const SeaPort = () => {
                                 <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                     Team up with Better Direct to leverage the full power of the SeaPort-NxG contract. Reach our dedicated expert, Anthony Hernandez, by email{' '}
                                     <a
-                                        href="mailto:anthony@betterdirect.com"
+                                        onClick={() => window.location.href = generateMailtoLink('anthony@betterdirect.com')}
                                         className="underline cursor-pointer"
                                         style={{ color: '#0570c6' }}
                                     >
