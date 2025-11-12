@@ -26,8 +26,158 @@ function App() {
   return (
     <HashRouter>
       <ScrollToTop />
-      <div className="App">
-        {/* Navbar appears on all pages */}
+      {/* Global Font Styles */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&family=Source+Serif+4:wght@300&display=swap');
+        
+        /* Global Font Application */
+        * {
+          font-family: 'Source Serif 4', serif;
+          font-weight: 300;
+        }
+        
+        /* Headings - Quattrocento Bold (36-42px range) */
+        h1, h2, h3, h4, h5, h6, 
+        .heading-font,
+        [class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"],
+        .font-bold, .font-semibold {
+          font-family: 'Quattrocento', serif !important;
+          font-weight: 700 !important;
+        }
+        
+        /* Heading Sizes - Range 36-42px */
+        h1, [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
+          font-size: 42px !important;
+          line-height: 1.2 !important;
+        }
+        
+        h2, [class*="text-3xl"] {
+          font-size: 40px !important;
+          line-height: 1.3 !important;
+        }
+        
+        h3, [class*="text-2xl"] {
+          font-size: 36px !important;
+          line-height: 1.4 !important;
+        }
+        
+        /* Body Text - SourceSerif4-Light (16-18px range) - Exclude nav/footer links */
+        p, span, div, li, button,
+        .body-font,
+        [class*="text-sm"], [class*="text-base"], [class*="text-lg"], [class*="text-xl"] {
+          font-family: 'Source Serif 4', serif !important;
+          font-weight: 300 !important;
+        }
+        
+        /* Regular content links (not in nav/footer) */
+        a:not(nav a):not(footer a) {
+          font-family: 'Source Serif 4', serif !important;
+          font-weight: 300 !important;
+        }
+        
+        /* Body Text Sizes - Range 16-18px */
+        [class*="text-lg"], [class*="text-xl"] {
+          font-size: 18px !important;
+          line-height: 1.6 !important;
+        }
+        
+        p, [class*="text-base"], div, span, li {
+          font-size: 17px !important;
+          line-height: 1.6 !important;
+        }
+        
+        /* Regular content links sizing */
+        a:not(nav a):not(footer a) {
+          font-size: 17px !important;
+          line-height: 1.6 !important;
+        }
+        
+        [class*="text-sm"] {
+          font-size: 16px !important;
+          line-height: 1.5 !important;
+        }
+        
+        /* Preserve button and input styling when needed */
+        button, input, select, textarea {
+          font-family: 'Source Serif 4', serif !important;
+          font-weight: 300 !important;
+        }
+        
+        /* Override any Tailwind font weights to maintain consistency */
+        .font-light { font-weight: 300 !important; }
+        .font-normal { font-weight: 300 !important; }
+        .font-medium { font-weight: 300 !important; }
+        
+        /* Footer and Navbar links - Quattrocento Bold - Override all other rules */
+        nav a, nav button, nav Link,
+        footer a, footer button, footer Link,
+        .navbar a, .navbar button,
+        header a, header button {
+          font-family: 'Quattrocento', serif !important;
+          font-weight: 700 !important;
+        }
+        
+        /* Extra specific targeting for Link components */
+        nav [class*="Link"], footer [class*="Link"],
+        nav > * > a, footer > * > a,
+        nav div a, footer div a {
+          font-family: 'Quattrocento', serif !important;
+          font-weight: 700 !important;
+        }
+        
+        /* FINAL OVERRIDE - Navigation and Footer links must use Quattrocento */
+        nav a, nav button, nav Link,
+        footer a, footer button, footer Link,
+        .navbar a, .navbar button,
+        header a, header button,
+        nav [class*="Link"], footer [class*="Link"],
+        nav > * > a, footer > * > a,
+        nav div a, footer div a,
+        nav * a, footer * a {
+          font-family: 'Quattrocento', serif !important;
+          font-weight: 700 !important;
+        }
+        
+        /* NUCLEAR OPTION - Override any Tailwind font classes in nav/footer */
+        nav .font-sans, footer .font-sans,
+        nav .font-serif, footer .font-serif,
+        nav .font-mono, footer .font-mono,
+        nav [class*="font-"], footer [class*="font-"] {
+          font-family: 'Quattrocento', serif !important;
+          font-weight: 700 !important;
+        }
+        
+        /* Target specific elements that might have inline styles */
+        nav a[style*="font-family"], footer a[style*="font-family"],
+        nav button[style*="font-family"], footer button[style*="font-family"] {
+          font-family: 'Quattrocento', serif !important;
+          font-weight: 700 !important;
+        }
+        
+        /* ULTIMATE OVERRIDE - Target React Router Link elements specifically */
+        footer .text-blue-600, footer .font-bold,
+        nav .text-blue-600, nav .font-bold,
+        footer [class*="text-"], nav [class*="text-"],
+        footer [class*="hover:"], nav [class*="hover:"] {
+          font-family: 'Quattrocento', serif !important;
+          font-weight: 700 !important;
+        }
+        
+        /* Preserve responsive text sizing for footer links */
+        @media (min-width: 768px) {
+          footer .md\\:text-3xl {
+            font-size: 1.875rem !important; /* text-3xl */
+            line-height: 2.25rem !important;
+          }
+        }
+        
+        footer .text-xl {
+          font-size: 1.25rem !important; /* text-xl for mobile */
+          line-height: 1.75rem !important;
+        }
+      `}</style>
+      
+      <div className="App overflow-x-hidden">{/* Navbar appears on all pages */}
         <Navbar />
         
         {/* Define all routes */}

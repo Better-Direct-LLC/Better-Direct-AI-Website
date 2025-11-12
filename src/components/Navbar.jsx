@@ -74,26 +74,26 @@ const Navbar = () => {
 
       {/* Main Navigation */}
       <div className="border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+        <div className="px-1 sm:px-4 lg:px-8 w-full">
+          <div className="flex justify-between xl:justify-start items-center h-20 md:h-20 lg:h-28">
             {/* Logo */}
-            <div className="flex items-center flex-shrink-0">
+            <div className="flex items-center flex-shrink-0 mr-2 sm:mr-4 xl:ml-8 xl:mr-8 max-w-full xl:h-24">
               <Link to="/" className="flex items-center">
                 <img
                   src={Logo}
                   alt="BetterDirect AI Logo"
-                  className="h-14 w-auto max-w-xs object-contain hover:scale-105"
+                  className="h-12 sm:h-16 md:h-20 lg:h-28 xl:h-24 w-auto max-w-full object-contain hover:scale-105 transition-transform duration-200"
                 />
               </Link>
             </div>
 
-            {/* Desktop Navigation Links */}
-            <div className="hidden xl:flex items-center gap-6">
+            {/* Desktop Navigation Links*/}
+            <div className="hidden xl:flex items-center gap-8 xl:ml-auto">
               {/* About Us - with dropdown */}
               <div className="group relative">
                 <Link
                   to="/about-us"
-                  className="font-medium text-sm whitespace-nowrap transition-colors duration-200 py-2"
+                  className="font-medium xl:text-xl whitespace-nowrap transition-all duration-200 py-2"
                   style={{ color: '#1161ad' }}
                 >
                   About Us
@@ -121,12 +121,12 @@ const Navbar = () => {
               <div className="group relative">
                 <Link
                   to="/buy-now"
-                  className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200 py-2"
+                  className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent"
                   style={{ color: '#1161ad' }}
                 >
                   Buy Now
                 </Link>
-                {/* Dropdown - Add your Buy Now dropdown items here */}
+                {/* Dropdown */}
                 <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[200px] border-t-4" style={{ borderTopColor: '#1161ad', borderColor: '#1161ad' }}>
                     <a href="https://global.channelonline.com/bdc/gsastore/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fgsastore%2FsDashboard%2Fmain" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
@@ -153,7 +153,7 @@ const Navbar = () => {
 
               <Link
                 to="/capability-statement"
-                className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
                 style={{ color: '#1161ad' }}
               >
                 Capability statement
@@ -161,7 +161,7 @@ const Navbar = () => {
 
               <Link
                 to="/careers"
-                className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
                 style={{ color: '#1161ad' }}
               >
                 Careers
@@ -169,7 +169,7 @@ const Navbar = () => {
 
               <Link
                 to="/contact-us"
-                className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
                 style={{ color: '#1161ad' }}
               >
                 Contact Us
@@ -179,12 +179,12 @@ const Navbar = () => {
               <div className="group relative">
                 <Link
                   to="/contracts"
-                  className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200 py-2"
+                  className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent"
                   style={{ color: '#1161ad' }}
                 >
                   Contracts
                 </Link>
-                {/* Dropdown - Add your Contracts dropdown items here */}
+                {/* Dropdown */}
                 <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[200px] border-t-4" style={{ borderTopColor: '#1161ad', borderColor: '#1161ad' }}>
                     <Link to="/2git" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
@@ -211,7 +211,7 @@ const Navbar = () => {
 
               <Link
                 to="/"
-                className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
                 style={{ color: '#1161ad' }}
               >
                 Home
@@ -219,7 +219,7 @@ const Navbar = () => {
 
               <Link
                 to="/news"
-                className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
                 style={{ color: '#1161ad' }}
               >
                 News
@@ -227,7 +227,7 @@ const Navbar = () => {
 
               <Link
                 to="/services"
-                className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
                 style={{ color: '#1161ad' }}
               >
                 Services
@@ -235,7 +235,7 @@ const Navbar = () => {
 
               <Link
                 to="/success-stories"
-                className="text-blue-600 hover:text-blue-800 font-medium text-sm whitespace-nowrap transition-colors duration-200"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
                 style={{ color: '#1161ad' }}
               >
                 Success Stories
@@ -245,7 +245,7 @@ const Navbar = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="xl:hidden p-2 rounded-md text-blue-600 hover:bg-blue-50"
+              className="xl:hidden  p-2 rounded-md text-blue-600 hover:bg-blue-50"
             >
               <svg
                 className="h-6 w-6"
@@ -269,34 +269,34 @@ const Navbar = () => {
           {isMobileMenuOpen && (
             <div className="xl:hidden pb-4 border-t border-gray-200">
               <div className="flex flex-col space-y-3 pt-4">
-                <Link to="/about-us" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
+                <Link to="/about-us" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   About Us
                 </Link>
-                <Link to="/buy-now" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
+                <Link to="/buy-now" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Buy Now
                 </Link>
-                <Link to="/capability-statement" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
+                <Link to="/capability-statement" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Capability statement
                 </Link>
-                <Link to="/careers" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
+                <Link to="/careers" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Careers
                 </Link>
-                <Link to="/contact-us" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
+                <Link to="/contact-us" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Contact Us
                 </Link>
-                <Link to="/contracts" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
+                <Link to="/contracts" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Contracts
                 </Link>
-                <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
+                <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Home
                 </Link>
-                <Link to="/news" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
+                <Link to="/news" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   News
                 </Link>
-                <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
+                <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Services
                 </Link>
-                <Link to="/success-stories" className="text-blue-600 hover:text-blue-800 font-medium text-sm py-2" onClick={closeMobileMenu}>
+                <Link to="/success-stories" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Success Stories
                 </Link>
               </div>

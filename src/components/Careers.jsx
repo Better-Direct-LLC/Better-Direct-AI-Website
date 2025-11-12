@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const Careers = () => {
-    const [expandedJob, setExpandedJob] = useState(null);
+    const [selectedJob, setSelectedJob] = useState(null);
+    const modalRef = useRef(null);
 
     // Job listings data with full descriptions
     const jobListings = [
@@ -630,12 +631,58 @@ const Careers = () => {
         { src: './assets/Careers/team-4.jpg', alt: 'Team Photo 4' }
     ];
 
-    const toggleJob = (index) => {
-        setExpandedJob(expandedJob === index ? null : index);
+    const openJobModal = (index) => {
+        setSelectedJob(index);
     };
+
+    const closeJobModal = () => {
+        setSelectedJob(null);
+    };
+
+    // Close modal when clicking outside
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (modalRef.current && !modalRef.current.contains(event.target)) {
+                closeJobModal();
+            }
+        }
+        if (selectedJob !== null) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [selectedJob]);
 
     return (
         <div className="min-h-screen">
+            {/* Custom CSS for animations */}
+            <style jsx>{`
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: scale(0.95); }
+                    to { opacity: 1; transform: scale(1); }
+                }
+                .animate-fadeIn {
+                    animation: fadeIn 0.3s ease-out;
+                }
+                .line-clamp-2 {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    line-height: 1.3;
+                }
+                .line-clamp-3 {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    line-height: 1.4;
+                }
+                .hover\\:scale-102:hover {
+                    transform: scale(1.02);
+                }
+            `}</style>
             {/* Hero Section */}
             <section className="py-16" style={{ background: '#1161ad' }}>
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -649,251 +696,272 @@ const Careers = () => {
 
             {/* Job Listings Section */}
             <section className="py-16 bg-white">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#0570c6' }}>
+                <div className="max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-12">
+                    <h2 className="text-3xl font-bold text-center mb-16" style={{ color: '#0570c6' }}>
                         Teams & Open Roles
                     </h2>
 
-                    <div className="space-y-4">
+                    {/* Professional Grid Layout with Better Spacing */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-10 xl:gap-12">
                         {jobListings.map((job, index) => (
-                            <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                                {/* Job Header - Clickable */}
-                                <div className="flex items-center justify-between gap-4">
-                                    {/* Job Title Card */}
-                                    <button
-                                        onClick={() => toggleJob(index)}
-                                        className={`text-white px-6 py-4 flex-1 flex items-center justify-between hover:opacity-90 transition-opacity cursor-pointer`}
-                                        style={{ background: job.color }}
-                                    >
-                                        <span className="font-semibold text-lg text-left">{job.title}</span>
-                                        {/* Arrow Icon */}
-                                        <span className="ml-4">
-                                            {expandedJob === index ? (
-                                                // Upward arrow (chevron up)
-                                                <svg width="20" height="20" fill="none" stroke="white" strokeWidth="2" viewBox="0 0 24 24">
-                                                    <path d="M18 15l-6-6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-                                                </svg>
-                                            ) : (
-                                                // Downward arrow (chevron down)
-                                                <svg width="20" height="20" fill="none" stroke="white" strokeWidth="2" viewBox="0 0 24 24">
-                                                    <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-                                                </svg>
-                                            )}
-                                        </span>
-                                    </button>
-
-                                    {/* Apply Now Button */}
-                                    <a
-                                        href="https://form.jotform.com/252595661537164"
-                                        className="px-6 py-3 mr-4 border-2 font-medium rounded transition-all hover:scale-105 duration-300 whitespace-nowrap"
-                                        style={{ border: "2px solid #0570c6", color: "#0570c6" }}
-                                        onMouseEnter={e => {
-                                            e.target.style.backgroundColor = '#0570c6';
-                                            e.target.style.color = '#fff';
-                                        }}
-                                        onMouseLeave={e => {
-                                            e.target.style.backgroundColor = '';
-                                            e.target.style.color = '#0570c6';
-                                        }}
-                                    >
-                                        Apply Now
-                                    </a>
-                                </div>
-
-                                {/* Expandable Content */}
+                            <div
+                                key={index}
+                                onClick={() => openJobModal(index)}
+                                className="group cursor-pointer transform transition-all duration-300 hover:scale-102 hover:shadow-xl"
+                            >
                                 <div
-                                    className={`transition-all duration-500 ease-in-out overflow-hidden ${expandedJob === index ? 'max-h-[3000px] opacity-100' : 'max-h-0 opacity-0'
-                                        }`}
+                                    className="rounded-xl p-6 text-white shadow-lg h-[400px] flex flex-col relative overflow-hidden"
+                                    style={{ background: `linear-gradient(135deg, ${job.color}, ${job.color}dd)` }}
                                 >
-                                    <div className={`text-white p-8`} style={{ background: job.color }}>
-                                        <h3 className="font-bold text-xl mb-4">Job description:</h3>
-                                        {Array.isArray(job.description)
-                                            ? job.description?.map((desc, i) => (
-                                                <p key={i} className="mb-4 leading-relaxed">{desc}</p>
-                                            ))
-                                            : <p className="mb-6 leading-relaxed">{job.description}</p>
-                                        }
+                                    {/* Background Pattern */}
+                                    <div className="absolute top-0 right-0 w-16 h-16 opacity-10">
+                                        <svg viewBox="0 0 100 100" className="w-full h-full">
+                                            <circle cx="50" cy="50" r="35" fill="white" />
+                                        </svg>
+                                    </div>
 
-                                        {/* Responsibilities */}
-                                        {job.responsibilities && job.responsibilities.length > 0 && (
-                                            <>
-                                                <h3 className="font-bold text-xl mb-4">Responsibilities</h3>
-                                                <ul className="list-disc list-inside space-y-2 mb-6">
-                                                    {job.responsibilities.map((resp, i) => (
-                                                        <li key={i} className="leading-relaxed">{resp}</li>
-                                                    ))}
-                                                </ul>
-                                            </>
-                                        )}
-                                        {job.Requirements && job.Requirements.length > 0 && (
-                                            <>
-                                                <h3 className="font-bold text-xl mb-4">Requirements</h3>
-                                                <ul className="list-disc list-inside space-y-2 mb-6">
-                                                    {job.Requirements.map((req, i) => (
-                                                        <li key={i} className="leading-relaxed">{req}</li>
-                                                    ))}
-                                                </ul>
-                                            </>
-                                        )}
-
-                                        {/* Required Qualifications */}
-                                        {job.requiredQualifications && job.requiredQualifications.length > 0 && (
-                                            <>
-                                                <h3 className="font-bold text-xl mb-4">Required Qualifications</h3>
-                                                <ul className="list-disc list-inside space-y-2 mb-6">
-                                                    {job.requiredQualifications.map((qual, i) => (
-                                                        <li key={i} className="leading-relaxed">{qual}</li>
-                                                    ))}
-                                                </ul>
-                                            </>
-                                        )}
-
-                                        {/* Preferred Qualifications */}
-                                        {job.preferredQualifications && job.preferredQualifications.length > 0 && (
-                                            <>
-                                                <h3 className="font-bold text-xl mb-4">Preferred Qualifications</h3>
-                                                <ul className="list-disc list-inside space-y-2 mb-6">
-                                                    {job.preferredQualifications.map((qual, i) => (
-                                                        <li key={i} className="leading-relaxed">{qual}</li>
-                                                    ))}
-                                                </ul>
-                                            </>
-                                        )}
-
-                                        {/* Core Competency Requirements */}
-                                        {job.coreCompetencies && job.coreCompetencies.length > 0 && (
-                                            <>
-                                                <h3 className="font-bold text-xl mb-4">Core Competency Requirements</h3>
-                                                <ul className="list-disc list-inside space-y-2 mb-6">
-                                                    {job.coreCompetencies.map((comp, i) => (
-                                                        <li key={i} className="leading-relaxed">{comp}</li>
-                                                    ))}
-                                                </ul>
-                                            </>
-                                        )}
-
-                                        {/* Qualifications */}
-                                        {job.qualifications && job.qualifications.length > 0 && (
-                                            <>
-                                                <h3 className="font-bold text-xl mb-4">Qualifications</h3>
-                                                <ul className="list-disc list-inside space-y-2 mb-6">
-                                                    {job.qualifications.map((qual, i) => (
-                                                        <li key={i} className="leading-relaxed">{qual}</li>
-                                                    ))}
-                                                </ul>
-                                            </>
-                                        )}
-
-                                        {/* Certification Requirements */}
-                                        {job.certificationRequirements && job.certificationRequirements.length > 0 && (
-                                            <>
-                                                <h3 className="font-bold text-xl mb-4">Certification Requirements</h3>
-                                                <ul className="list-disc list-inside space-y-2 mb-6">
-                                                    {job.certificationRequirements.map((cert, i) => (
-                                                        <li key={i} className="leading-relaxed">{cert}</li>
-                                                    ))}
-                                                </ul>
-                                            </>
-                                        )}
-
-                                        {/* Work Environment */}
-                                        {job.workEnvironment && job.workEnvironment.length > 0 && (
-                                            <>
-                                                <h3 className="font-bold text-xl mb-4">Work Environment</h3>
-                                                <ul className="list-disc list-inside space-y-2 mb-6">
-                                                    {job.workEnvironment.map((env, i) => (
-                                                        <li key={i} className="leading-relaxed">{env}</li>
-                                                    ))}
-                                                </ul>
-                                            </>
-                                        )}
-
-                                        {/* Additional Info */}
-                                        {job.additionalInfo && (
-                                            <p className="mb-6 leading-relaxed">{job.additionalInfo}</p>
-                                        )}
-
-                                        <div className="space-y-4 mt-6">
-                                            {job.jobType && <p><strong>Job Type:</strong> {job.jobType}</p>}
-                                            {job.compensation && (
-                                                <>
-                                                    <p className="font-bold">Compensation Package:</p>
-                                                    <ul className="list-disc list-inside ml-4">
-                                                        <li>{job.compensation}</li>
-                                                    </ul>
-                                                </>
-                                            )}
-                                            {job.schedule && job.schedule.length > 0 && (
-                                                <>
-                                                    <p className="font-bold">Schedule:</p>
-                                                    <ul className="list-disc list-inside ml-4">
-                                                        {job.schedule.map((sched, i) => (
-                                                            <li key={i}>{sched}</li>
-                                                        ))}
-                                                    </ul>
-                                                </>
-                                            )}
-                                            {job.commute && (
-                                                <>
-                                                    <p className="font-bold">Ability to Commute:</p>
-                                                    <ul className="list-disc list-inside ml-4">
-                                                        <li>{job.commute}</li>
-                                                    </ul>
-                                                </>
-                                            )}
-                                            {job.relocate && (
-                                                <>
-                                                    <p className="font-bold">Ability to Relocate:</p>
-                                                    <ul className="list-disc list-inside ml-4">
-                                                        <li>{job.relocate}</li>
-                                                    </ul>
-                                                </>
-                                            )}
-                                            {job.workLocation && (
-                                                <p><strong>Work Location:</strong> {job.workLocation}</p>
-                                            )}
+                                    <div className="relative z-10 flex-1 flex flex-col">
+                                        <div className="h-[280px] flex flex-col">
+                                            <h3 className="font-bold text-lg xl:text-xl mb-3 leading-tight">{job.title}</h3>
+                                            <p className="text-sm opacity-90 mb-3 font-medium">{job.location}</p>
+                                            <p className="text-xs opacity-75 line-clamp-4 mb-4 leading-relaxed flex-1">{job.company}</p>
+                                        </div>
+                                        
+                                        <div className="flex items-center justify-between pt-4 border-t border-white border-opacity-20">
+                                            <span className="text-xs font-medium opacity-90 bg-white bg-opacity-20 px-3 text-black py-1 rounded-full">{job.jobType || 'Full-time'}</span>
+                                            <div className="flex items-center text-sm opacity-90 group-hover:opacity-100 transition-opacity">
+                                                <span className="mr-1 font-medium">View Details</span>
+                                                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                                                </svg>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
+
+                    {/* Professional Modal */}
+                    {selectedJob !== null && (
+                        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black bg-opacity-60 backdrop-blur-sm">
+                            <div
+                                ref={modalRef}
+                                className="bg-white rounded-xl shadow-2xl max-w-4xl w-full h-full sm:h-auto sm:max-h-[90vh] overflow-y-auto sm:overflow-hidden relative animate-fadeIn sm:flex sm:flex-col"
+                            >
+                                {/* Modal Header */}
+                                <div
+                                    className="sm:flex-shrink-0 px-4 sm:px-8 py-4 sm:py-6 rounded-t-xl border-b border-gray-200"
+                                    style={{ background: `linear-gradient(135deg, ${jobListings[selectedJob].color}, ${jobListings[selectedJob].color}dd)` }}
+                                >
+                                    <div className="flex items-start justify-between">
+                                        <div className="text-white">
+                                            <h2 className="text-xl sm:text-2xl font-bold mb-2">{jobListings[selectedJob].title}</h2>
+                                            <p className="text-white opacity-90 mb-1 text-sm sm:text-base">{jobListings[selectedJob].location}</p>
+                                            <p className="text-xs sm:text-sm text-white opacity-75">{jobListings[selectedJob].company}</p>
+                                        </div>
+                                        <button
+                                            onClick={closeJobModal}
+                                            className="close-btn text-white hover:text-black transition-colors p-2 rounded-full hover:bg-white cursor-pointer hover:bg-opacity-20"
+                                        >
+                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Modal Content - Scrollable */}
+                                <div className="sm:flex-1 sm:overflow-y-auto px-4 sm:px-8 py-4 sm:py-6 space-y-6" style={{ color: '#1161ad' }}>
+                                    {/* Job Description */}
+                                    <div>
+                                        <h3 className="text-xl font-bold mb-4 flex items-center">
+                                            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                            </svg>
+                                            Job Description
+                                        </h3>
+                                        <div className="prose prose-blue max-w-none">
+                                            {Array.isArray(jobListings[selectedJob].description)
+                                                ? jobListings[selectedJob].description.map((desc, i) => (
+                                                    <p key={i} className="mb-3 leading-relaxed text-gray-700">{desc}</p>
+                                                ))
+                                                : <p className="mb-4 leading-relaxed text-gray-700">{jobListings[selectedJob].description}</p>
+                                            }
+                                        </div>
+                                    </div>
+
+                                    {/* Responsibilities */}
+                                    {jobListings[selectedJob].responsibilities && jobListings[selectedJob].responsibilities.length > 0 && (
+                                        <div>
+                                            <h3 className="text-xl font-bold mb-4 flex items-center">
+                                                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                                </svg>
+                                                Key Responsibilities
+                                            </h3>
+                                            <ul className="space-y-2">
+                                                {jobListings[selectedJob].responsibilities.map((resp, i) => (
+                                                    <li key={i} className="flex items-start">
+                                                        <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                                        <span className="text-gray-700">{resp}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+
+                                    {/* Requirements */}
+                                    {jobListings[selectedJob].Requirements && jobListings[selectedJob].Requirements.length > 0 && (
+                                        <div>
+                                            <h3 className="text-xl font-bold mb-4 flex items-center">
+                                                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                Requirements
+                                            </h3>
+                                            <ul className="space-y-2">
+                                                {jobListings[selectedJob].Requirements.map((req, i) => (
+                                                    <li key={i} className="flex items-start">
+                                                        <span className="inline-block w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                                        <span className="text-gray-700">{req}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+
+                                    {/* Qualifications sections with similar formatting */}
+                                    {(jobListings[selectedJob].qualifications ||
+                                        jobListings[selectedJob].requiredQualifications ||
+                                        jobListings[selectedJob].preferredQualifications) && (
+                                            <div>
+                                                <h3 className="text-xl font-bold mb-4 flex items-center">
+                                                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l9-5-9-5-9 5 9 5zm0 0v6" />
+                                                    </svg>
+                                                    Qualifications
+                                                </h3>
+                                                {jobListings[selectedJob].qualifications && (
+                                                    <ul className="space-y-2 mb-4">
+                                                        {jobListings[selectedJob].qualifications.map((qual, i) => (
+                                                            <li key={i} className="flex items-start">
+                                                                <span className="inline-block w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                                                <span className="text-gray-700">{qual}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                )}
+                                                {jobListings[selectedJob].requiredQualifications && (
+                                                    <>
+                                                        <h4 className="font-semibold text-lg mb-2 text-blue-700">Required Qualifications</h4>
+                                                        <ul className="space-y-2 mb-4">
+                                                            {jobListings[selectedJob].requiredQualifications.map((qual, i) => (
+                                                                <li key={i} className="flex items-start">
+                                                                    <span className="inline-block w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                                                    <span className="text-gray-700">{qual}</span>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </>
+                                                )}
+                                                {jobListings[selectedJob].preferredQualifications && (
+                                                    <>
+                                                        <h4 className="font-semibold text-lg mb-2 text-blue-700">Preferred Qualifications</h4>
+                                                        <ul className="space-y-2">
+                                                            {jobListings[selectedJob].preferredQualifications.map((qual, i) => (
+                                                                <li key={i} className="flex items-start">
+                                                                    <span className="inline-block w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                                                    <span className="text-gray-700">{qual}</span>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </>
+                                                )}
+                                            </div>
+                                        )}
+
+                                    {/* Job Details Footer */}
+                                    <div className="bg-gray-50 rounded-lg p-6 space-y-3">
+                                        <h3 className="font-bold text-lg mb-3" style={{ color: '#1161ad' }}>Position Details</h3>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            {jobListings[selectedJob].jobType && (
+                                                <div className="flex items-center">
+                                                    <span className="font-medium text-gray-600 mr-2">Job Type:</span>
+                                                    <span className="text-gray-800">{jobListings[selectedJob].jobType}</span>
+                                                </div>
+                                            )}
+                                            {jobListings[selectedJob].workLocation && (
+                                                <div className="flex items-center">
+                                                    <span className="font-medium text-gray-600 mr-2">Work Location:</span>
+                                                    <span className="text-gray-800">{jobListings[selectedJob].workLocation}</span>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Modal Footer with Apply Button */}
+                                <div className="sm:flex-shrink-0 px-4 sm:px-8 py-4 sm:py-6 bg-gray-50 rounded-b-xl border-t border-gray-200">
+                                    <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                                        <p className="text-gray-600 text-sm">
+                                            Ready to join our team? Submit your application today!
+                                        </p>
+                                        <a
+                                            href="https://form.jotform.com/252595661537164"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center px-6 sm:px-8 py-3 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+                                            style={{ background: `linear-gradient(135deg, ${jobListings[selectedJob].color}, ${jobListings[selectedJob].color}dd)` }}
+                                        >
+                                            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                            </svg>
+                                            Apply Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </section>
 
             {/* Team Photos Section */}
             <section className="py-16" style={{ background: '#1161ad' }}>
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-white rounded-lg shadow-2xl p-8">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
-                            {teamPhotos.map((photo, index) => (
-                                <div key={index} className="overflow-hidden rounded-lg shadow-lg flex items-center justify-center bg-white aspect-[4/3] w-full max-w-[420px] mx-auto">
-                                    <img
-                                        src={photo.src}
-                                        alt={photo.alt}
-                                        className="object-contain w-full h-full max-w-[420px] max-h-[340px] hover:scale-105 transition-transform duration-300"
-                                        onError={(e) => {
-                                            e.target.src = `https://via.placeholder.com/700x600?text=Team+${index + 1}`;
-                                        }}
-                                    />
-                                </div>
-                            ))}
-                        </div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl font-bold text-center mb-12 text-white">
+                        Meet Our Team
+                    </h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+                        {teamPhotos.map((photo, index) => (
+                            <div key={index} className="overflow-hidden rounded-xl shadow-xl bg-white aspect-[4/3] w-full max-w-[420px] mx-auto transform hover:scale-105 transition-all duration-300">
+                                <img
+                                    src={photo.src}
+                                    alt={photo.alt}
+                                    className="object-cover w-full h-full"
+                                    onError={(e) => {
+                                        e.target.src = `https://via.placeholder.com/700x600/1161ad/ffffff?text=Team+${index + 1}`;
+                                    }}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
             {/* Bottom CTA Section */}
             <section className="py-16 bg-white">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-white rounded-lg shadow-2xl p-8 md:p-12" style={{ background: '#1161ad' }}>
-                        <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                            Better Direct LLC – We're Hiring!
-                        </h2>
-                        <p className="text-lg mb-8 leading-relaxed">
-                            We're hiring! At Better Direct LLC, we value dedicated and talented professionals who want to make an impact. Please complete the form below.
-                        </p>
-                        <div className="text-right">
+                        <div className="text-center">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                                Better Direct LLC – We're Hiring!
+                            </h2>
+                            <p className="text-lg mb-8 leading-relaxed max-w-3xl mx-auto">
+                                We're hiring! At Better Direct LLC, we value dedicated and talented professionals who want to make an impact. Please complete the form below.
+                            </p>
                             <a
                                 href="https://form.jotform.com/252595661537164"
                                 className="inline-block px-8 py-3 border-2 border-white text-white font-medium rounded hover:bg-white hover:text-blue-600 transition-all duration-300"

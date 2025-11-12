@@ -260,10 +260,10 @@ const AboutUs = () => {
 
       {/* People Who Make a Difference - Team Grid */}
       <section className="py-16 bg-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-8 items-start">
-            {/* Left: Title and Paragraph (1/3) */}
-            <div className="md:w-1/3 w-full flex-shrink-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-8 items-start">
+            {/* Left: Title and Paragraph (1/4) */}
+            <div className="lg:w-1/4 md:w-1/3 w-full flex-shrink-0">
               <h2 className="text-3xl font-bold mb-4" style={{ color: "#0570c6" }}>
                 People Who Make a Difference
               </h2>
@@ -272,15 +272,15 @@ const AboutUs = () => {
                 Our team is the driving force behind everything we do. They are not just employees, they are innovators, problem-solvers, and champions of the community. More than half of our staff live locally, and many have found opportunities here that they might not have had at larger IT firms. By providing meaningful careers, mentorship, and a supportive environment, we help our team unlock their full potential, create lasting impact, and deliver exceptional IT solutions that benefit both our clients and the community we proudly call home.
               </p>
             </div>
-            {/* Right: Team Grid (2/3) */}
-            <div className="md:w-2/3 w-full">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {/* Right: Team Grid (3/4 width for better 4-column layout) */}
+            <div className="lg:w-3/4 md:w-2/3 w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {teamGrid.map((person, index) => (
                   <div
                     key={index}
                     className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center"
                   >
-                    <div className="w-full aspect-square relative">
+                    <div className="w-full aspect-square relative flex-shrink-0">
                       <img
                         src={person.image}
                         alt={person.name}
@@ -293,9 +293,9 @@ const AboutUs = () => {
                       {/* Consistent white divider line */}
                       <div className="absolute bottom-0 left-0 w-full h-1" style={{ background: '#fff' }} />
                     </div>
-                    <div className="p-4 w-full flex flex-col items-center">
-                      <h3 className="font-bold mb-1 text-center" style={{ color: "#0570c6" }}>{person.name}</h3>
-                      <p className="text-sm text-gray-600 text-center" style={{ color: "#0570c6" }}>{person.title}</p>
+                    <div className="p-4 md:p-6 w-full flex flex-col items-center justify-center flex-grow">
+                      <h3 className="font-bold mb-2 text-center leading-tight" style={{ color: "#0570c6" }}>{person.name}</h3>
+                      <p className="text-sm text-gray-600 text-center leading-relaxed" style={{ color: "#0570c6" }}>{person.title}</p>
                     </div>
                   </div>
                 ))}

@@ -155,7 +155,7 @@ const ContactUs = () => {
 
                 {/* Content */}
                 <div className="p-8">
-                  <h2 className="text-3xl font-bold mb-6 text-center drop-shadow-lg" style={{ color: "#6cb2ebff" }}>
+                  <h2 className="text-3xl font-bold mb-6 text-center drop-shadow-lg" style={{ color: "#ffffff" }}>
                     {slides[currentSlide].title}
                   </h2>
 
@@ -163,13 +163,13 @@ const ContactUs = () => {
                   {slides[currentSlide].type === 'location' && (
                     <div className="text-center space-y-4">
                       <div>
-                        <p className="text-lg" style={{ color: "#6cb2ebff" }}>
-                          We're located at <strong className="text-cyan-300">{slides[currentSlide].address}</strong>
+                        <p className="text-lg" style={{ color: "#ffffff" }}>
+                          We're located at <strong className="text-white">{slides[currentSlide].address}</strong>
                         </p>
                       </div>
                       <div>
-                        <p className="text-lg" style={{ color: "#6cb2ebff" }}>
-                          <strong className="text-cyan-300">Mailing:</strong> {slides[currentSlide].mailing}
+                        <p className="text-lg" style={{ color: "#ffffff" }}>
+                          <strong className="text-white">Mailing:</strong> {slides[currentSlide].mailing}
                         </p>
                       </div>
                     </div>
@@ -179,18 +179,18 @@ const ContactUs = () => {
                   {slides[currentSlide].type === 'contact' && (
                     <div className="text-center space-y-4">
                       <div>
-                        <p className="text-lg" style={{ color: "#bee3fcff " }}>
-                          <strong style={{ color: "#bee3fcff" }}>Call Us at:</strong> <a href="tel:4809213858" className="hover:text-cyan-100 underline">{slides[currentSlide].phone}</a>
+                        <p className="text-lg" style={{ color: "#ffffff" }}>
+                          <strong style={{ color: "#ffffff" }}>Call Us at:</strong> <a href="tel:4809213858" className="hover:text-white underline">{slides[currentSlide].phone}</a>
                         </p>
                       </div>
                       <div>
-                        <p className="text-lg" style={{ color: "#bee3fcff" }}>
+                        <p className="text-lg" style={{ color: "#ffffff" }}>
                           <strong >Fax:</strong> {slides[currentSlide].fax}
                         </p>
                       </div>
                       <div>
-                        <p className="text-lg" style={{ color: "#bee3fcff" }}>
-                          <strong >Email:</strong> <a href={`mailto:${slides[currentSlide].email}`} className="hover:text-cyan-100 underline">{slides[currentSlide].email}</a>
+                        <p className="text-lg" style={{ color: "#ffffff" }}>
+                          <strong >Email:</strong> <a href={`mailto:${slides[currentSlide].email}`} className="hover:text-white underline">{slides[currentSlide].email}</a>
                         </p>
                       </div>
                     </div>
@@ -203,10 +203,10 @@ const ContactUs = () => {
                         <tbody>
                           {slides[currentSlide].schedule.map((item, index) => (
                             <tr key={index} className="border-b-2 border-cyan-400/20 last:border-b-0">
-                              <td className="px-6 py-3 text-center font-semibold border-r-2 border-cyan-400/20" style={{ color: "#bee3fcff" }} >
+                              <td className="px-6 py-3 text-center font-semibold border-r-2 border-cyan-400/20" style={{ color: "#ffffff" }} >
                                 {item.day}
                               </td>
-                              <td className="px-6 py-3 text-center font-semibold" style={{ color: "#bee3fcff" }}>
+                              <td className="px-6 py-3 text-center font-semibold" style={{ color: "#ffffff" }}>
                                 {item.hours}
                               </td>
                             </tr>
@@ -273,7 +273,7 @@ const ContactUs = () => {
             {/* Left side - Image */}
             <div className="order-2 md:order-1">
               <img
-                src="./assets/Contactus/bd.jpg"
+                src="./assets/AboutUs/mark.jpg"
                 alt="Better Direct Presentation"
                 className="w-full h-auto rounded-lg shadow-xl"
                 onError={(e) => {
