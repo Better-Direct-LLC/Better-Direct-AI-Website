@@ -166,12 +166,12 @@ const Contracts = () => {
               <div className="relative">
                 <div className="rounded-lg overflow-hidden shadow-xl" style={{ backgroundColor: "#1161ad" }}>
                   {/* Carousel Image */}
-                  <div className={`relative h-0 transition-all duration-500 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`} style={{ paddingBottom: '56.25%' }}>
+                  <div className={`relative h-0 transition-all duration-500 ${isTransitioning ? 'opacity-0' : 'opacity-100'} px-16`} style={{ paddingBottom: '56.25%' }}>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <img
                         src={carouselSlides[currentSlide].image}
                         alt={carouselSlides[currentSlide].title}
-                        className="max-h-full max-w-full object-contain rounded-xl shadow-lg"
+                        className="max-h-full max-w-[60%] object-contain rounded-xl shadow-lg"
                         onError={(e) => {
                           e.target.src = 'https://via.placeholder.com/600x400?text=Contract';
                         }}
@@ -352,7 +352,7 @@ const Contracts = () => {
                 {/* Navigation Arrows */}
                 <button
                   onClick={prevStateSlide}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white bg-opacity-80 rounded-full shadow-lg hover:bg-opacity-100 hover:scale-110 transition-all duration-300 group cursor-pointer"
+                  className="absolute top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white bg-opacity-80 rounded-full shadow-lg hover:bg-opacity-100 hover:scale-110 transition-all duration-300 group cursor-pointer"
                   aria-label="Previous slide"
                 >
                   <svg
