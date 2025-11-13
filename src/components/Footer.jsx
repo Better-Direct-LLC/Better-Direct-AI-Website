@@ -83,11 +83,18 @@ const Footer = () => {
         </div>
         {/* Address & Copyright */}
         <div className="text-center text-white mt-10 text-lg">
-          <p className="flex items-center justify-center gap-2 mb-2">
+          <p className="flex items-center justify-center gap-2 mb-2 hover:scale-105">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
             </svg>
-            <span className='font-bold'>2425 E. University Dr., Tempe, AZ 85288</span>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=2425+E+University+Dr,+Tempe,+AZ+85288"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold hover:text-blue-200 transition-colors"
+            >
+              2425 E. University Dr., Tempe, AZ 85288
+            </a>
           </p>
         </div>
       </div>

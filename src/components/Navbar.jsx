@@ -42,7 +42,7 @@ const Navbar = () => {
       {/* Top Bar with CTA Buttons */}
       <div className="border-b border-gray-200 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-end items-center gap-3">
+          <div className="flex justify-center items-center gap-3">
             {/* Email us button */}
             <button
               className="group relative px-6 py-2.5 border-2 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent cursor-pointer hover:scale-105"
