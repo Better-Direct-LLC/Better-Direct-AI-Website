@@ -107,10 +107,10 @@ const Navbar = () => {
             {/* Desktop Navigation Links*/}
             <div className="hidden xl:flex items-center gap-8 xl:ml-auto">
               {/* About Us - with dropdown */}
-              <div className="group relative">
+              <div className="group relative flex items-center">
                 <Link
                   to="/about-us"
-                  className="font-medium xl:text-xl whitespace-nowrap transition-all duration-200 py-2"
+                  className="font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent flex items-center"
                   style={{ color: '#1161ad' }}
                 >
                   About Us
@@ -135,10 +135,10 @@ const Navbar = () => {
               </div>
 
               {/* Buy Now - with dropdown */}
-              <div className="group relative">
+              <div className="group relative flex items-center">
                 <Link
                   to="/buy-now"
-                  className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent"
+                  className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent flex items-center"
                   style={{ color: '#1161ad' }}
                 >
                   Buy Now
@@ -173,7 +173,7 @@ const Navbar = () => {
 
               <Link
                 to="/capability-statement"
-                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad] flex items-center"
                 style={{ color: '#1161ad' }}
               >
                 Capability statement
@@ -181,7 +181,7 @@ const Navbar = () => {
 
               <Link
                 to="/careers"
-                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad] flex items-center"
                 style={{ color: '#1161ad' }}
               >
                 Careers
@@ -189,17 +189,17 @@ const Navbar = () => {
 
               <Link
                 to="/contact-us"
-                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad] flex items-center"
                 style={{ color: '#1161ad' }}
               >
                 Contact Us
               </Link>
 
               {/* Contracts - with dropdown */}
-              <div className="group relative">
+              <div className="group relative flex items-center">
                 <Link
                   to="/contracts"
-                  className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent"
+                  className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent flex items-center"
                   style={{ color: '#1161ad' }}
                 >
                   Contracts
@@ -231,7 +231,7 @@ const Navbar = () => {
 
               <Link
                 to="/"
-                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad] flex items-center"
                 style={{ color: '#1161ad' }}
               >
                 Home
@@ -239,7 +239,7 @@ const Navbar = () => {
 
               <Link
                 to="/news"
-                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad] flex items-center"
                 style={{ color: '#1161ad' }}
               >
                 News
@@ -247,7 +247,7 @@ const Navbar = () => {
 
               <Link
                 to="/services"
-                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad] flex items-center"
                 style={{ color: '#1161ad' }}
               >
                 Services
@@ -255,7 +255,7 @@ const Navbar = () => {
 
               <Link
                 to="/success-stories"
-                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad]"
+                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad] flex items-center"
                 style={{ color: '#1161ad' }}
               >
                 Success Stories

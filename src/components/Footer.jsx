@@ -37,11 +37,11 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex-1 flex flex-col items-center justify-center mb-6 md:mb-0">
             <Link to="/" onClick={scrollToTop}>
-              <img
-                src={Logo}
-                alt="Better Direct AI Logo"
-                className="h-32 md:h-40 w-auto object-contain mb-2 transition-transform duration-300 hover:scale-105"
-              />
+                <img
+                  src={Logo}
+                  alt="BetterDirect AI Logo"
+                  className="h-12 sm:h-16 md:h-20 lg:h-28 xl:h-24 w-auto max-w-full object-contain hover:scale-105 transition-transform duration-200"
+                />
             </Link>
           </div>
           {/* Divider */}
