@@ -24,10 +24,16 @@ const ADMC = () => {
     // ========== EDITABLE CC CONFIGURATION ==========
     // Add or remove emails here as needed
     const additionalCCEmails = [
-        'agyness.tsang@betterdirect.com',
+        'rashawn.hugg@betterdirect.com',
         'info@betterdirect.com',
         'mark@betterdirect.com',
-        'kim@betterdirect.com'
+        'kim@betterdirect.com',
+        'kato@betterdirect.com',
+        'thien@betterdirect.com',
+        'rachel.mock@betterdirect.com',
+        'diana@betterdirect.com',
+        'devika.nhendanmadath@betterdirect.com',
+        'matthew.walz@betterdirect.com'
     ];
     // ================================================
 

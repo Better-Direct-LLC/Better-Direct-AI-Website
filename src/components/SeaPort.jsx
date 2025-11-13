@@ -17,10 +17,16 @@ const SeaPort = () => {
          // ========== EDITABLE CC CONFIGURATION ==========
     // Add or remove emails here as needed
     const additionalCCEmails = [
+        'rashawn.hugg@betterdirect.com',
         'info@betterdirect.com',
         'mark@betterdirect.com',
-        'anthony@betterdirect.com',
-        // Add more emails below as needed:
+        'kim@betterdirect.com',
+        'kato@betterdirect.com',
+        'thien@betterdirect.com',
+        'rachel.mock@betterdirect.com',
+        'diana@betterdirect.com',
+        'devika.nhendanmadath@betterdirect.com',
+        'matthew.walz@betterdirect.com'
     ];
     // ================================================
 
