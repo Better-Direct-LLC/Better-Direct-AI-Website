@@ -3,7 +3,7 @@ import React from 'react';
 const CapabilityStatement = () => (
   <>
     <div className="min-h-screen flex items-center justify-center py-16" style={{ background: '#1161ad' }}>
-      <div className="max-w-5xl w-full bg-white rounded-2xl shadow-2xl p-10 grid md:grid-cols-2 gap-8 items-center">
+      <div className="max-w-7xl w-full bg-white rounded-2xl shadow-2xl p-10 grid md:grid-cols-2 gap-8 items-center">
         {/* Left half: Title and description */}
         <div className="flex flex-col justify-center items-start">
           <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#0570c6' }}>Empowering Innovation Through Veteran-Led, HUBZone-Certified IT Solutions</h1>
