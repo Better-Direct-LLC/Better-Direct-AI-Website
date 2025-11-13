@@ -97,8 +97,8 @@ function App() {
           line-height: 1.5 !important;
         }
         
-        /* Preserve button and input styling when needed */
-        button, input, select, textarea {
+        /* Preserve button and input styling when needed - excluding nav buttons */
+        button:not(nav button), input, select, textarea {
           font-family: 'Source Serif 4', serif !important;
           font-weight: 300 !important;
         }
@@ -160,6 +160,31 @@ function App() {
         footer [class*="text-"], nav [class*="text-"],
         footer [class*="hover:"], nav [class*="hover:"] {
           font-family: 'Quattrocento', serif !important;
+          font-weight: 700 !important;
+        }
+        
+        /* NAVBAR BUTTONS - FORCE BOLD */
+        nav button, nav a[class*="border-2"] {
+          font-family: 'Quattrocento', serif !important;
+          font-weight: 700 !important;
+        }
+        
+        /* Target specific navbar button classes */
+        .group.relative.px-6.py-2\.5.border-2 {
+          font-family: 'Quattrocento', serif !important;
+          font-weight: 700 !important;
+        }
+        
+        /* NUCLEAR OPTION - ALL TEXT IN NAV BUTTONS */
+        nav button *, nav a[class*="border"] *, 
+        nav [class*="group"] *, nav [class*="px-6"] *,
+        nav span, nav button span {
+          font-family: 'Quattrocento', serif !important;
+          font-weight: 700 !important;
+        }
+        
+        /* Override any font-medium in navbar */
+        nav .font-medium, nav [class*="font-medium"] {
           font-weight: 700 !important;
         }
         

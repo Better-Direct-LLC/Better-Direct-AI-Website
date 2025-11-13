@@ -89,7 +89,7 @@ const ServicesSection = () => {
           {/* Navigation arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 text-white p-2 rounded-full hover:bg-blue-700 transition-colors hover:scale-105 cursor-pointer"
+            className="absolute left-[-2rem] top-1/2 -translate-y-1/2 text-white p-2 rounded-full hover:bg-blue-700 transition-colors hover:scale-105 cursor-pointer"
             style={{ background: '#1161ad' }}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,7 +98,7 @@ const ServicesSection = () => {
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 text-white p-2 rounded-full hover:bg-blue-700 transition-colors hover:scale-105 cursor-pointer"
+            className="absolute right-[-2rem] top-1/2 -translate-y-1/2 text-white p-2 rounded-full hover:bg-blue-700 transition-colors hover:scale-105 cursor-pointer"
             style={{ background: '#1161ad' }}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
