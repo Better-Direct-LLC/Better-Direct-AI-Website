@@ -267,7 +267,7 @@ const AboutUs = () => {
               <h2 className="text-3xl font-bold mb-4" style={{ color: "#0570c6" }}>
                 People Who Make a Difference
               </h2>
-              <div className="w-16 h-1" style={{ background: '#1161ad' }}></div>
+              <div className="w-16 h-1 mb-4" style={{ background: '#1161ad' }}></div>
               <p className="max-w-md" style={{ color: "#0570c6" }}>
                 Our team is the driving force behind everything we do. They are not just employees, they are innovators, problem-solvers, and champions of the community. More than half of our staff live locally, and many have found opportunities here that they might not have had at larger IT firms. By providing meaningful careers, mentorship, and a supportive environment, we help our team unlock their full potential, create lasting impact, and deliver exceptional IT solutions that benefit both our clients and the community we proudly call home.
               </p>

@@ -28,12 +28,11 @@ function App() {
       <ScrollToTop />
       {/* Global Font Styles */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&family=Source+Serif+4:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@800&family=Source+Serif+4:wght@500&display=swap');
         
         /* Global Font Application */
         * {
           font-family: 'Source Serif 4', serif;
-          font-weight: 300;
         }
         
         /* Headings - Quattrocento Bold (36-42px range) */
@@ -42,7 +41,7 @@ function App() {
         [class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"],
         .font-bold, .font-semibold {
           font-family: 'Quattrocento', serif !important;
-          font-weight: 700 !important;
+          font-weight: 800 !important;
         }
         
         /* Heading Sizes - Range 36-42px */
@@ -61,18 +60,17 @@ function App() {
           line-height: 1.4 !important;
         }
         
-        /* Body Text - SourceSerif4-Light (16-18px range) - Exclude nav/footer links */
+        /* Body Text - SourceSerif4-Medium (16-18px range) - Exclude nav/footer links */
         p, span, div, li, button,
         .body-font,
         [class*="text-sm"], [class*="text-base"], [class*="text-lg"], [class*="text-xl"] {
           font-family: 'Source Serif 4', serif !important;
-          font-weight: 300 !important;
+          font-weight: 500 !important;
         }
         
         /* Regular content links (not in nav/footer) */
         a:not(nav a):not(footer a) {
           font-family: 'Source Serif 4', serif !important;
-          font-weight: 300 !important;
         }
         
         /* Body Text Sizes - Range 16-18px */
@@ -100,13 +98,13 @@ function App() {
         /* Preserve button and input styling when needed - excluding nav buttons */
         button:not(nav button), input, select, textarea {
           font-family: 'Source Serif 4', serif !important;
-          font-weight: 300 !important;
+          font-weight: 500 !important;
         }
         
         /* Override any Tailwind font weights to maintain consistency */
-        .font-light { font-weight: 300 !important; }
-        .font-normal { font-weight: 300 !important; }
-        .font-medium { font-weight: 300 !important; }
+        .font-light { font-weight: 500 !important; }
+        .font-normal { font-weight: 500 !important; }
+        .font-medium { font-weight: 500 !important; }
         
         /* Footer and Navbar links - Quattrocento Bold - Override all other rules */
         nav a, nav button, nav Link,

@@ -50,10 +50,10 @@ const Navbar = () => {
       {/* Top Bar with CTA Buttons */}
       <div className="border-b border-gray-200 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center items-center gap-3">
+          <div className="flex justify-center items-center gap-5">
             {/* Email us button */}
             <button
-              className="group relative px-6 py-2.5 border-2 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent cursor-pointer hover:scale-105"
+              className="group relative px-6 py-2.5 border-2 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent cursor-pointer hover:scale-105 w-[250px]"
               style={{ color: '#1161ad', borderColor: '#1161ad' }}
               onClick={() => window.location.href = mailtoLink}
             >
@@ -68,7 +68,7 @@ const Navbar = () => {
             {/* Phone button */}
             <a
               href="tel:4809213858"
-              className="px-6 py-2.5 font-medium text-sm rounded transition-colors duration-200 hover:scale-105"
+              className="px-6 py-2.5 font-medium text-sm rounded transition-colors duration-200 hover:scale-105 w-[350px] text-center"
               style={{ background: '#0570c6', color: 'white' }}
               onMouseOver={e => e.currentTarget.style.background = '#1161ad'}
               onMouseOut={e => e.currentTarget.style.background = '#0570c6'}
@@ -77,7 +77,7 @@ const Navbar = () => {
             </a>
 
             {/* Buy Now button */}
-            <Link to="/buy-now" className="group relative px-6 py-2.5 border-2 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent cursor-pointer hover:scale-105" style={{ color: '#1161ad', borderColor: '#1161ad' }}>
+            <Link to="/buy-now" className="group relative px-6 py-2.5 border-2 font-medium text-sm rounded overflow-hidden transition-all duration-300 hover:bg-gray-100 hover:border-transparent cursor-pointer hover:scale-105 w-[250px] text-center" style={{ color: '#1161ad', borderColor: '#1161ad' }}>
               <span className="relative inline-flex items-center gap-1">
                 Buy Now
                 <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
@@ -94,7 +94,7 @@ const Navbar = () => {
         <div className="px-1 sm:px-4 lg:px-8 w-full">
           <div className="flex justify-between xl:justify-start items-center h-20 md:h-20 lg:h-28">
             {/* Logo */}
-            <div className="flex items-center flex-shrink-0 mr-2 sm:mr-4 xl:ml-8 xl:mr-8 max-w-full xl:h-24">
+            <div className="flex items-center flex-shrink-0 mr-2 sm:mr-4 xl:ml-60 xl:mr-8 max-w-full xl:h-24">
               <Link to="/" className="flex items-center">
                 <img
                   src={Logo}
@@ -105,7 +105,7 @@ const Navbar = () => {
             </div>
 
             {/* Desktop Navigation Links*/}
-            <div className="hidden xl:flex items-center gap-8 xl:ml-auto">
+            <div className="hidden xl:flex items-center gap-8 xl:ml-auto xl:mr-60">
               {/* About Us - with dropdown */}
               <div className="group relative flex items-center">
                 <Link

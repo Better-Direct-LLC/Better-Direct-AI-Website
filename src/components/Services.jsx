@@ -214,18 +214,47 @@ const Services = () => {
                         </p>
                     </div>
 
-                    {/* Services Grid */}
-                    <div className="grid md:grid-cols-2 gap-6">
-                        {services.map((service, index) => (
-                            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    {/* Services Grid - 2-2-1 Layout */}
+                    <div className="space-y-6">
+                        {/* First Row - 2 cards */}
+                        <div className="grid md:grid-cols-2 gap-6">
+                            {services.slice(0, 2).map((service, index) => (
+                                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                                    <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
+                                        {service.title}
+                                    </h3>
+                                    <p className="leading-relaxed" style={{ color: '#0570c6' }}>
+                                        {service.description}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                        
+                        {/* Second Row - 2 cards */}
+                        <div className="grid md:grid-cols-2 gap-6">
+                            {services.slice(2, 4).map((service, index) => (
+                                <div key={index + 2} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                                    <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
+                                        {service.title}
+                                    </h3>
+                                    <p className="leading-relaxed" style={{ color: '#0570c6' }}>
+                                        {service.description}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                        
+                        {/* Third Row - 1 centered card */}
+                        <div className="flex justify-center">
+                            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow max-w-md w-full">
                                 <h3 className="text-xl font-bold mb-4" style={{ color: '#0570c6' }}>
-                                    {service.title}
+                                    {services[4].title}
                                 </h3>
                                 <p className="leading-relaxed" style={{ color: '#0570c6' }}>
-                                    {service.description}
+                                    {services[4].description}
                                 </p>
                             </div>
-                        ))}
+                        </div>
                     </div>
                 </div>
             </section>

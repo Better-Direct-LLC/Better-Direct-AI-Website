@@ -28,7 +28,7 @@ const CapabilityStatement = () => (
           <p className="text-lg mb-6 text-start" style={{ color: '#0570c6' }}>
             Better Direct stands as Arizona’s only IT Solutions Integrator and Original Equipment Manufacturer (OEM) certified as a HUBZone, Service-Disabled Veteran-Owned Small Business (SDVOSB), and Small Disadvantaged Business (SDB). Since 2006, we’ve been delivering tailored technology solutions that empower organizations to meet their evolving needs with confidence and efficiency. </p>
           <p className="text-lg text-start" style={{ color: '#0570c6' }}>
-           We specialize in comprehensive hardware, software, and service offerings, providing access to over <b className="font-bold" style={{ color: '#1161ad' }}>2,000 trusted brands</b> and more than <b className="font-bold" style={{ color: '#1161ad' }}>400,000 products</b>. Our deep industry expertise, combined with our commitment to excellence and agility, makes Better Direct a strategic partner for federal, state, and commercial clients seeking scalable, cost-effective IT solutions.
+           We specialize in comprehensive hardware, software, and service offerings, providing access to over <strong>2,000 trusted brands</strong> and more than <strong>400,000 products</strong>. Our deep industry expertise, combined with our commitment to excellence and agility, makes Better Direct a strategic partner for federal, state, and commercial clients seeking scalable, cost-effective IT solutions.
           </p>
         </div>
         <div className="flex justify-start mt-10">

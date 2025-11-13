@@ -235,21 +235,23 @@ const ADMC = () => {
                                 </h2>
                                 <p className="leading-relaxed mb-4" style={{ color: '#0570c6' }}>
                                     For your ADMC sales needs, partner with Better Direct to unlock tailored IT solutions and exceptional service. Our ITES sales team, led by Agness Tsang, is dedicated to delivering top-notch support, ensuring seamless procurement and compliance for your agency’s mission. Contact us today at{' '}
-                                    <a
+                                    <strong><a
                                         href="tel:+14809213858"
                                         className="underline cursor-pointer"
                                         style={{ color: '#0570c6' }}
                                     >
                                         (480) 921-3858 (ext – 697)
                                     </a>
+                                    </strong>
                                     {' '}or email{' '}
-                                    <a
+                                    <strong><a
                                         onClick={() => window.location.href = generateMailtoLink('agyness.tsang@betterdirect.com')}
                                         className="underline cursor-pointer"
                                         style={{ color: '#0570c6' }}
                                     >
                                         agyness.tsang@betterdirect.com
                                     </a>
+                                    </strong>   
                                     {' '}to get started!
                                 </p>
                             </div>

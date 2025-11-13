@@ -253,7 +253,7 @@ const TwoGIT = () => {
                   Contact 2GIT Sales
                 </h2>
                 <p className="leading-relaxed" style={{ color: '#0570c6' }}>
-                  For your 2GIT sales needs, partner with Better Direct to unlock tailored IT solutions and exceptional service. Our GSA sales team, led by Madi Alberts, is dedicated to delivering top-notch support, ensuring seamless procurement and compliance for your agency's mission. Contact us today at <a href="tel:4809213858" className="underline hover:text-blue-800">(480) 921-3858</a> ext.703 or email <a onClick={() => window.location.href = generateMailtoLink('madison.alberts@betterdirect.com')} className="underline cursor-pointer" style={{ color: '#0570c6' }}>madison.alberts@betterdirect.com</a> to get started!
+                  For your 2GIT sales needs, partner with Better Direct to unlock tailored IT solutions and exceptional service. Our GSA sales team, led by Madi Alberts, is dedicated to delivering top-notch support, ensuring seamless procurement and compliance for your agency's mission. Contact us today at <strong><a href="tel:4809213858" className="underline hover:text-blue-800">(480) 921-3858  ext.703</a></strong> or email <strong><a onClick={() => window.location.href = generateMailtoLink('madison.alberts@betterdirect.com')} className="underline cursor-pointer">madison.alberts@betterdirect.com</a></strong> to get started!
                 </p>
               </div>
             </div>

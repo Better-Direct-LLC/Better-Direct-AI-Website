@@ -249,21 +249,23 @@ const MAS = () => {
                                 </h2>
                                 <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                     For your SEWP sales needs, partner with Better Direct to unlock tailored IT solutions and exceptional service. Our SEWP sales team, led by Kim Lambert, is dedicated to delivering top-notch support, ensuring seamless procurement and compliance for your agency’s mission. Contact us today at{' '}
-                                    <a
+                                    <strong><a
                                         href="tel:+14809213858"
                                         className="underline cursor-pointer"
                                         style={{ color: '#0570c6' }}
                                     >
                                         (480) 921-3858 (ext – 133)
                                     </a>
+                                    </strong>
                                     {' '}or email{' '}
-                                    <a
+                                    <strong><a
                                         onClick={() => window.location.href = generateMailtoLink('kim@betterdirect.com')}
                                         className="underline cursor-pointer"
                                         style={{ color: '#0570c6' }}
                                     >
                                         kim@betterdirect.com
                                     </a>
+                                    </strong>
                                     {' '}to get started!
                                 </p>
                             </div>

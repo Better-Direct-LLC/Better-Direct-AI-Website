@@ -243,14 +243,16 @@ const SeaPort = () => {
                                 </h2>
                                 <p className="leading-relaxed" style={{ color: '#0570c6' }}>
                                     Team up with Better Direct to leverage the full power of the SeaPort-NxG contract. Reach our dedicated expert, Anthony Hernandez, by email{' '}
-                                    <a
+                                    
+                                    <strong><a
                                         onClick={() => window.location.href = generateMailtoLink('anthony@betterdirect.com')}
                                         className="underline cursor-pointer"
                                         style={{ color: '#0570c6' }}
                                     >
                                         anthony@betterdirect.com
-                                    </a>
+                                    </a></strong>
                                     {' '}or by phone at{' '}
+                                    <strong>
                                     <a
                                         href="tel:+14809213858"
                                         className="underline cursor-pointer"
@@ -258,6 +260,7 @@ const SeaPort = () => {
                                     >
                                         480.921.3858 Ext 121
                                     </a>
+                                    </strong>
                                     .
                                 </p>
                             </div>

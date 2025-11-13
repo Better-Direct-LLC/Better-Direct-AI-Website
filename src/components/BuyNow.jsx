@@ -304,9 +304,9 @@ const BuyNow = () => {
                 <div>
                   <h3 className="text-2xl font-bold  mb-3" style={{ color: "#0570c6" }}>Call us directly</h3>
                   <p className="text-gray-700 mb-2" style={{ color: "#0570c6" }}>Call Us at:</p>
-                  <a href="tel:4809213858" className=" hover:text-blue-800 font-medium" style={{ color: "#0570c6" }}>(480) 921-3858</a>
+                  <strong><a href="tel:4809213858" className=" hover:text-blue-800" style={{ color: "#0570c6" }}>(480) 921-3858</a></strong>
                   <span className="text-gray-500"> / </span>
-                  <a href="tel:8669213858" className=" hover:text-blue-800 font-medium" style={{ color: "#0570c6" }}>(866) 921- 3858</a>
+                  <strong><a href="tel:8669213858" className=" hover:text-blue-800" style={{ color: "#0570c6" }}>(866) 921- 3858</a></strong>
                 </div>
               </div>
             </div>
@@ -321,13 +321,13 @@ const BuyNow = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold  mb-3" style={{ color: "#0570c6" }}>Email us</h3>
-                  <a
+                  <strong><a
                     href={mailtoLink}
-                    className="hover:text-blue-800 font-medium"
+                    className="hover:text-blue-800"
                     style={{ color: "#0570c6" }}
                   >
                     info@betterdirect.com
-                  </a>
+                  </a></strong>
                 </div>
               </div>
             </div>
