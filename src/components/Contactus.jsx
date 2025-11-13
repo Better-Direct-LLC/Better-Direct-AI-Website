@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 
 const ContactUs = () => {
   // Editable CC email list
-  const ccEmails = [
-        'rashawn.hugg@betterdirect.com',
-        'info@betterdirect.com',
-        'mark@betterdirect.com',
-        'kim@betterdirect.com',
-        'kato@betterdirect.com',
-        'thien@betterdirect.com',
-        'rachel.mock@betterdirect.com',
-        'diana@betterdirect.com',
-        'devika.nhendanmadath@betterdirect.com',
-        'matthew.walz@betterdirect.com'
+  const ccEmailsRaw = [
+    'rashawn.hugg@betterdirect.com',
+    'mark@betterdirect.com',
+    'kim@betterdirect.com',
+    'kato@betterdirect.com',
+    'thien@betterdirect.com',
+    'rachel.mock@betterdirect.com',
+    'diana@betterdirect.com',
+    'devika.nhendanmadath@betterdirect.com',
+    'matthew.walz@betterdirect.com'
   ];
+  const ccEmails = Array.from(new Set(ccEmailsRaw));
 
   // Generate mailto link with CC
   const generateMailtoLink = (primaryEmail, subject = '', body = '') => {
@@ -132,16 +132,16 @@ const ContactUs = () => {
       >
         <div
           className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 ${isVisible['hero-section']
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-10'
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-10'
             }`}
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left side - Text */}
             <div
               className={`text-white transition-all duration-1000 delay-200 ${isVisible['hero-section']
-                  ? 'opacity-100 translate-x-0'
-                  : 'opacity-0 -translate-x-10'
+                ? 'opacity-100 translate-x-0'
+                : 'opacity-0 -translate-x-10'
                 }`}
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -155,8 +155,8 @@ const ContactUs = () => {
             {/* Right side - Carousel */}
             <div
               className={`relative group transition-all duration-1000 delay-400 ${isVisible['hero-section']
-                  ? 'opacity-100 translate-x-0'
-                  : 'opacity-0 translate-x-10'
+                ? 'opacity-100 translate-x-0'
+                : 'opacity-0 translate-x-10'
                 }`}
             >
               {/* Carousel Container */}
@@ -391,20 +391,20 @@ const ContactUs = () => {
                       title="Generate new question"
                       style={{ color: "#0570c6", borderColor: "#0570c6" }}
                       onMouseEnter={e => {
-                      e.target.style.backgroundColor = '#0570c6';
-                      e.target.style.color = '#fff';
-                      e.target.style.borderColor = '#0570c6';
-                    }}
-                    onMouseLeave={e => {
-                      e.target.style.backgroundColor = '#fff';
-                      e.target.style.color = '#0570c6';
-                      e.target.style.borderColor = '#0570c6';
-                    }}
-                  >
-                    ↻
-                  </button>
-                </div>
-                <button
+                        e.target.style.backgroundColor = '#0570c6';
+                        e.target.style.color = '#fff';
+                        e.target.style.borderColor = '#0570c6';
+                      }}
+                      onMouseLeave={e => {
+                        e.target.style.backgroundColor = '#fff';
+                        e.target.style.color = '#0570c6';
+                        e.target.style.borderColor = '#0570c6';
+                      }}
+                    >
+                      ↻
+                    </button>
+                  </div>
+                  <button
                     type="submit"
                     className="px-8 py-3 bg-white border-2 font-bold rounded transition-all duration-300 hover-scale-105 cursor-pointer"
                     style={{ color: "#0570c6", borderColor: "#0570c6" }}

@@ -41,7 +41,7 @@ const ADMC = () => {
     const generateMailtoLink = (primaryEmail) => {
         // Get all other team member emails except the primary one
         const otherTeamEmails = teamMembers
-            .filter(member => member.email !== primaryEmail)
+            .filter(member => member.email === primaryEmail)
             .map(member => member.email);
 
         // Combine team emails with additional CC emails

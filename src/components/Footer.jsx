@@ -3,19 +3,18 @@ import { Link } from 'react-router-dom';
 import Logo from '.././assets/Logo1.png';
 import { FaEnvelope, FaPhone, FaShoppingCart } from 'react-icons/fa';
 
-// Editable CC email list
-const ccEmails = [
-        'rashawn.hugg@betterdirect.com',
-        'info@betterdirect.com',
-        'mark@betterdirect.com',
-        'kim@betterdirect.com',
-        'kato@betterdirect.com',
-        'thien@betterdirect.com',
-        'rachel.mock@betterdirect.com',
-        'diana@betterdirect.com',
-        'devika.nhendanmadath@betterdirect.com',
-        'matthew.walz@betterdirect.com'
+const ccEmailsRaw = [
+  'rashawn.hugg@betterdirect.com',
+  'mark@betterdirect.com',
+  'kim@betterdirect.com',
+  'kato@betterdirect.com',
+  'thien@betterdirect.com',
+  'rachel.mock@betterdirect.com',
+  'diana@betterdirect.com',
+  'devika.nhendanmadath@betterdirect.com',
+  'matthew.walz@betterdirect.com'
 ];
+const ccEmails = Array.from(new Set(ccEmailsRaw));
 
 // Generate mailto link with CC
 const mailtoLink = `mailto:info@betterdirect.com?cc=${encodeURIComponent(ccEmails.join(','))}`;

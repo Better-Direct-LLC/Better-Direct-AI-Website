@@ -3,21 +3,22 @@ import { Link } from 'react-router-dom';
 import Logo from '.././assets/Logo1.png';
 
 // Editable CC email list
-const ccEmails = [
-        'rashawn.hugg@betterdirect.com',
-        'info@betterdirect.com',
-        'mark@betterdirect.com',
-        'kim@betterdirect.com',
-        'kato@betterdirect.com',
-        'thien@betterdirect.com',
-        'rachel.mock@betterdirect.com',
-        'diana@betterdirect.com',
-        'devika.nhendanmadath@betterdirect.com',
-        'matthew.walz@betterdirect.com'
+const ccEmailsRaw = [
+  'rashawn.hugg@betterdirect.com',
+  'info@betterdirect.com',
+  'mark@betterdirect.com',
+  'kim@betterdirect.com',
+  'kato@betterdirect.com',
+  'thien@betterdirect.com',
+  'rachel.mock@betterdirect.com',
+  'diana@betterdirect.com',
+  'devika.nhendanmadath@betterdirect.com',
+  'matthew.walz@betterdirect.com'
 ];
-
+const ccEmails = Array.from(new Set(ccEmailsRaw));
 // Generate mailto link with CC
-const mailtoLink = `mailto:info@betterdirect.com?cc=${encodeURIComponent(ccEmails.join(','))}`;
+const mailtoLink = `mailto:info@betterdirect.com?cc=${encodeURIComponent(ccEmails.filter(email => email !== 'info@betterdirect.com').join(','))}`;
+const mailtoSeaportLink = `mailto:rashawn.hugg@betterdirect.com?cc=${encodeURIComponent(ccEmails.filter(email => email !== 'rashawn.hugg@betterdirect.com').join(','))}`;
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navRef = useRef(null);
@@ -162,6 +163,9 @@ const Navbar = () => {
                     </a>
                     <a href="https://global.channelonline.com/bdc/admc3/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fadmc3" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
                       ITES-4H Store
+                    </a>
+                    <a href={mailtoSeaportLink} className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
+                      Seaport Store
                     </a>
                   </div>
                 </div>
