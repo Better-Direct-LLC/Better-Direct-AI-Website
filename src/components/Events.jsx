@@ -647,13 +647,12 @@ export default function Events() {
             {/* Premium Navigation Arrows */}
             <button
               onClick={prevGallerySlide}
-              className="absolute -left-6 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group shadow-2xl cursor-pointer"
+              className="absolute -left-6 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 group shadow-2xl cursor-pointer"
               style={{
                 background: 'linear-gradient(135deg, #1161ad 0%, #0570c6 100%)',
                 color: 'white'
               }}
               onMouseOver={e => {
-                e.currentTarget.style.transform = 'translateY(-50%) scale(1.15)';
                 e.currentTarget.style.boxShadow = '0 20px 40px rgba(17, 97, 173, 0.4)';
               }}
               onMouseOut={e => {
@@ -668,13 +667,12 @@ export default function Events() {
 
             <button
               onClick={nextGallerySlide}
-              className="absolute -right-6 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group shadow-2xl"
+              className="absolute -right-6 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 group shadow-2xl"
               style={{
                 background: 'linear-gradient(135deg, #1161ad 0%, #0570c6 100%)',
                 color: 'white'
               }}
               onMouseOver={e => {
-                e.currentTarget.style.transform = 'translateY(-50%) scale(1.15)';
                 e.currentTarget.style.boxShadow = '0 20px 40px rgba(17, 97, 173, 0.4)';
               }}
               onMouseOut={e => {
