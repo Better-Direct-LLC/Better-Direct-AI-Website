@@ -1,14 +1,14 @@
 // Editable CC email list
 const ccEmailsRaw = [
-  'rashawn.hugg@betterdirect.com',
   'mark@betterdirect.com',
+  'diana@betterdirect.com',
   'kim@betterdirect.com',
   'kato@betterdirect.com',
   'thien@betterdirect.com',
   'rachel.mock@betterdirect.com',
-  'diana@betterdirect.com',
+  'rashawn.hugg@betterdirect.com',
   'devika.nhendanmadath@betterdirect.com',
-  'matthew.walz@betterdirect.com'
+  'matthew.walz@betterdirect.com',
 ];
 const ccEmails = Array.from(new Set(ccEmailsRaw));
 // Generate mailto link with CC

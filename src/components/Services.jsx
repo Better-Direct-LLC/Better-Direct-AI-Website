@@ -135,19 +135,19 @@ const Services = () => {
         setCurrentVideo((prev) => (prev - 1 + videos.length) % videos.length);
     };
 
-        // ========== EDITABLE CC CONFIGURATION ==========
+    // ========== EDITABLE CC CONFIGURATION ==========
     // Add or remove emails here as needed
     const additionalCCEmails = [
-        'rashawn.hugg@betterdirect.com',
         'info@betterdirect.com',
         'mark@betterdirect.com',
+        'diana@betterdirect.com',
         'kim@betterdirect.com',
         'kato@betterdirect.com',
         'thien@betterdirect.com',
         'rachel.mock@betterdirect.com',
-        'diana@betterdirect.com',
+        'rashawn.hugg@betterdirect.com',
         'devika.nhendanmadath@betterdirect.com',
-        'matthew.walz@betterdirect.com'
+        'matthew.walz@betterdirect.com',
     ];
     // ================================================
 
@@ -229,7 +229,7 @@ const Services = () => {
                                 </div>
                             ))}
                         </div>
-                        
+
                         {/* Second Row - 2 cards */}
                         <div className="grid md:grid-cols-2 gap-6">
                             {services.slice(2, 4).map((service, index) => (
@@ -243,7 +243,7 @@ const Services = () => {
                                 </div>
                             ))}
                         </div>
-                        
+
                         {/* Third Row - 1 centered card */}
                         <div className="flex justify-center">
                             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow max-w-md w-full">
@@ -274,7 +274,7 @@ const Services = () => {
                                             onClick={prevVideo}
                                             className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition-all z-10 hover:scale-105 cursor-pointer"
                                             aria-label="Previous video"
-                                            style={{ zIndex: 2 , background: '#1161ad'  }}
+                                            style={{ zIndex: 2, background: '#1161ad' }}
                                         >
                                             <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M15 19l-7-7 7-7" /></svg>
                                         </button>
@@ -316,7 +316,7 @@ const Services = () => {
                                             onClick={nextVideo}
                                             className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center text-white rounded-full shadow hover:bg-blue-700 transition-all z-10 hover:scale-105 cursor-pointer"
                                             aria-label="Next video"
-                                            style={{ zIndex: 2 , background: '#1161ad'  }}
+                                            style={{ zIndex: 2, background: '#1161ad' }}
                                         >
                                             <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M9 5l7 7-7 7" /></svg>
                                         </button>
@@ -466,8 +466,8 @@ const Services = () => {
 
                                     {/* Contact Button */}
                                     <button
-                                    onClick={() => window.location.href = generateMailtoLink(member.email)}
-                                    className="px-6 py-2 cursor-pointer hover:scale-105 transition-transform duration-200" style={{ background: '#1161ad', color: '#ffffff' }}>
+                                        onClick={() => window.location.href = generateMailtoLink(member.email)}
+                                        className="px-6 py-2 cursor-pointer hover:scale-105 transition-transform duration-200" style={{ background: '#1161ad', color: '#ffffff' }}>
                                         {member.buttonText}
                                     </button>
                                 </div>
@@ -477,39 +477,39 @@ const Services = () => {
                 </div>
             </section>
 
-                    {/* FAQ Section */}
-                    <section className="py-16 bg-gray-100">
-                        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                {faqs.map((faq, index) => (
-                                    <div key={index} className="bg-white rounded-lg shadow hover:bg-gray-50 cursor-pointer">
-                                        <button
-                                            onClick={() => toggleFaq(index)}
-                                            className="w-full px-6 py-4 text-left flex items-center justify-between transition-colors cursor-pointer"
-                                        >
-                                            <span className="font-medium" style={{ color: '#0570c6' }}>{faq.question}</span>
-                                            <div className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0 ml-4 cursor-pointer">
-                                                {expandedFaq === index ? (
-                                                    <svg className="w-4 h-4 text-gray-600 cursor-pointer" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                                        <path d="M6 15l6-6 6 6" strokeLinecap="round" strokeLinejoin="round" />
-                                                    </svg>
-                                                ) : (
-                                                    <svg className="w-4 h-4 text-gray-600 cursor-pointer" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                                        <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-                                                    </svg>
-                                                )}
-                                            </div>
-                                        </button>
-                                        {expandedFaq === index && (
-                                            <div className="px-6 pb-4">
-                                                <p className="" style={{ color: '#0570c6' }}>{faq.answer}</p>
-                                            </div>
+            {/* FAQ Section */}
+            <section className="py-16 bg-gray-100">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {faqs.map((faq, index) => (
+                            <div key={index} className="bg-white rounded-lg shadow hover:bg-gray-50 cursor-pointer">
+                                <button
+                                    onClick={() => toggleFaq(index)}
+                                    className="w-full px-6 py-4 text-left flex items-center justify-between transition-colors cursor-pointer"
+                                >
+                                    <span className="font-medium" style={{ color: '#0570c6' }}>{faq.question}</span>
+                                    <div className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0 ml-4 cursor-pointer">
+                                        {expandedFaq === index ? (
+                                            <svg className="w-4 h-4 text-gray-600 cursor-pointer" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                                <path d="M6 15l6-6 6 6" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                        ) : (
+                                            <svg className="w-4 h-4 text-gray-600 cursor-pointer" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                                <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
                                         )}
                                     </div>
-                                ))}
+                                </button>
+                                {expandedFaq === index && (
+                                    <div className="px-6 pb-4">
+                                        <p className="" style={{ color: '#0570c6' }}>{faq.answer}</p>
+                                    </div>
+                                )}
                             </div>
-                        </div>
-                    </section>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             {/* Get in Touch Section */}
             <section className="py-16 bg-white">

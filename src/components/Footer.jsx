@@ -4,15 +4,15 @@ import Logo from '.././assets/Logo1.png';
 import { FaEnvelope, FaPhone, FaShoppingCart } from 'react-icons/fa';
 
 const ccEmailsRaw = [
-  'rashawn.hugg@betterdirect.com',
   'mark@betterdirect.com',
+  'diana@betterdirect.com',
   'kim@betterdirect.com',
   'kato@betterdirect.com',
   'thien@betterdirect.com',
   'rachel.mock@betterdirect.com',
-  'diana@betterdirect.com',
+  'rashawn.hugg@betterdirect.com',
   'devika.nhendanmadath@betterdirect.com',
-  'matthew.walz@betterdirect.com'
+  'matthew.walz@betterdirect.com',
 ];
 const ccEmails = Array.from(new Set(ccEmailsRaw));
 
@@ -37,11 +37,11 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex-1 flex flex-col items-center justify-center mb-6 md:mb-0">
             <Link to="/" onClick={scrollToTop}>
-                <img
-                  src={Logo}
-                  alt="BetterDirect AI Logo"
-                  className="h-12 sm:h-16 md:h-20 lg:h-28 xl:h-24 w-auto max-w-full object-contain hover:scale-105 transition-transform duration-200"
-                />
+              <img
+                src={Logo}
+                alt="BetterDirect AI Logo"
+                className="h-12 sm:h-16 md:h-20 lg:h-28 xl:h-24 w-auto max-w-full object-contain hover:scale-105 transition-transform duration-200"
+              />
             </Link>
           </div>
           {/* Divider */}
