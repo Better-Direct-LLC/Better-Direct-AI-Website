@@ -24,6 +24,78 @@ const News = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Senator Sinema Meeting Section */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-12" style={{ color: '#0570c6' }}>
+            Better Direct President Mark Evans Met with Senator Sinema at Veterans Round Table
+          </h1>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            {/* Left side - Body Text */}
+            <div>
+              <p className="leading-relaxed text-lg" style={{ color: '#0570c6' }}>
+                President of Better Direct Mark Evans recently had the opportunity to sit down and speak with Senator Kyrsten Sinema, who represents the state of Arizona in the United States Senate. The two discussed the importance of veteran-owned small businesses and the unique challenges and opportunities these businesses face. They also discussed Senator Sinema's willingness to stand up for what she believes is right and how that aligns with the values at Better Direct.
+              </p>
+              <br />
+              <p className="leading-relaxed text-lg" style={{ color: '#0570c6' }}>
+                As an SDVOSB (Service-Disabled Veteran Owned Small Business) as well as being located in a certified HUBZone (Historically Under-utilized Business Zone), Better Direct is in a unique position to assist the United States government in fulfilling its global acquisition needs while significantly contributing to the local community.
+              </p>
+            </div>
+
+            {/* Right side - Professional Quote */}
+            <div className="relative">
+              <div 
+                className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-xl border-l-4 relative"
+                style={{ borderLeftColor: '#0570c6' }}
+              >
+                {/* Quote Icon */}
+                <div 
+                  className="absolute -top-4 -left-4 w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+                  style={{ backgroundColor: '#0570c6' }}
+                >
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                  </svg>
+                </div>
+
+                {/* Quote Text */}
+                <blockquote className="text-lg leading-relaxed mb-6 mt-4" style={{ color: '#0570c6' }}>
+                  "Coming from a military family, I take seriously my responsibility to deliver for AZ veterans. I'll keep working to address the challenges facing veteran-owned small businesses to help them thrive and expand economic opportunities across AZ."
+                </blockquote>
+
+                {/* Attribution */}
+                <div className="border-t pt-4" style={{ borderColor: '#0570c6', borderOpacity: 0.2 }}>
+                  <div className="flex items-center space-x-3">
+                    <div 
+                      className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg"
+                      style={{ backgroundColor: '#0570c6' }}
+                    >
+                      KS
+                    </div>
+                    <div>
+                      <p className="font-semibold" style={{ color: '#0570c6' }}>
+                        Kyrsten Sinema
+                      </p>
+                      <p className="text-sm opacity-75" style={{ color: '#0570c6' }}>
+                        @SenatorSinema • October 11, 2023
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Social Media Link Indicator */}
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center shadow-md" style={{ backgroundColor: '#1da1f2' }}>
+                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CISCO CCNA Section */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

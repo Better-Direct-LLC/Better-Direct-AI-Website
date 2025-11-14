@@ -237,13 +237,24 @@ const Navbar = () => {
                 Home
               </Link>
 
-              <Link
-                to="/news"
-                className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent hover:border-[#1161ad] flex items-center"
-                style={{ color: '#1161ad' }}
-              >
-                News
-              </Link>
+              {/* News - with dropdown */}
+              <div className="group relative flex items-center">
+                <Link
+                  to="/news"
+                  className="text-blue-600 hover:text-blue-800 font-medium text-xl whitespace-nowrap transition-all duration-200 py-2 border-b-4 border-transparent flex items-center"
+                  style={{ color: '#1161ad' }}
+                >
+                  News
+                </Link>
+                {/* Dropdown */}
+                <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="bg-white border border-gray-200 rounded shadow-lg py-2 min-w-[200px] border-t-4" style={{ borderTopColor: '#1161ad', borderColor: '#1161ad' }}>
+                    <Link to="/events" className="block px-4 py-2 text-sm text-blue-600 hover:bg-blue-50" style={{ color: '#1161ad' }}>
+                      Events
+                    </Link>
+                  </div>
+                </div>
+              </div>
 
               <Link
                 to="/services"

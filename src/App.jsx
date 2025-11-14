@@ -21,6 +21,7 @@ import SEWP from './components/SEWP';
 import ADMC from './components/ADMC';
 import ITES from './components/ITES';
 import SeaPort from './components/SeaPort';
+import Events from './components/Events';
 
 function App() {
   return (
@@ -226,6 +227,7 @@ function App() {
           {/* About Us sub-pages */}
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/employee-review" element={<EmployeeReview />} />
+          <Route path="/events" element={<Events />} />
           
           {/* 404 Not Found - optional */}
           <Route path="*" element={
