@@ -26,14 +26,12 @@ const eventData = [
     date: 'Nov 4–7, 2025',
     summary: 'Met with TD SYNNEX SVP Eddie Franklin, reviewed FY26 budgets, CMMC 2.0 rollout, and SEWP future. Explored DLT growth and Cisco strategy.',
     tags: ['TD SYNNEX', 'CMMC 2.0', 'SEWP', 'Federal Budget'],
-    img: './assets/Events/Davis/Image4.jpg',
+    img: './assets/Events/Florida/Image4.jpg',
     images: [
-      './assets/Events/Davis/Image1.jpg',
-      './assets/Events/Davis/Image2.jpg',
-      './assets/Events/Davis/Image3.jpg',
-      './assets/Events/Davis/Image4.jpg',
-      './assets/Events/Davis/Image5.jpg',
-      './assets/Events/Davis/Image6.jpg',
+      './assets/Events/Florida/Image1.jpg',
+      './assets/Events/Florida/Image2.jpg',
+      './assets/Events/Florida/Image3.jpg',
+      './assets/Events/Florida/Image4.jpg',
     ],
     details: [
       'Met Eddie Franklin (SVP, TD SYNNEX) – discussed FY26 DLT growth',
@@ -57,7 +55,6 @@ const eventData = [
       './assets/Events/Hawaii/img4.jpg',
       './assets/Events/Hawaii/img5.jpg',
       './assets/Events/Hawaii/img6.jpg',
-      './assets/Events/Hawaii/img7.jpg',
     ],
     details: [
       'Only 2 resellers present – high visibility',
@@ -73,16 +70,25 @@ const eventData = [
     date: 'Oct 21–23, 2025',
     summary: 'Only AZ-based HUBZone/SDVOSB. Promoted AI dev team and Getac rugged devices. Gained lifecycle refresh insights.',
     tags: ['HUBZone', 'Getac', 'AI Solutions'],
-    img: './assets/Events/Huachuca/Image1.jpg',
+    img: './assets/Events/LukeAFB/Image14.jpg',
     images: [
-      './assets/Events/Huachuca/Image1.jpg',
-      './assets/Events/Huachuca/Image2.jpg',
-      './assets/Events/Huachuca/Image3.jpg',
-      './assets/Events/Huachuca/Image4.jpg',
+      './assets/Events/Davis/Image1.jpg',
+      './assets/Events/Davis/Image2.jpg',
+      './assets/Events/Davis/Image3.jpg',
+      './assets/Events/Davis/Image4.jpg',
       './assets/Events/Huachuca/Image5.jpg',
       './assets/Events/Huachuca/Image6.jpg',
       './assets/Events/Huachuca/Image7.jpg',
       './assets/Events/Huachuca/Image8.jpg',
+      './assets/Events/Huachuca/Image9.jpg',
+      './assets/Events/Huachuca/Image10.jpg',
+      './assets/Events/Huachuca/Image11.jpg',
+      './assets/Events/Huachuca/Image12.jpg',
+      './assets/Events/LukeAFB/Image13.jpg',
+      './assets/Events/LukeAFB/Image14.jpg',
+      './assets/Events/LukeAFB/Image15.jpg',
+      './assets/Events/LukeAFB/Image16.jpg',
+      './assets/Events/LukeAFB/Image17.jpg',
     ],
     details: [
       'Only AZ-based HUBZone/SDVOSB reseller',
@@ -119,29 +125,21 @@ const futureEvents = [
     key: 'Tech Expo-Fort Meade',
     title: 'Tech Expo – Fort Meade, MD',
     date: 'Feb 3, 2026',
-    summary: 'Met with TD SYNNEX SVP Eddie Franklin, reviewed FY26 budgets, CMMC 2.0 rollout, and SEWP future. Explored DLT growth and Cisco strategy.',
-    tags: ['DOD'],
+    summary: 'The Tech Expo at Fort Meade connects Department of Defense personnel with industry leaders to explore emerging technologies, network on mission-critical solutions, and foster innovation through live demos and collaborative discussions. This free, on-base event provides hands-on opportunities to address key challenges in cybersecurity, IT, and defense tech.',
+    tags: ['Tech Expo', 'Fort Meade', 'DOD', 'cybersecurity', 'IT innovation', 'defense technology', 'networking', 'mission solutions'],
     img: '',
     images: [
-      // './assets/Events/GTC/img1.jpg',
-      // './assets/Events/GTC/img2.jpg',
-      // './assets/Events/GTCTech Expo.jpg',
-      // './assets/Events/GTC/img4.jpg',
+      '',
     ],
     details: [
-      'Met Eddie Franklin (SVP, TD SYNNEX) – discussed FY26 DLT growth',
-      'CMMC 2.0 rollout begins Nov 10, 2025',
-      'SEWP likely to remain standalone',
-      'FY26 Defense IT: $66.1B total',
-      'TD SYNNEX launching managed CMMC facility',
     ],
   },
   {
     key: 'Tech Expo-Fort Belvoir',
     title: 'Tech Expo – Fort Belvoir, VA',
     date: 'Feb 4, 2026',
-    summary: 'Showcased HP & Getac rugged solutions to Army, Navy, Air Force. Strong interest in AI servers and FAA SAVES LOAs.',
-    tags: ['DOD'],
+    summary: 'Held on base, the Fort Belvoir Tech Expo brings together government agencies and industry experts to showcase cutting-edge defense innovations, enabling collaboration on procurement needs and technology integrations for enhanced operational efficiency. Attendees can engage in guided tours, live demonstrations, and strategic networking sessions at this complimentary event.',
+    tags: ['Tech Expo', 'Fort Belvoir', 'DOD', 'defense innovation', 'procurement', 'technology showcase', 'government collaboration', 'live demos'],
     img: '',
     images: [
       '',
@@ -150,19 +148,14 @@ const futureEvents = [
       '',
     ],
     details: [
-      'Only 2 resellers present – high visibility',
-      'Getac S410 EOL 2026 → S510 launch',
-      'Dell Pro MAX AI: $4,000 MSRP',
-      'Follow-up LOAs: Tanium, Zscaler, Panasonic',
-      'Prime booth traffic driven by Marcos',
     ],
   },
   {
     key: 'Better Direct AI',
     title: 'Better Direct AI – Sales Kick Off 2026',
     date: 'March 6-7, 2026',
-    summary: 'Only AZ-based HUBZone/SDVOSB. Promoted AI dev team and Getac rugged devices. Gained lifecycle refresh insights.',
-    tags: ['HUBZone', 'AI Solutions'],
+    summary: 'Better Direct\'s AI Sales Kick Off 2026 gathers sales teams for interactive sessions on AI-driven strategies, resilience in sales, and practical tools for pitching advanced IT solutions, emphasizing hands-on training to boost performance in a competitive market. This two-day event in Tempe focuses on emotional intelligence, negotiation tactics, and emerging tech trends for revenue growth.',
+    tags: ['AI sales', 'kick off', 'Tempe AZ', 'IT solutions', 'sales training', 'negotiation', 'emotional intelligence', 'revenue strategies'],
     img: '',
     images: [
       '',
@@ -171,18 +164,14 @@ const futureEvents = [
       '',
     ],
     details: [
-      'Only AZ-based HUBZone/SDVOSB reseller',
-      'Introduced AI Development Team',
-      'Strong interest in Getac rugged devices',
-      'Gained lifecycle refresh timelines from IT engineers',
     ],
   },
   {
     key: 'Wright-Patterson AFB Tech Expo',
     title: 'Wright-Patterson AFB Tech Expo – Dayton, OH',
     date: 'March 18, 2026',
-    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
-    tags: ['Air Force'],
+    summary: 'The Wright-Patterson AFB Tech Expo unites Air Force personnel with industry innovators to evaluate emerging technologies for aerospace and defense missions, featuring hands-on exhibits and expert networking to drive collaborative problem-solving. Free and on-site, it highlights advancements in AI, cybersecurity, and mission systems for enhanced base operations.',
+    tags: ['Tech Expo', 'Wright-Patterson AFB', 'Air Force', 'aerospace tech', 'cybersecurity', 'mission innovation', 'industry networking'],
     img: '',
     images: [
       '',
@@ -191,19 +180,14 @@ const futureEvents = [
       '',
     ],
     details: [
-      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
-      'Gov procurement cycle: "50 AI dog years old"',
-      '7 AI Supercomputers planned with DoE',
-      'Humanoids next $T market after GPUs',
-      'Urgent need for US energy investment',
     ],
   },
   {
     key: 'Tech Summit',
     title: 'Tech Summit at Fort Huachuca – Sierra Vista, AZ',
     date: 'March 24, 2026',
-    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
-    tags: ['Army'],
+    summary: 'The Tech Summit at Fort Huachuca facilitates Army leaders and tech providers in discussing mission requirements, with live demos of AI-enhanced cybersecurity and emerging tools to innovate operational capabilities. This open, no-cost event promotes education, collaboration, and hands-on exploration of solutions tailored to Army needs.',
+    tags: ['Tech Summit', 'Fort Huachuca', 'Army', 'AI cybersecurity', 'emerging tech', 'collaboration', 'live demos', 'mission solutions'],
     img: '',
     images: [
       '',
@@ -212,19 +196,14 @@ const futureEvents = [
       '',
     ],
     details: [
-      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
-      'Gov procurement cycle: "50 AI dog years old"',
-      '7 AI Supercomputers planned with DoE',
-      'Humanoids next $T market after GPUs',
-      'Urgent need for US energy investment',
     ],
   },
   {
     key: 'Red White & You',
     title: 'Red White & You- TD SYNNEX– TBD',
     date: 'TBD',
-    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
-    tags: ['TD SYNNEX'],
+    summary: 'TD SYNNEX\'s Red White & You conference empowers public sector resellers with insights into IT modernization, hybrid work solutions, and national security tech, through executive keynotes, vendor partnerships, and networking to capitalize on U.S. government IT opportunities. Typically held late May, this event drives business growth via hands-on sessions and new collaborations.',
+    tags: ['Red White & You', 'TD SYNNEX', 'public sector', 'IT modernization', 'government IT', 'reseller conference', 'networking', 'security tech'],
     img: '',
     images: [
       '',
@@ -233,40 +212,29 @@ const futureEvents = [
       '',
     ],
     details: [
-      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
-      'Gov procurement cycle: "50 AI dog years old"',
-      '7 AI Supercomputers planned with DoE',
-      'Humanoids next $T market after GPUs',
-      'Urgent need for US energy investment',
     ],
   },
   {
     key: 'Wright-Patterson',
     title: 'Wright-Patterson AFB Tech Expo– Dayton, OH',
     date: 'Sept 16, 2026',
-    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
-    tags: ['Air Force'],
+    summary: 'This fall edition of the Wright-Patterson AFB Tech Expo targets year-end spending by connecting Air Force teams with exhibitors on advanced aerospace tech, cybersecurity, and logistics solutions through interactive booths and leader-led tours. As a premier on-base gathering since 1995, it attracts diverse DoD attendees for strategic tech adoption.',
+    tags: ['Tech Expo', 'Wright-Patterson AFB', 'Air Force', 'aerospace', 'cybersecurity', 'year-end procurement', 'DoD networking'],
     img: '',
     images: [
       '',
       '',
       '',
-      '',
     ],
     details: [
-      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
-      'Gov procurement cycle: "50 AI dog years old"',
-      '7 AI Supercomputers planned with DoE',
-      'Humanoids next $T market after GPUs',
-      'Urgent need for US energy investment',
     ],
   },
   {
     key: 'TechNet Indo-Pacific',
     title: 'TechNet Indo-Pacific – Hawaii',
     date: 'Oct 27-29, 2026',
-    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
-    tags: ['Air Force', 'ARMY'],
+    summary: 'TechNet Indo-Pacific, the region\'s premier defense tech event, assembles military leaders, AFCEA members, and innovators for sessions on secure edge communications, AI, and Indo-Pacific security challenges, featuring exhibits and global networking. Co-sponsored by AFCEA, this three-day conference in Honolulu advances joint Army-Air Force strategies.',
+    tags: ['TechNet Indo-Pacific', 'Hawaii', 'AFCEA', 'defense tech', 'AI security', 'edge comms', 'military networking', 'Indo-Pacific strategy'],
     img: '',
     images: [
       '',
@@ -275,19 +243,14 @@ const futureEvents = [
       '',
     ],
     details: [
-      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
-      'Gov procurement cycle: "50 AI dog years old"',
-      '7 AI Supercomputers planned with DoE',
-      'Humanoids next $T market after GPUs',
-      'Urgent need for US energy investment',
     ],
   },
   {
     key: 'Innovation Day at Fort Huachuca',
     title: 'Innovation Day at Fort Huachuca – Sierra Vista, AZ',
     date: 'Nov 3, 2026',
-    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
-    tags: ['ARMY'],
+    summary: 'Innovation Day at Fort Huachuca bridges Army missions with industry demos of cutting-edge tech like AI and adaptive infrastructures, encouraging open dialogue on challenges and future requirements. This free event emphasizes education, partnerships, and practical integrations to enhance cybersecurity and operational resilience.',
+    tags: ['Innovation Day', 'Fort Huachuca', 'Army', 'emerging tech', 'AI integration', 'cybersecurity', 'industry partnerships', 'mission education'],
     img: '',
     images: [
       '',
@@ -296,19 +259,14 @@ const futureEvents = [
       '',
     ],
     details: [
-      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
-      'Gov procurement cycle: "50 AI dog years old"',
-      '7 AI Supercomputers planned with DoE',
-      'Humanoids next $T market after GPUs',
-      'Urgent need for US energy investment',
     ],
   },
   {
     key: 'Davis-Monthan AFB Tech Expo',
     title: 'Davis-Monthan AFB Tech Expo – Tucson, AZ',
     date: 'Nov 4, 2026',
-    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
-    tags: ['Air Force'],
+    summary: 'The Davis-Monthan AFB Tech Expo offers Air Force aviators and support staff direct access to innovative IT and defense solutions via hands-on exhibits, focusing on mission enhancement through tech collaborations. Open to all base personnel, it includes networking with experts on cybersecurity, logistics, and aerial operations advancements.',
+    tags: ['Tech Expo', 'Davis-Monthan AFB', 'Air Force', 'defense IT', 'cybersecurity', 'hands-on demos', 'aerial tech', 'base networking'],
     img: '',
     images: [
       '',
@@ -317,19 +275,14 @@ const futureEvents = [
       '',
     ],
     details: [
-      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
-      'Gov procurement cycle: "50 AI dog years old"',
-      '7 AI Supercomputers planned with DoE',
-      'Humanoids next $T market after GPUs',
-      'Urgent need for US energy investment',
     ],
   },
   {
     key: 'Luke AFB Tech Expo',
     title: 'Luke AFB Tech Expo – Glendale, AZ',
     date: 'Nov 5, 2026',
-    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
-    tags: ['Air Force'],
+    summary: 'At Luke AFB Tech Expo, fighter pilot training personnel connect with vendors on secure networks, Wi-Fi advancements, and mission-critical tech, promoting innovation in training simulations and base security. This complimentary on-site event features live training sessions and strategic discussions for Air Force excellence.',
+    tags: ['Tech Expo', 'Luke AFB', 'Air Force', 'secure networks', 'training tech', 'Wi-Fi innovation', 'mission security', 'fighter pilot support'],
     img: '',
     images: [
       '',
@@ -338,19 +291,14 @@ const futureEvents = [
       '',
     ],
     details: [
-      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
-      'Gov procurement cycle: "50 AI dog years old"',
-      '7 AI Supercomputers planned with DoE',
-      'Humanoids next $T market after GPUs',
-      'Urgent need for US energy investment',
     ],
   },
   {
     key: 'RIO RANCHO- HP',
     title: 'RIO RANCHO- HP',
     date: 'Mid Nov, 2026',
-    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
-    tags: ['HP'],
+    summary: 'HP\'s Rio Rancho event highlights advancements in high-performance computing and edge-to-cloud solutions, targeting tech professionals for insights into AI, data management, and sustainable innovations from their New Mexico campus. This mid-November gathering fosters partnerships and demos for government and enterprise applications.',
+    tags: ['HP event', 'Rio Rancho', 'high-performance computing', 'AI edge', 'cloud solutions', 'tech innovation', 'demos', 'partnerships'],
     img: '',
     images: [
       '',
@@ -359,11 +307,6 @@ const futureEvents = [
       '',
     ],
     details: [
-      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
-      'Gov procurement cycle: "50 AI dog years old"',
-      '7 AI Supercomputers planned with DoE',
-      'Humanoids next $T market after GPUs',
-      'Urgent need for US energy investment',
     ],
   }
 
@@ -380,31 +323,67 @@ const galleryImages = [
   },
   {
     id: 2,
-    src: './assets/Events/Hawaii/img2.jpg',
+    src: './assets/Events/Hawaii/img4.jpg',
     title: 'Defense Tech Summit',
     description: 'Mission-critical technology solutions'
   },
   {
     id: 3,
-    src: './assets/Events/Hawaii/img3.jpg',
+    src: './assets/Events/Hawaii/img5.jpg',
     title: 'Government Innovation Forum',
     description: 'Digital transformation initiatives'
   },
   {
     id: 4,
-    src: './assets/Events/Hawaii/img4.jpg',
+    src: './assets/Events/Davis/Image1.jpg',
     title: 'HUBZone Tech Expo',
     description: 'Small business technology showcase'
   },
   {
     id: 5,
-    src: './assets/Events/Hawaii/img5.jpg',
+    src: './assets/Events/Huachuca/Image12.jpg',
     title: 'Cloud Infrastructure Summit',
     description: 'Enterprise cloud solutions'
   },
   {
     id: 6,
-    src: './assets/Events/Hawaii/img6.jpg',
+    src: './assets/Events/LukeAFB/Image14.jpg',
+    title: 'Cybersecurity Workshop',
+    description: 'CMMC 2.0 compliance training'
+  },
+  {
+    id: 7,
+    src: './assets/Events/GTC/img1.jpg',
+    title: 'HUBZone Tech Expo',
+    description: 'Small business technology showcase'
+  },
+  {
+    id: 8,
+    src: './assets/Events/GTC/img2.jpg',
+    title: 'Cloud Infrastructure Summit',
+    description: 'Enterprise cloud solutions'
+  },
+  {
+    id: 9,
+    src: './assets/Events/GTC/img3.jpg',
+    title: 'Cybersecurity Workshop',
+    description: 'CMMC 2.0 compliance training'
+  },
+  {
+    id: 10,
+    src: './assets/Events/Florida/Image1.jpg',
+    title: 'HUBZone Tech Expo',
+    description: 'Small business technology showcase'
+  },
+  {
+    id: 11,
+    src: './assets/Events/Florida/Image3.jpg',
+    title: 'Cloud Infrastructure Summit',
+    description: 'Enterprise cloud solutions'
+  },
+  {
+    id: 12,
+    src: './assets/Events/Florida/Image2.jpg',
     title: 'Cybersecurity Workshop',
     description: 'CMMC 2.0 compliance training'
   }
