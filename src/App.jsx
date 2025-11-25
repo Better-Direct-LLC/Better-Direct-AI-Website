@@ -33,7 +33,7 @@ function App() {
         
         /* Global Font Application */
         * {
-          font-family: 'Source Serif 4', serif;
+          font-family: 'Quattrocento', serif;
         }
         
         /* Headings - Quattrocento Bold (36-42px range) */
@@ -65,13 +65,13 @@ function App() {
         p, span, div, li, button,
         .body-font,
         [class*="text-sm"], [class*="text-base"], [class*="text-lg"], [class*="text-xl"] {
-          font-family: 'Source Serif 4', serif !important;
+          font-family: 'Quattrocento', serif !important;
           font-weight: 500 !important;
         }
         
         /* Regular content links (not in nav/footer) */
         a:not(nav a):not(footer a) {
-          font-family: 'Source Serif 4', serif !important;
+          font-family: 'Quattrocento', serif !important;
         }
         
         /* Body Text Sizes - Range 16-18px */
@@ -98,7 +98,7 @@ function App() {
         
         /* Preserve button and input styling when needed - excluding nav buttons */
         button:not(nav button), input, select, textarea {
-          font-family: 'Source Serif 4', serif !important;
+          font-family: 'Quattrocento', serif !important;
           font-weight: 500 !important;
         }
         

@@ -26,12 +26,14 @@ const eventData = [
     date: 'Nov 4–7, 2025',
     summary: 'Met with TD SYNNEX SVP Eddie Franklin, reviewed FY26 budgets, CMMC 2.0 rollout, and SEWP future. Explored DLT growth and Cisco strategy.',
     tags: ['TD SYNNEX', 'CMMC 2.0', 'SEWP', 'Federal Budget'],
-    img: './assets/Events/GTC/img3.jpg',
+    img: './assets/Events/Davis/Image1.jpg',
     images: [
-      './assets/Events/GTC/img1.jpg',
-      './assets/Events/GTC/img2.jpg',
-      './assets/Events/GTC/img3.jpg',
-      './assets/Events/GTC/img4.jpg',
+      './assets/Events/Davis/Image1.jpg',
+      './assets/Events/Davis/Image2.jpg',
+      './assets/Events/Davis/Image3.jpg',
+      './assets/Events/Davis/Image4.jpg',
+      './assets/Events/Davis/Image5.jpg',
+      './assets/Events/Davis/Image6.jpg',
     ],
     details: [
       'Met Eddie Franklin (SVP, TD SYNNEX) – discussed FY26 DLT growth',
@@ -47,12 +49,15 @@ const eventData = [
     date: 'Oct 27–30, 2025',
     summary: 'Showcased HP & Getac rugged solutions to Army, Navy, Air Force. Strong interest in AI servers and FAA SAVES LOAs.',
     tags: ['HUBZone', 'Getac S510', 'Dell AI', 'FAA SAVES'],
-    img: './assets/Events/GTC/img4.jpg',
+    img: './assets/Events/Hawaii/img3.jpg',
     images: [
-      './assets/Events/GTC/img1.jpg',
-      './assets/Events/GTC/img2.jpg',
-      './assets/Events/GTC/img3.jpg',
-      './assets/Events/GTC/img4.jpg',
+      './assets/Events/Hawaii/img1.jpg',
+      './assets/Events/Hawaii/img2.jpg',
+      './assets/Events/Hawaii/img3.jpg',
+      './assets/Events/Hawaii/img4.jpg',
+      './assets/Events/Hawaii/img5.jpg',
+      './assets/Events/Hawaii/img6.jpg',
+      './assets/Events/Hawaii/img7.jpg',
     ],
     details: [
       'Only 2 resellers present – high visibility',
@@ -68,12 +73,16 @@ const eventData = [
     date: 'Oct 21–23, 2025',
     summary: 'Only AZ-based HUBZone/SDVOSB. Promoted AI dev team and Getac rugged devices. Gained lifecycle refresh insights.',
     tags: ['HUBZone', 'Getac', 'AI Solutions'],
-    img: './assets/Events/GTC/img2.jpg',
+    img: './assets/Events/Huachuca/Image1.jpg',
     images: [
-      './assets/Events/GTC/img1.jpg',
-      './assets/Events/GTC/img2.jpg',
-      './assets/Events/GTC/img3.jpg',
-      './assets/Events/GTC/img4.jpg',
+      './assets/Events/Huachuca/Image1.jpg',
+      './assets/Events/Huachuca/Image2.jpg',
+      './assets/Events/Huachuca/Image3.jpg',
+      './assets/Events/Huachuca/Image4.jpg',
+      './assets/Events/Huachuca/Image5.jpg',
+      './assets/Events/Huachuca/Image6.jpg',
+      './assets/Events/Huachuca/Image7.jpg',
+      './assets/Events/Huachuca/Image8.jpg',
     ],
     details: [
       'Only AZ-based HUBZone/SDVOSB reseller',
@@ -107,17 +116,17 @@ const eventData = [
 
 const futureEvents = [
   {
-    key: 'stars',
-    title: 'Stars & Stripes DAP – Key West, FL',
-    date: 'Nov 4–7, 2025',
+    key: 'Tech Expo-Fort Meade',
+    title: 'Tech Expo – Fort Meade, MD',
+    date: 'Feb 3, 2026',
     summary: 'Met with TD SYNNEX SVP Eddie Franklin, reviewed FY26 budgets, CMMC 2.0 rollout, and SEWP future. Explored DLT growth and Cisco strategy.',
-    tags: ['TD SYNNEX', 'CMMC 2.0', 'SEWP', 'Federal Budget'],
-    img: './assets/Events/GTC/img3.jpg',
+    tags: ['DOD'],
+    img: '',
     images: [
-      './assets/Events/GTC/img1.jpg',
-      './assets/Events/GTC/img2.jpg',
-      './assets/Events/GTC/img3.jpg',
-      './assets/Events/GTC/img4.jpg',
+      // './assets/Events/GTC/img1.jpg',
+      // './assets/Events/GTC/img2.jpg',
+      // './assets/Events/GTCTech Expo.jpg',
+      // './assets/Events/GTC/img4.jpg',
     ],
     details: [
       'Met Eddie Franklin (SVP, TD SYNNEX) – discussed FY26 DLT growth',
@@ -128,17 +137,17 @@ const futureEvents = [
     ],
   },
   {
-    key: 'technet',
-    title: 'TechNet Indo-Pacific – Hawaii',
-    date: 'Oct 27–30, 2025',
+    key: 'Tech Expo-Fort Belvoir',
+    title: 'Tech Expo – Fort Belvoir, VA',
+    date: 'Feb 4, 2026',
     summary: 'Showcased HP & Getac rugged solutions to Army, Navy, Air Force. Strong interest in AI servers and FAA SAVES LOAs.',
-    tags: ['HUBZone', 'Getac S510', 'Dell AI', 'FAA SAVES'],
-    img: './assets/Events/GTC/img4.jpg',
+    tags: ['DOD'],
+    img: '',
     images: [
-      './assets/Events/GTC/img1.jpg',
-      './assets/Events/GTC/img2.jpg',
-      './assets/Events/GTC/img3.jpg',
-      './assets/Events/GTC/img4.jpg',
+      '',
+      '',
+      '',
+      '',
     ],
     details: [
       'Only 2 resellers present – high visibility',
@@ -149,17 +158,17 @@ const futureEvents = [
     ],
   },
   {
-    key: 'azbases',
-    title: 'AZ Bases Tour – Ft. Huachuca, Davis-Monthan, Luke AFB',
-    date: 'Oct 21–23, 2025',
+    key: 'Better Direct AI',
+    title: 'Better Direct AI – Sales Kick Off 2026',
+    date: 'March 6-7, 2026',
     summary: 'Only AZ-based HUBZone/SDVOSB. Promoted AI dev team and Getac rugged devices. Gained lifecycle refresh insights.',
-    tags: ['HUBZone', 'Getac', 'AI Solutions'],
-    img: './assets/Events/GTC/img2.jpg',
+    tags: ['HUBZone', 'AI Solutions'],
+    img: '',
     images: [
-      './assets/Events/GTC/img1.jpg',
-      './assets/Events/GTC/img2.jpg',
-      './assets/Events/GTC/img3.jpg',
-      './assets/Events/GTC/img4.jpg',
+      '',
+      '',
+      '',
+      '',
     ],
     details: [
       'Only AZ-based HUBZone/SDVOSB reseller',
@@ -169,17 +178,17 @@ const futureEvents = [
     ],
   },
   {
-    key: 'gtc',
-    title: 'NVIDIA GTC – Washington, DC',
-    date: 'Oct 27–29, 2025',
+    key: 'Wright-Patterson AFB Tech Expo',
+    title: 'Wright-Patterson AFB Tech Expo – Dayton, OH',
+    date: 'March 18, 2026',
     summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
-    tags: ['NVIDIA', 'AI Supercomputers', 'Quantum + AI'],
-    img: './assets/Events/GTC/img1.jpg',
+    tags: ['Air Force'],
+    img: '',
     images: [
-      './assets/Events/GTC/img1.jpg',
-      './assets/Events/GTC/img2.jpg',
-      './assets/Events/GTC/img3.jpg',
-      './assets/Events/GTC/img4.jpg',
+      '',
+      '',
+      '',
+      '',
     ],
     details: [
       'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
@@ -189,63 +198,215 @@ const futureEvents = [
       'Urgent need for US energy investment',
     ],
   },
+  {
+    key: 'Tech Summit',
+    title: 'Tech Summit at Fort Huachuca – Sierra Vista, AZ',
+    date: 'March 24, 2026',
+    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
+    tags: ['Army'],
+    img: '',
+    images: [
+      '',
+      '',
+      '',
+      '',
+    ],
+    details: [
+      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
+      'Gov procurement cycle: "50 AI dog years old"',
+      '7 AI Supercomputers planned with DoE',
+      'Humanoids next $T market after GPUs',
+      'Urgent need for US energy investment',
+    ],
+  },
+      {
+    key: 'Red White & You',
+    title: 'Red White & You- TD SYNNEX– TBD',
+    date: 'TBD',
+    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
+    tags: ['TD SYNNEX'],
+    img: '',
+    images: [
+      '',
+      '',
+      '',
+      '',
+    ],
+    details: [
+      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
+      'Gov procurement cycle: "50 AI dog years old"',
+      '7 AI Supercomputers planned with DoE',
+      'Humanoids next $T market after GPUs',
+      'Urgent need for US energy investment',
+    ],
+  },
+  {
+    key: 'Wright-Patterson',
+    title: 'Wright-Patterson AFB Tech Expo– Dayton, OH',
+    date: 'Sept 16, 2026',
+    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
+    tags: ['Air Force'],
+    img: '',
+    images: [
+      '',
+      '',
+      '',
+      '',
+    ],
+    details: [
+      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
+      'Gov procurement cycle: "50 AI dog years old"',
+      '7 AI Supercomputers planned with DoE',
+      'Humanoids next $T market after GPUs',
+      'Urgent need for US energy investment',
+    ],
+  },
+    {
+    key: 'TechNet Indo-Pacific',
+    title: 'TechNet Indo-Pacific – Hawaii',
+    date: 'Oct 27-29, 2026',
+    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
+    tags: ['Air Force', 'ARMY'],
+    img: '',
+    images: [
+      '',
+      '',
+      '',
+      '',
+    ],
+    details: [
+      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
+      'Gov procurement cycle: "50 AI dog years old"',
+      '7 AI Supercomputers planned with DoE',
+      'Humanoids next $T market after GPUs',
+      'Urgent need for US energy investment',
+    ],
+  },
+    {
+    key: 'Innovation Day at Fort Huachuca',
+    title: 'Innovation Day at Fort Huachuca – Sierra Vista, AZ',
+    date: 'Nov 3, 2026',
+    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
+    tags: ['ARMY'],
+    img: '',
+    images: [
+      '',
+      '',
+      '',
+      '',
+    ],
+    details: [
+      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
+      'Gov procurement cycle: "50 AI dog years old"',
+      '7 AI Supercomputers planned with DoE',
+      'Humanoids next $T market after GPUs',
+      'Urgent need for US energy investment',
+    ],
+  },
+    {
+    key: 'Davis-Monthan AFB Tech Expo',
+    title: 'Davis-Monthan AFB Tech Expo – Tucson, AZ',
+    date: 'Nov 4, 2026',
+    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
+    tags: ['Air Force'],
+    img: '',
+    images: [
+      '',
+      '',
+      '',
+      '',
+    ],
+    details: [
+      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
+      'Gov procurement cycle: "50 AI dog years old"',
+      '7 AI Supercomputers planned with DoE',
+      'Humanoids next $T market after GPUs',
+      'Urgent need for US energy investment',
+    ],
+  },
+    {
+    key: 'Luke AFB Tech Expo',
+    title: 'Luke AFB Tech Expo – Glendale, AZ',
+    date: 'Nov 5, 2026',
+    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
+    tags: ['Air Force'],
+    img: '',
+    images: [
+      '',
+      '',
+      '',
+      '',
+    ],
+    details: [
+      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
+      'Gov procurement cycle: "50 AI dog years old"',
+      '7 AI Supercomputers planned with DoE',
+      'Humanoids next $T market after GPUs',
+      'Urgent need for US energy investment',
+    ],
+  },
+    {
+    key: 'RIO RANCHO- HP',
+    title: 'RIO RANCHO- HP',
+    date: 'Mid Nov, 2026',
+    summary: 'Jensen Huang keynote on AI factories, Grace Blackwell, tokenization, and humanoid robots. Federal procurement cycle too slow.',
+    tags: ['HP'],
+    img: '',
+    images: [
+      '',
+      '',
+      '',
+      '',
+    ],
+    details: [
+      'Jensen Huang: AI Factories, Grace Blackwell, Tokenization',
+      'Gov procurement cycle: "50 AI dog years old"',
+      '7 AI Supercomputers planned with DoE',
+      'Humanoids next $T market after GPUs',
+      'Urgent need for US energy investment',
+    ],
+  }
+  
+  
 ];
 
 // Gallery images data
 const galleryImages = [
   {
     id: 1,
-    src: './assets/Events/img1.jpg',
+    src: './assets/Events/Hawaii/img1.jpg',
     title: 'Federal IT Conference 2024',
     description: 'AI and cybersecurity presentations'
   },
   {
     id: 2,
-    src: './assets/Events/img2.jpg',
+    src: './assets/Events/Hawaii/img2.jpg',
     title: 'Defense Tech Summit',
     description: 'Mission-critical technology solutions'
   },
   {
     id: 3,
-    src: './assets/Events/img3.jpg',
+    src: './assets/Events/Hawaii/img3.jpg',
     title: 'Government Innovation Forum',
     description: 'Digital transformation initiatives'
   },
   {
     id: 4,
-    src: './assets/Events/img4.jpg',
+    src: './assets/Events/Hawaii/img4.jpg',
     title: 'HUBZone Tech Expo',
     description: 'Small business technology showcase'
   },
   {
     id: 5,
-    src: './assets/Events/img5.jpg',
+    src: './assets/Events/Hawaii/img5.jpg',
     title: 'Cloud Infrastructure Summit',
     description: 'Enterprise cloud solutions'
   },
   {
     id: 6,
-    src: './assets/Events/img6.jpg',
+    src: './assets/Events/Hawaii/img6.jpg',
     title: 'Cybersecurity Workshop',
     description: 'CMMC 2.0 compliance training'
-  },
-  {
-    id: 7,
-    src: './assets/Events/img7.jpg',
-    title: 'AI Innovation Lab',
-    description: 'Machine learning for government'
-  },
-  {
-    id: 8,
-    src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800&q=90',
-    title: 'Partner Networking Event',
-    description: 'Industry collaboration summit'
-  },
-  {
-    id: 9,
-    src: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800&q=90',
-    title: 'Tech Leadership Panel',
-    description: 'Future of federal technology'
   }
 ];
 
@@ -253,6 +414,8 @@ export default function Events() {
   const [lightbox, setLightbox] = useState(null);
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [futureEventsIndex, setFutureEventsIndex] = useState(0);
+  const futureEventsPerPage = 4;
   const [countdown, setCountdown] = useState({
     days: '--',
     hours: '--',
@@ -334,6 +497,22 @@ export default function Events() {
       }
     });
   };
+
+  const nextFutureEvents = () => {
+  setFutureEventsIndex(prev => {
+    const total = futureEvents.length;
+    const next = prev + futureEventsPerPage;
+    return next >= total ? 0 : next;
+  });
+};
+
+const prevFutureEvents = () => {
+  setFutureEventsIndex(prev => {
+    const total = futureEvents.length;
+    const prevIdx = prev - futureEventsPerPage;
+    return prevIdx < 0 ? Math.max(0, total - futureEventsPerPage) : prevIdx;
+  });
+};
 
   return (
     <div className="bg-white min-h-screen">
@@ -425,25 +604,91 @@ export default function Events() {
             Upcoming Events
             <span className="block w-20 h-1 mx-auto mt-4" style={{ background: '#1161ad' }}></span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
-            {futureEvents.map(event => (
-              <div key={event.key} className="event-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden hover:-translate-y-2" onClick={() => {
-                setCurrentImageIndex(0);
-                setLightbox(event);
-              }}>
-                <div className="event-img h-52 bg-gray-200" style={{ backgroundImage: `url('${event.img}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-                <div className="event-content p-6">
-                  <div className="event-date text-sm mb-2" style={{ color: '#6c757d' }}>{event.date}</div>
-                  <h3 className="event-title text-xl font-bold mb-2" style={{ color: '#1161ad' }}>{event.title}</h3>
-                  <p className="event-summary text-base mb-4" style={{ color: '#6c757d' }}>{event.summary}</p>
-                  <div className="event-tags flex flex-wrap gap-2 text-xs">
-                    {event.tags.map(tag => (
-                      <span key={tag} className="tag px-2 py-1 rounded-full" style={{ background: '#e9ecef', color: '#1161ad' }}>{tag}</span>
-                    ))}
+          <div className="relative max-w-7xl mx-auto">
+            {/* Left Arrow */}
+            <button
+              onClick={() => {
+                setFutureEventsIndex(prev => {
+                  const total = futureEvents.length;
+                  const prevIdx = prev - 4;
+                  return prevIdx < 0 ? Math.max(0, total - 4) : prevIdx;
+                });
+              }}
+              className="absolute -left-8 top-1/2 -translate-y-1/2 z-10 w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group shadow-xl"
+              style={{
+                background: 'linear-gradient(135deg, #1161ad 0%, #0570c6 100%)',
+                color: 'white'
+              }}
+              aria-label="Previous events"
+            >
+              <svg className="w-6 h-6 transform group-hover:-translate-x-0.5 transition-transform duration-200 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Carousel Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {futureEvents.slice(futureEventsIndex, futureEventsIndex + 4).map(event => (
+                <div key={event.key} className="event-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden hover:-translate-y-2" onClick={() => {
+                  // setCurrentImageIndex(0);
+                  // setLightbox(event);
+                }}>
+                  <div className="event-img h-52 bg-gray-200" style={{ backgroundImage: `url('${event.img}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+                  <div className="event-content p-6">
+                    <div className="event-date text-sm mb-2" style={{ color: '#6c757d' }}>{event.date}</div>
+                    <h3 className="event-title text-xl font-bold mb-2" style={{ color: '#1161ad' }}>{event.title}</h3>
+                    <p className="event-summary text-base mb-4" style={{ color: '#6c757d' }}>{event.summary}</p>
+                    <div className="event-tags flex flex-wrap gap-2 text-xs">
+                      {event.tags.map(tag => (
+                        <span key={tag} className="tag px-2 py-1 rounded-full" style={{ background: '#e9ecef', color: '#1161ad' }}>{tag}</span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Right Arrow */}
+            <button
+              onClick={() => {
+                setFutureEventsIndex(prev => {
+                  const total = futureEvents.length;
+                  const next = prev + 4;
+                  return next >= total ? 0 : next;
+                });
+              }}
+              className="absolute -right-8 top-1/2 -translate-y-1/2 z-10 w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group shadow-xl"
+              style={{
+                background: 'linear-gradient(135deg, #1161ad 0%, #0570c6 100%)',
+                color: 'white'
+              }}
+              aria-label="Next events"
+            >
+              <svg className="w-6 h-6 transform group-hover:translate-x-0.5 transition-transform duration-200 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            {/* Carousel Indicators */}
+            <div className="flex justify-center mt-8 space-x-3">
+              {Array.from({ length: Math.ceil(futureEvents.length / 4) }).map((_, index) => {
+                const isActive = Math.floor(futureEventsIndex / 4) === index;
+                return (
+                  <button
+                    key={index}
+                    onClick={() => setFutureEventsIndex(index * 4)}
+                    className={`transition-all duration-300 rounded-full ${
+                      isActive ? 'w-8 h-3' : 'w-3 h-3 hover:scale-125'
+                    }`}
+                    style={{
+                      background: isActive
+                        ? 'linear-gradient(90deg, #1161ad 0%, #0570c6 100%)'
+                        : '#e2e8f0'
+                    }}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
