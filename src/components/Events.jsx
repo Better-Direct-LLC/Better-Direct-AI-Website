@@ -26,7 +26,7 @@ const eventData = [
     date: 'Nov 4–7, 2025',
     summary: 'Met with TD SYNNEX SVP Eddie Franklin, reviewed FY26 budgets, CMMC 2.0 rollout, and SEWP future. Explored DLT growth and Cisco strategy.',
     tags: ['TD SYNNEX', 'CMMC 2.0', 'SEWP', 'Federal Budget'],
-    img: './assets/Events/Davis/Image1.jpg',
+    img: './assets/Events/Davis/Image4.jpg',
     images: [
       './assets/Events/Davis/Image1.jpg',
       './assets/Events/Davis/Image2.jpg',
@@ -49,7 +49,7 @@ const eventData = [
     date: 'Oct 27–30, 2025',
     summary: 'Showcased HP & Getac rugged solutions to Army, Navy, Air Force. Strong interest in AI servers and FAA SAVES LOAs.',
     tags: ['HUBZone', 'Getac S510', 'Dell AI', 'FAA SAVES'],
-    img: './assets/Events/Hawaii/img3.jpg',
+    img: './assets/Events/Hawaii/img6.jpg',
     images: [
       './assets/Events/Hawaii/img1.jpg',
       './assets/Events/Hawaii/img2.jpg',
@@ -581,7 +581,16 @@ const prevFutureEvents = () => {
                 setCurrentImageIndex(0);
                 setLightbox(event);
               }}>
-                <div className="event-img h-52 bg-gray-200" style={{ backgroundImage: `url('${event.img}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+                <div
+                  className="event-img h-52 bg-gray-200"
+                  style={{
+                    backgroundImage: `url('${event.img}')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    imageRendering: 'crisp-edges',
+                  }}
+                ></div>
                 <div className="event-content p-6">
                   <div className="event-date text-sm mb-2" style={{ color: '#6c757d' }}>{event.date}</div>
                   <h3 className="event-title text-xl font-bold mb-2" style={{ color: '#1161ad' }}>{event.title}</h3>
@@ -633,7 +642,16 @@ const prevFutureEvents = () => {
                   // setCurrentImageIndex(0);
                   // setLightbox(event);
                 }}>
-                  <div className="event-img h-52 bg-gray-200" style={{ backgroundImage: `url('${event.img}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+                  <div
+                    className="event-img h-52 bg-gray-200"
+                    style={{
+                      backgroundImage: `url('${event.img}')`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                      imageRendering: 'crisp-edges',
+                    }}
+                  ></div>
                   <div className="event-content p-6">
                     <div className="event-date text-sm mb-2" style={{ color: '#6c757d' }}>{event.date}</div>
                     <h3 className="event-title text-xl font-bold mb-2" style={{ color: '#1161ad' }}>{event.title}</h3>
@@ -717,7 +735,12 @@ const prevFutureEvents = () => {
                 <img
                   src={lightbox.images ? lightbox.images[currentImageIndex] : lightbox.img}
                   alt={lightbox.title}
-                  className="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-105"
+                  className="w-full h-full transition-all duration-700 ease-in-out transform hover:scale-105"
+                  style={{
+                    objectFit: 'contain',
+                    imageRendering: 'crisp-edges',
+                    background: '#111',
+                  }}
                 />
 
                 {/* Premium Navigation Arrows */}
