@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
@@ -219,7 +219,7 @@ const futureEvents = [
       'Urgent need for US energy investment',
     ],
   },
-      {
+  {
     key: 'Red White & You',
     title: 'Red White & You- TD SYNNEX– TBD',
     date: 'TBD',
@@ -261,7 +261,7 @@ const futureEvents = [
       'Urgent need for US energy investment',
     ],
   },
-    {
+  {
     key: 'TechNet Indo-Pacific',
     title: 'TechNet Indo-Pacific – Hawaii',
     date: 'Oct 27-29, 2026',
@@ -282,7 +282,7 @@ const futureEvents = [
       'Urgent need for US energy investment',
     ],
   },
-    {
+  {
     key: 'Innovation Day at Fort Huachuca',
     title: 'Innovation Day at Fort Huachuca – Sierra Vista, AZ',
     date: 'Nov 3, 2026',
@@ -303,7 +303,7 @@ const futureEvents = [
       'Urgent need for US energy investment',
     ],
   },
-    {
+  {
     key: 'Davis-Monthan AFB Tech Expo',
     title: 'Davis-Monthan AFB Tech Expo – Tucson, AZ',
     date: 'Nov 4, 2026',
@@ -324,7 +324,7 @@ const futureEvents = [
       'Urgent need for US energy investment',
     ],
   },
-    {
+  {
     key: 'Luke AFB Tech Expo',
     title: 'Luke AFB Tech Expo – Glendale, AZ',
     date: 'Nov 5, 2026',
@@ -345,7 +345,7 @@ const futureEvents = [
       'Urgent need for US energy investment',
     ],
   },
-    {
+  {
     key: 'RIO RANCHO- HP',
     title: 'RIO RANCHO- HP',
     date: 'Mid Nov, 2026',
@@ -366,8 +366,8 @@ const futureEvents = [
       'Urgent need for US energy investment',
     ],
   }
-  
-  
+
+
 ];
 
 // Gallery images data
@@ -415,7 +415,9 @@ export default function Events() {
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [futureEventsIndex, setFutureEventsIndex] = useState(0);
-  const futureEventsPerPage = 4;
+  const [isMobile, setIsMobile] = useState(false);
+  const futureEventsPerPage = isMobile ? 1 : 4;
+  const galleryItemsPerPage = isMobile ? 1 : 3;
   const [countdown, setCountdown] = useState({
     days: '--',
     hours: '--',
@@ -424,7 +426,7 @@ export default function Events() {
   });
 
   // Countdown functionality
-  React.useEffect(() => {
+  useEffect(() => {
     const updateCountdown = () => {
       const target = new Date('2026-03-10T09:00:00'); // AI Sales Kickoff 2026
       const now = new Date();
@@ -454,6 +456,17 @@ export default function Events() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Handle form submission and mailto
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -471,7 +484,7 @@ export default function Events() {
   // Gallery navigation functions
   const nextGallerySlide = () => {
     const totalImages = galleryImages.length;
-    const imagesPerView = 3;
+    const imagesPerView = galleryItemsPerPage;
     const maxStartIndex = Math.max(0, totalImages - imagesPerView);
 
     setCurrentGalleryIndex(prev => {
@@ -486,7 +499,7 @@ export default function Events() {
 
   const prevGallerySlide = () => {
     const totalImages = galleryImages.length;
-    const imagesPerView = 3;
+    const imagesPerView = galleryItemsPerPage;
     const maxStartIndex = Math.max(0, totalImages - imagesPerView);
 
     setCurrentGalleryIndex(prev => {
@@ -499,20 +512,20 @@ export default function Events() {
   };
 
   const nextFutureEvents = () => {
-  setFutureEventsIndex(prev => {
-    const total = futureEvents.length;
-    const next = prev + futureEventsPerPage;
-    return next >= total ? 0 : next;
-  });
-};
+    setFutureEventsIndex(prev => {
+      const total = futureEvents.length;
+      const next = prev + futureEventsPerPage;
+      return next >= total ? 0 : next;
+    });
+  };
 
-const prevFutureEvents = () => {
-  setFutureEventsIndex(prev => {
-    const total = futureEvents.length;
-    const prevIdx = prev - futureEventsPerPage;
-    return prevIdx < 0 ? Math.max(0, total - futureEventsPerPage) : prevIdx;
-  });
-};
+  const prevFutureEvents = () => {
+    setFutureEventsIndex(prev => {
+      const total = futureEvents.length;
+      const prevIdx = prev - futureEventsPerPage;
+      return prevIdx < 0 ? Math.max(0, total - futureEventsPerPage) : prevIdx;
+    });
+  };
 
   return (
     <div className="bg-white min-h-screen">
@@ -619,8 +632,8 @@ const prevFutureEvents = () => {
               onClick={() => {
                 setFutureEventsIndex(prev => {
                   const total = futureEvents.length;
-                  const prevIdx = prev - 4;
-                  return prevIdx < 0 ? Math.max(0, total - 4) : prevIdx;
+                  const prevIdx = prev - futureEventsPerPage;
+                  return prevIdx < 0 ? Math.max(0, total - futureEventsPerPage) : prevIdx;
                 });
               }}
               className="absolute -left-8 top-1/2 -translate-y-1/2 z-10 w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group shadow-xl"
@@ -636,8 +649,8 @@ const prevFutureEvents = () => {
             </button>
 
             {/* Carousel Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {futureEvents.slice(futureEventsIndex, futureEventsIndex + 4).map(event => (
+            <div className={`grid gap-8 ${isMobile ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'}`}>
+              {futureEvents.slice(futureEventsIndex, futureEventsIndex + futureEventsPerPage).map(event => (
                 <div key={event.key} className="event-card bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden hover:-translate-y-2" onClick={() => {
                   // setCurrentImageIndex(0);
                   // setLightbox(event);
@@ -671,7 +684,7 @@ const prevFutureEvents = () => {
               onClick={() => {
                 setFutureEventsIndex(prev => {
                   const total = futureEvents.length;
-                  const next = prev + 4;
+                  const next = prev + futureEventsPerPage;
                   return next >= total ? 0 : next;
                 });
               }}
@@ -689,15 +702,14 @@ const prevFutureEvents = () => {
 
             {/* Carousel Indicators */}
             <div className="flex justify-center mt-8 space-x-3">
-              {Array.from({ length: Math.ceil(futureEvents.length / 4) }).map((_, index) => {
-                const isActive = Math.floor(futureEventsIndex / 4) === index;
+              {Array.from({ length: Math.ceil(futureEvents.length / futureEventsPerPage) }).map((_, index) => {
+                const isActive = Math.floor(futureEventsIndex / futureEventsPerPage) === index;
                 return (
                   <button
                     key={index}
-                    onClick={() => setFutureEventsIndex(index * 4)}
-                    className={`transition-all duration-300 rounded-full ${
-                      isActive ? 'w-8 h-3' : 'w-3 h-3 hover:scale-125'
-                    }`}
+                    onClick={() => setFutureEventsIndex(index * futureEventsPerPage)}
+                    className={`transition-all duration-300 rounded-full ${isActive ? 'w-8 h-3' : 'w-3 h-3 hover:scale-125'
+                      }`}
                     style={{
                       background: isActive
                         ? 'linear-gradient(90deg, #1161ad 0%, #0570c6 100%)'
@@ -866,8 +878,8 @@ const prevFutureEvents = () => {
                 boxShadow: '0 25px 80px rgba(17, 97, 173, 0.15), 0 0 0 1px rgba(17, 97, 173, 0.05)'
               }}
             >
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                {galleryImages.slice(currentGalleryIndex, currentGalleryIndex + 3).map((image, index) => (
+              <div className={`grid gap-10 ${isMobile ? 'grid-cols-1' : 'grid-cols-1 lg:grid-cols-3'}`}>
+                {galleryImages.slice(currentGalleryIndex, currentGalleryIndex + galleryItemsPerPage).map((image, index) => (
                   <div key={image.id} className="relative group overflow-hidden rounded-2xl">
                     <div className="relative">
                       <img
@@ -915,7 +927,7 @@ const prevFutureEvents = () => {
             {/* Premium Navigation Arrows */}
             <button
               onClick={prevGallerySlide}
-              className="absolute -left-6 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 group shadow-2xl cursor-pointer"
+              className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 group shadow-2xl cursor-pointer"
               style={{
                 background: 'linear-gradient(135deg, #1161ad 0%, #0570c6 100%)',
                 color: 'white'
@@ -924,7 +936,6 @@ const prevFutureEvents = () => {
                 e.currentTarget.style.boxShadow = '0 20px 40px rgba(17, 97, 173, 0.4)';
               }}
               onMouseOut={e => {
-                e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
                 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
               }}
             >
@@ -935,7 +946,7 @@ const prevFutureEvents = () => {
 
             <button
               onClick={nextGallerySlide}
-              className="absolute -right-6 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 group shadow-2xl"
+              className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 group shadow-2xl"
               style={{
                 background: 'linear-gradient(135deg, #1161ad 0%, #0570c6 100%)',
                 color: 'white'
@@ -944,7 +955,6 @@ const prevFutureEvents = () => {
                 e.currentTarget.style.boxShadow = '0 20px 40px rgba(17, 97, 173, 0.4)';
               }}
               onMouseOut={e => {
-                e.currentTarget.style.transform = 'translateY(-50%) scale(1)';
                 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
               }}
             >
@@ -955,9 +965,9 @@ const prevFutureEvents = () => {
 
             {/* Elegant Progress Indicators */}
             <div className="flex justify-center mt-12 space-x-4">
-              {Array.from({ length: Math.ceil(galleryImages.length / 3) }).map((_, index) => {
-                const startIndex = index * 3;
-                const isActive = Math.floor(currentGalleryIndex / 3) === index;
+              {Array.from({ length: Math.ceil(galleryImages.length / galleryItemsPerPage) }).map((_, index) => {
+                const startIndex = index * galleryItemsPerPage;
+                const isActive = Math.floor(currentGalleryIndex / galleryItemsPerPage) === index;
 
                 return (
                   <button
@@ -968,8 +978,8 @@ const prevFutureEvents = () => {
                       setCurrentGalleryIndex(targetIndex);
                     }}
                     className={`relative transition-all duration-400 hover:scale-125 ${isActive
-                        ? 'w-12 h-4'
-                        : 'w-4 h-4 hover:w-8'
+                      ? 'w-12 h-4'
+                      : 'w-4 h-4 hover:w-8'
                       } rounded-full overflow-hidden`}
                     style={{
                       background: isActive
