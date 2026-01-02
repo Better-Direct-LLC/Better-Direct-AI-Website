@@ -153,7 +153,7 @@ const futureEvents = [
   {
     key: 'Better Direct AI',
     title: 'Better Direct AI – Sales Kick Off 2026',
-    date: 'March 6-7, 2026',
+    date: 'March 5-7, 2026',
     summary: 'Better Direct\'s AI Sales Kick Off 2026 gathers sales teams for interactive sessions on AI-driven strategies, resilience in sales, and practical tools for pitching advanced IT solutions, emphasizing hands-on training to boost performance in a competitive market. This two-day event in Tempe focuses on emotional intelligence, negotiation tactics, and emerging tech trends for revenue growth.',
     tags: ['AI sales', 'kick off', 'Tempe AZ', 'IT solutions', 'sales training', 'negotiation', 'emotional intelligence', 'revenue strategies'],
     img: '',
@@ -407,7 +407,7 @@ export default function Events() {
   // Countdown functionality
   useEffect(() => {
     const updateCountdown = () => {
-      const target = new Date('2026-03-10T09:00:00'); // AI Sales Kickoff 2026
+      const target = new Date('2026-03-05T09:00:00'); // Updated to March 5, 2026
       const now = new Date();
       const diff = target - now;
 
@@ -508,16 +508,18 @@ export default function Events() {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Hero Section */}
-      <section className="hero py-24 px-4" style={{ backgroundColor: '#1161ad', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Federal IT Events & Insights</h1>
-          <p className="text-xl mb-8 max-w-xl mx-auto">Stay ahead with Better Direct — HUBZone & SDVOSB-certified leader in mission-ready technology solutions.</p>
 
+      {/* Hero + Sales Kick-Off Combined Section */}
+      <section className="w-full" style={{ background: 'linear-gradient(135deg, #1161ad 0%, #0570c6 100%)' }}>
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8 py-8 md:py-16 px-2 md:px-4 max-w-6xl mx-auto">
+        {/* Hero */}
+        <div className="flex-1 flex flex-col justify-center items-center text-center text-white md:text-left md:items-start max-w-2xl w-full md:mr-20">
+          <h1 className="text-5xl font-bold mb-4">Federal IT Events & Insights</h1>
+          <p className="text-xl mb-8 max-w-xl">Stay ahead with Better Direct — HUBZone & SDVOSB-certified leader in mission-ready technology solutions.</p>
           {/* Countdown Timer */}
-          <div className="mt-12 mb-8">
+          <div className="mt-8 mb-6 w-full overflow-x-auto">
             <p className="mb-4 text-lg">Next Event Countdown</p>
-            <div className="flex justify-center gap-6 font-mono font-bold">
+            <div className="flex justify-center md:justify-start gap-3 font-mono font-bold w-full min-w-[320px]">
               <div className="bg-opacity-20 backdrop-blur-sm px-6 py-4 rounded-2xl min-w-20 text-center" style={{ background: '#0570c6' }}>
                 <span className="block text-4xl text-white">{countdown.days}</span>
                 <small className="text-sm opacity-80">Days</small>
@@ -536,7 +538,6 @@ export default function Events() {
               </div>
             </div>
           </div>
-
           <button
             onClick={scrollToUpcomingEvents}
             className="group relative px-8 py-4 border-2 font-semibold text-lg rounded-full overflow-hidden transition-all duration-300 hover:border-transparent cursor-pointer hover:scale-105 bg-white"
@@ -557,6 +558,59 @@ export default function Events() {
               </span>
             </span>
           </button>
+        </div>
+        {/* Sales Kick-Off */}
+        <div className="flex-1 flex flex-col justify-center items-center md:items-end max-w-2xl w-full">
+          <a
+            href="https://join-us-for-sales-kick-o-7cy6wzw.gamma.site/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block group cursor-pointer w-full"
+          >
+            <div className="relative bg-black rounded-3xl shadow-2xl p-8 md:p-12 transform transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-3xl overflow-hidden w-full">
+              {/* Decorative blur circles in background */}
+              <div className="absolute top-10 right-10 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-10 left-10 w-48 h-48 bg-purple-600/20 rounded-full blur-3xl"></div>
+              <div className="relative">
+                {/* RSVP Badge */}
+                <div className="inline-block px-4 py-1.5 rounded-full text-xs font-bold bg-white text-black mb-6">
+                  RSVP
+                </div>
+                {/* Title */}
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-8 text-center md:text-left">
+                  Better Direct AI –<br />Sales Kick-Off 2026
+                </h2>
+                {/* Event Details - Two Column Layout */}
+                <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-0">
+                  {/* Left side - Event Info */}
+                  <div className="space-y-3 text-white/90">
+                    <div className="flex items-center gap-2 text-sm md:text-base">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                      </svg>
+                      <span>March 5-7, 2026</span>
+                      <span className="mx-1">|</span>
+                      <span>RSVP</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm md:text-base">
+
+                    </div>
+                    <div className="flex items-center gap-2 text-sm md:text-base">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                      </svg>
+                      <span>TD SYNNEX Office</span>
+                    </div>
+                  </div>
+                  {/* Right side - Download Button */}
+                  <div className="flex items-center gap-2 text-white group-hover:text-blue-300 transition-colors">
+                    <span className="text-sm md:text-base font-medium whitespace-nowrap">→ Download Flyer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
         </div>
       </section>
 
@@ -779,31 +833,6 @@ export default function Events() {
                   </div>
                 )}
 
-                {/* Premium Dot Indicators
-                {lightbox.images && lightbox.images.length > 1 && (
-                  <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 backdrop-blur-sm bg-black bg-opacity-20 rounded-full px-4 py-2">
-                    {lightbox.images.map((_, index) => (
-                      <button
-                        key={index}
-                        className={`relative transition-all duration-300 rounded-full ${
-                          index === currentImageIndex 
-                            ? 'w-8 h-3' 
-                            : 'w-3 h-3 hover:scale-125'
-                        }`}
-                        style={{
-                          background: index === currentImageIndex
-                            ? 'linear-gradient(135deg, #1161ad 0%, #0570c6 100%)'
-                            : 'rgba(255, 255, 255, 0.5)',
-                          boxShadow: index === currentImageIndex
-                            ? '0 4px 12px rgba(17, 97, 173, 0.4)'
-                            : 'none'
-                        }}
-                        onClick={() => setCurrentImageIndex(index)}
-                      />
-                    ))}
-                  </div>
-                )} */}
-
                 {/* Progress Bar */}
                 {lightbox.images && lightbox.images.length > 1 && (
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-black bg-opacity-20">
@@ -884,11 +913,6 @@ export default function Events() {
                       {/* Content Overlay */}
                       <div className="absolute inset-0 flex flex-col justify-end p-8">
                         <div className="transform translate-y-6 group-hover:translate-y-0 transition-all duration-500 ease-out">
-                          {/* <h3 className="text-2xl font-bold text-white mb-3 leading-tight">{image.title}</h3> */}
-                          {/* <p className="text-white/90 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100">
-                            {image.description}
-                          </p>
-                           */}
                           {/* Decorative Line */}
                           <div className="w-12 h-1 rounded-full mt-4 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200"
                             style={{ background: '#0570c6' }}></div>
