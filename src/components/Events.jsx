@@ -403,13 +403,53 @@ export default function Events() {
     mins: '--',
     secs: '--'
   });
+  const [nextEvent, setNextEvent] = useState(null);
+
+  // Parse date string to Date object (handles various formats)
+  const parseEventDate = (dateStr) => {
+    // Handle "TBD" or empty dates
+    if (!dateStr || dateStr === 'TBD' || dateStr.includes('Mid Nov')) return null;
+    
+    // Try to parse different date formats
+    // Format: "Feb 3, 2026" or "March 5-7, 2026" or "Oct 27-29, 2026"
+    const match = dateStr.match(/([A-Za-z]+)\s+(\d+)(?:-\d+)?,?\s+(\d{4})/);
+    if (match) {
+      const [, month, day, year] = match;
+      return new Date(`${month} ${day}, ${year} 09:00:00`);
+    }
+    
+    return null;
+  };
+
+  // Find the next upcoming event
+  const findNextEvent = () => {
+    const now = new Date();
+    
+    // Filter and sort events by date
+    const upcomingEvents = futureEvents
+      .map(event => ({
+        ...event,
+        parsedDate: parseEventDate(event.date)
+      }))
+      .filter(event => event.parsedDate && event.parsedDate > now)
+      .sort((a, b) => a.parsedDate - b.parsedDate);
+    
+    return upcomingEvents.length > 0 ? upcomingEvents[0] : null;
+  };
 
   // Countdown functionality
   useEffect(() => {
     const updateCountdown = () => {
-      const target = new Date('2026-03-05T09:00:00'); // Updated to March 5, 2026
+      const next = findNextEvent();
+      setNextEvent(next);
+      
+      if (!next || !next.parsedDate) {
+        setCountdown({ days: 'TBD', hours: '', mins: '', secs: '' });
+        return;
+      }
+
       const now = new Date();
-      const diff = target - now;
+      const diff = next.parsedDate - now;
 
       if (diff <= 0) {
         setCountdown({ days: 'Live!', hours: '', mins: '', secs: '' });
@@ -518,7 +558,9 @@ export default function Events() {
           <p className="text-xl mb-8 max-w-xl">Stay ahead with Better Direct — HUBZone & SDVOSB-certified leader in mission-ready technology solutions.</p>
           {/* Countdown Timer */}
           <div className="mt-8 mb-6 w-full overflow-x-auto">
-            <p className="mb-4 text-lg">Next Event Countdown</p>
+            <p className="mb-4 text-lg">
+              {nextEvent ? `Next Event: ${nextEvent.title}` : 'Next Event Countdown'}
+            </p>
             <div className="flex justify-center md:justify-start gap-3 font-mono font-bold w-full min-w-[320px]">
               <div className="bg-opacity-20 backdrop-blur-sm px-6 py-4 rounded-2xl min-w-20 text-center" style={{ background: '#0570c6' }}>
                 <span className="block text-4xl text-white">{countdown.days}</span>
