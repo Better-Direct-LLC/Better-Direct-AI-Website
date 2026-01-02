@@ -21,11 +21,31 @@ const mailtoLink = `mailto:info@betterdirect.com?cc=${encodeURIComponent(ccEmail
 const mailtoSeaportLink = `mailto:rashawn.hugg@betterdirect.com?cc=${encodeURIComponent(ccEmails.filter(email => email !== 'rashawn.hugg@betterdirect.com').join(','))}`;
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileDropdowns, setMobileDropdowns] = useState({
+    aboutUs: false,
+    buyNow: false,
+    contracts: false,
+    news: false
+  });
   const navRef = useRef(null);
 
   // Function to close mobile menu when link is clicked
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+    setMobileDropdowns({
+      aboutUs: false,
+      buyNow: false,
+      contracts: false,
+      news: false
+    });
+  };
+
+  // Toggle mobile dropdown sections
+  const toggleMobileDropdown = (section) => {
+    setMobileDropdowns(prev => ({
+      ...prev,
+      [section]: !prev[section]
+    }));
   };
 
   // Close mobile menu when clicking outside
@@ -299,35 +319,168 @@ const Navbar = () => {
           {/* Mobile Navigation Menu */}
           {isMobileMenuOpen && (
             <div className="xl:hidden pb-4 border-t border-gray-200">
-              <div className="flex flex-col space-y-3 pt-4">
-                <Link to="/about-us" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
-                  About Us
-                </Link>
-                <Link to="/buy-now" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
-                  Buy Now
-                </Link>
-                <Link to="/capability-statement" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+              <div className="flex flex-col space-y-1 pt-4">
+                {/* About Us with dropdown */}
+                <div>
+                  <button 
+                    onClick={() => toggleMobileDropdown('aboutUs')}
+                    className="w-full text-left text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2 flex items-center justify-between" 
+                    style={{ color: '#1161ad' }}
+                  >
+                    <Link to="/about-us" onClick={closeMobileMenu}>About Us</Link>
+                    <svg 
+                      className={`w-5 h-5 transition-transform duration-200 ${mobileDropdowns.aboutUs ? 'rotate-180' : ''}`} 
+                      fill="currentColor" 
+                      viewBox="0 0 20 20"
+                    >
+                      <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                  {mobileDropdowns.aboutUs && (
+                    <div className="bg-gray-50 border-l-4" style={{ borderColor: '#1161ad' }}>
+                      <Link to="/certifications" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+                        Certifications
+                      </Link>
+                      <a href="https://drive.google.com/file/d/1Ktch401esB3V1p8dNACra15UUbHVUc_p/view" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }}>
+                        Credit Application
+                      </a>
+                      <Link to="/employee-review" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+                        Employee Review
+                      </Link>
+                      <a href="https://drive.google.com/file/d/1ErvMYOaUJKVTVquuXcaWNO-Nrni2bTLC/view" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }}>
+                        W-9
+                      </a>
+                    </div>
+                  )}
+                </div>
+
+                {/* Buy Now with dropdown */}
+                <div>
+                  <button 
+                    onClick={() => toggleMobileDropdown('buyNow')}
+                    className="w-full text-left text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2 flex items-center justify-between" 
+                    style={{ color: '#1161ad' }}
+                  >
+                    <Link to="/buy-now" onClick={closeMobileMenu}>Buy Now</Link>
+                    <svg 
+                      className={`w-5 h-5 transition-transform duration-200 ${mobileDropdowns.buyNow ? 'rotate-180' : ''}`} 
+                      fill="currentColor" 
+                      viewBox="0 0 20 20"
+                    >
+                      <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                  {mobileDropdowns.buyNow && (
+                    <div className="bg-gray-50 border-l-4" style={{ borderColor: '#1161ad' }}>
+                      <a href="https://global.channelonline.com/bdc/gsastore/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fgsastore%2FsDashboard%2Fmain" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }}>
+                        GSA Store
+                      </a>
+                      <a href="https://global.channelonline.com/bdc/gsastore/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fgsastore%2FsDashboard%2Fmain" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }}>
+                        2GIT Store
+                      </a>
+                      <a href="https://global.channelonline.com/bdc/admc3/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fadmc3" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }}>
+                        ADMC 3 Store
+                      </a>
+                      <a href="https://global.channelonline.com/bdc/sewp/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fsewp%2FsDashboard%2Fmain" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }}>
+                        SEWP Store
+                      </a>
+                      <a href="https://global.channelonline.com/bdc/storesite/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fstoresite" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }}>
+                        Open Market
+                      </a>
+                      <a href="https://global.channelonline.com/bdc/admc3/Login/main?fdestination=https:%2F%2Fusm.channelonline.com%2Fbdc%2Fadmc3" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }}>
+                        ITES-4H Store
+                      </a>
+                      <a href={mailtoSeaportLink} className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }}>
+                        Seaport Store
+                      </a>
+                    </div>
+                  )}
+                </div>
+
+                {/* Regular menu items without dropdowns */}
+                <Link to="/capability-statement" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2 block" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Capability statement
                 </Link>
-                <Link to="/careers" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+                <Link to="/careers" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2 block" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Careers
                 </Link>
-                <Link to="/contact-us" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+                <Link to="/contact-us" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2 block" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Contact Us
                 </Link>
-                <Link to="/contracts" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
-                  Contracts
-                </Link>
-                <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+
+                {/* Contracts with dropdown */}
+                <div>
+                  <button 
+                    onClick={() => toggleMobileDropdown('contracts')}
+                    className="w-full text-left text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2 flex items-center justify-between" 
+                    style={{ color: '#1161ad' }}
+                  >
+                    <Link to="/contracts" onClick={closeMobileMenu}>Contracts</Link>
+                    <svg 
+                      className={`w-5 h-5 transition-transform duration-200 ${mobileDropdowns.contracts ? 'rotate-180' : ''}`} 
+                      fill="currentColor" 
+                      viewBox="0 0 20 20"
+                    >
+                      <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                  {mobileDropdowns.contracts && (
+                    <div className="bg-gray-50 border-l-4" style={{ borderColor: '#1161ad' }}>
+                      <Link to="/2git" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+                        GSA 2GIT
+                      </Link>
+                      <Link to="/mas" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+                        GSA MAS
+                      </Link>
+                      <Link to="/sewp" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+                        SEWP V
+                      </Link>
+                      <Link to="/admc" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+                        ADMC 3
+                      </Link>
+                      <Link to="/ites" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+                        ITES-4H
+                      </Link>
+                      <Link to="/seaport" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+                        SEAPORT
+                      </Link>
+                    </div>
+                  )}
+                </div>
+
+                <Link to="/" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2 block" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Home
                 </Link>
-                <Link to="/news" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
-                  News
-                </Link>
-                <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+
+                {/* News with dropdown */}
+                <div>
+                  <button 
+                    onClick={() => toggleMobileDropdown('news')}
+                    className="w-full text-left text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2 flex items-center justify-between" 
+                    style={{ color: '#1161ad' }}
+                  >
+                    <Link to="/news" onClick={closeMobileMenu}>News</Link>
+                    <svg 
+                      className={`w-5 h-5 transition-transform duration-200 ${mobileDropdowns.news ? 'rotate-180' : ''}`} 
+                      fill="currentColor" 
+                      viewBox="0 0 20 20"
+                    >
+                      <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                  {mobileDropdowns.news && (
+                    <div className="bg-gray-50 border-l-4" style={{ borderColor: '#1161ad' }}>
+                      <Link to="/events" className="block px-8 py-3 text-lg hover:bg-gray-100" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+                        Events
+                      </Link>
+                    </div>
+                  )}
+                </div>
+
+                <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2 block" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Services
                 </Link>
-                <Link to="/success-stories" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
+                <Link to="/success-stories" className="text-blue-600 hover:text-blue-800 font-medium text-xl py-4 px-2 block" style={{ color: '#1161ad' }} onClick={closeMobileMenu}>
                   Success Stories
                 </Link>
               </div>
